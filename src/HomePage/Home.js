@@ -23,7 +23,7 @@ export default function Home() {
             <Fruits />
             <Meat />
             <Toiletries />
-            <Wellbeing />
+            {/* <Wellbeing /> */}
             <Footer />
         </>
 
