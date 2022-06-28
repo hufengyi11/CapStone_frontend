@@ -15,7 +15,7 @@ const navigate = useNavigate();
                         <h4>GoMart</h4>
                         <ul>
                             <li><a href="#" onClick={() => {navigate('aboutus', {replace:true})}}>About us</a></li>
-                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#" onClick={() => {navigate('faqs', {replace:true})}}>FAQs</a></li>
                             <li><a href="#">Career</a></li>
                         </ul>
                     </ div>
@@ -31,6 +31,7 @@ const navigate = useNavigate();
                         <h4>Support</h4>
                         <ul>
                             <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Review</a></li>
                         </ul>
                     </div>
 

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './HomePage/Home';
 import Layout from './Layout/Layout.js';
 import AboutUs from './AboutUs/AboutUs';
+import Faqs from './FAQs/Faqs';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="userlogin" element={<UserLogin />} />
             <Route path="aboutus" element={<AboutUs />} />
+            <Route path="faqs" element={<Faqs />} />
           </Route>
         </Routes>
       </BrowserRouter>
