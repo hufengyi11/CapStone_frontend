@@ -1,21 +1,30 @@
 import React from 'react'
-import Navigation from '../Navigation/Navigation'
+import Navigation from '../Layout/Layout'
+import Footer from '../Footer/Footer';
+import Bakery from '../HomePage/Bakery';
+import Dairy from '../HomePage/Dairy.js';
+import Drinks from '../HomePage/Drinks.js';
+import Fruits from '../HomePage/Fruits.js';
+import Meat from '../HomePage/Meat';
+import Toiletries from '../HomePage/Toiletries';
+import Vegetable from '../HomePage/Vegetable';
+import Wellbeing from '../HomePage/Wellbeing';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from '../LogIn/Login';
-import UserLogin from '../LogIn/UserLogin';
 
 
 export default function Home() {
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Navigation />}>
-                        <Route index element={<Home />} />
-                        <Route path='/userlogin' element={<UserLogin />} />
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+            <div className='ItemDisplay'></div>
+            <Vegetable />
+            <Bakery />
+            <Drinks />
+            <Dairy />
+            <Fruits />
+            <Meat />
+            <Toiletries />
+            <Wellbeing />
+            <Footer />
         </>
 
     )

@@ -1,32 +1,23 @@
 import './App.css';
-import React from 'react';
-import Navigation from './Navigation/Navigation';
-import Footer from './Footer/Footer';
-import Bakery from './HomePage/Bakery';
-import Dairy from './HomePage/Dairy.js';
-import Drinks from './HomePage/Drinks.js';
-import Fruits from './HomePage/Fruits.js';
-import Meat from './HomePage/Meat';
-import Toiletries from './HomePage/Toiletries';
-import Vegetable from './HomePage/Vegetable';
-import Wellbeing from './HomePage/Wellbeing';
-
+import React, { useState } from 'react';
+import UserLogin from './LogIn/UserLogin';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './HomePage/Home';
+import Layout from './Layout/Layout.js';
 
 function App() {
 
   return (
     <>
-      <Navigation />
-      <div className='ItemDisplay'></div>
-        <Vegetable />
-        <Bakery />
-        <Drinks />
-        <Dairy />
-        <Fruits />
-        <Meat />
-        <Toiletries />
-        <Wellbeing />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="userlogin" element={<UserLogin />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
