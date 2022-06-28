@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4>Socials</h4>
                         <li><a className="facebook"href="#">Facebook</a></li>
-  	 				        <li><a href="#"><FaTwitter /></a></li>
+  	 				        <li><a href="#"></a></li>
   	 				        <li><a href="#">Instagram</a></li>
                     </ div>
 
