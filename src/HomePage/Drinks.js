@@ -14,7 +14,7 @@ export default function Drinks() {
     }, [])
     return (
         <div>
-            <p>Drinks</p>
+            <h3>Drinks</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>

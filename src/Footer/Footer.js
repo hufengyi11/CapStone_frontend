@@ -1,14 +1,15 @@
 import React from "react";
-import { IconName } from "react-icons/ai";
+import { FaBeer, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import ReactDOM from 'react-dom';
-
+import './Footer.css'
 
 const Footer = () => {
 
+
     return (
         <footer className="footer">
-                <div className="container">
-                    <div className="row">
+            <div className="container">
+                <div className="row">
                     <div className="footer-col" >
                         <h4>GoMart</h4>
                         <ul>
@@ -17,13 +18,13 @@ const Footer = () => {
                             <li><a href="#">Career</a></li>
                             <li><a href="#">Copyright</a></li>
                         </ul>
-                        </ div>
+                    </ div>
 
                     <div className="footer-col">
                         <h4>Socials</h4>
-                        <li><a className="facebook"href="#">Facebook</a></li>
-  	 				        <li><a href="#"></a></li>
-  	 				        <li><a href="#">Instagram</a></li>
+                        <div><a className="social" href="#"><FaFacebook /></a></div>
+                        <div><a className="social" href="#"><FaTwitter /></a></div>
+                        <div><a className="social" href="#"><FaInstagram /></a></div>
                     </ div>
 
                     <div className="footer-col">
@@ -36,11 +37,11 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-col">
-  	 			        <h4>Vendor</h4>
-  	 			        <ul>
-  	 				        <li><a href="#">Login</a></li>
-                       </ul>
-  	 			    </div>
+                        <h4>Vendor</h4>
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>

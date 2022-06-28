@@ -6,16 +6,18 @@ export default function Wellbeing() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/items/wellbeing')
+        axios
+            .get('http://localhost:8080/items/wellbeing')
             .then(res => {
                 const items = res.data;
                 setItems(items);
-            }).catch((err) => console.log(err));
+            })
+            .catch((err) => console.log(err));
     }, []);
 
     return (
         <div>
-            <p>Well Being</p>
+            <h3>Well Being</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>

@@ -15,7 +15,7 @@ export default function Vegetable() {
 
     return (
         <div>
-            <p>Vegetables</p>
+            <h3>Vegetables</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>

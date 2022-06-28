@@ -15,7 +15,7 @@ export default function Toiletries() {
 
     return (
         <div>
-            <p>Toiletries</p>
+            <h3>Toiletries</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>

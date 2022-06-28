@@ -15,7 +15,7 @@ export default function Bakery() {
 
     return (
         <div>
-            <p>Bakery</p>
+            <h3>Bakery</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>

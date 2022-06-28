@@ -5,32 +5,35 @@ import './Nav.css'
 const Navigation = () => {
     return (
         <>
-        <div className="topnav">
-        <a className="active" href="#home">
-            Home
-        </a>
-        <a href="#Sign-up">
-            Sign up
-        </a>
-        <a href="#basket">
-            Basket
-        </a></div>
-         <input type="text" placeholder="Search..">
-         </input>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">
+                Home
+            </a>
+            <a href="#news">
+                Happy hour?
+            </a>
+           
+            <a href="#sign-up" className='splitt'>
+                singup
+            </a> 
+            <a href="#basket" className='split'> 
+                Basket 
+            </a>
+            <input type = "text" placeholder="Search.."></input> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa-regular fa-bars"></i>
 
-      
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
+            </a>
+        </div>
+
     </>
     );
-
     function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-          x.style.display = "none";
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
         } else {
-          x.style.display = "block";
+          x.className = "topnav";
         }
       }
 }
