@@ -1,6 +1,7 @@
 .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
+    position: relative;
   }
   .topnav a {
     float: left;
@@ -20,7 +21,7 @@
     color: white;
   }
   .topnav input[type=text] {
-    float: left;
+    float: right;
     padding: 6px;
     border: none;
     margin-top: 8px;
