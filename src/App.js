@@ -1,19 +1,19 @@
 import './App.css';
 import Home from './HomePage/Home';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react';
 import Navigation from './Navigation/Navigation';
 
 function App() {
   return (
     <BrowserRouter>
-        <div>
-          <Navigation />
-            <Route>
-             <Route path="/home" element={<Home/>} />
-            <Route component={Home}/>
+        <Routes>
+          {/* <Navigation /> */}
+            <Route path='/' element={<Navigation />}>
+             <Route index element={<Home/>} />
+            {/* <Route component={Home}/> */}
            </Route>
-        </div> 
+        </Routes> 
       </BrowserRouter>
   );
 }
