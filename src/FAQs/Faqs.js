@@ -3,6 +3,7 @@ import React from "react";
 const Faqs= () =>{
     return(
         <>
+        <div>
         <h1>GoMart FAQs</h1>
         <h2>What is GoMart?</h2>
         <p>Groceries delivered to your doorstep within minutes</p>
@@ -18,7 +19,15 @@ const Faqs= () =>{
         <p>Due to COVID-19, we currently do not accept cash payments in order to offer
             contactless delivery.
         </p>
-        <p></p>
+        <h2>Where can I write a review?</h2>
+        <p>If you would like to let us know how we're doing, follow the link on the bottom
+            of the page under 'Suport'.
+        </p>
+        <h2>My order was cancelled but I still see a charge on my account. What happens?</h2>
+        <p>Orders usually take 3 to 5 business days to clear the account, so expect a full 
+            refund by that time.
+        </p>
+        </div>
         </>
     );
 } 

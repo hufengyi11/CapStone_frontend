@@ -7,8 +7,8 @@ const Navigation = () => {
     return (
         <>
             <nav className="topnav" id="myTopnav">
+            <img className="logo" src={require('../Images/gomartlogo.png')} alt="image"/>
                 <ul>
-                {/* <img  src={mainLogo} style={nbStyle.logo} alt="fireSpot"/> */}
                     <Link to="/" className="active">Home</Link>
                     <Link to="/news">Happy hour?</Link>
                     <Link to="/userlogin" className='split'>

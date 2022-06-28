@@ -6,6 +6,7 @@ const AboutUs = () => {
     const navigate = useNavigate;
     return(
         <>
+        <div>
         <h1>About Us</h1>
         <h2>We'll keep this quick!</h2>
         <h2>What is GoMart?</h2>
@@ -20,7 +21,7 @@ const AboutUs = () => {
         </p>
         <h2>How did GoMart start?</h2>
         <p></p>
-
+        </div>
         <div>
             <Footer />
         </div>

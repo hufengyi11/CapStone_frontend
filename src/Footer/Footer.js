@@ -22,9 +22,9 @@ const navigate = useNavigate();
 
                     <div className="footer-col">
                         <h4>Socials</h4>
-                        <div><a className="social" href="#"><FaFacebook /></a></div>
-                        <div><a className="social" href="#"><FaTwitter /></a></div>
-                        <div><a className="social" href="#"><FaInstagram /></a></div>
+                        <div><a className="social" href="https://www.facebook.com/"><FaFacebook /></a></div>
+                        <div><a className="social" href="https://www.twitter.com/"><FaTwitter /></a></div>
+                        <div><a className="social" href="https://www.instagram.com/"><FaInstagram /></a></div>
                     </ div>
 
                     <div className="footer-col">
