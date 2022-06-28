@@ -8,7 +8,7 @@ import Meat from '../HomePage/Meat';
 import Toiletries from '../HomePage/Toiletries';
 import Vegetable from '../HomePage/Vegetable';
 import Wellbeing from '../HomePage/Wellbeing';
-import './Home.css';
+
 
 export default function Home() {
     return (
