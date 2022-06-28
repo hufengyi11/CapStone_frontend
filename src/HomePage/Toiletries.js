@@ -14,7 +14,7 @@ export default function Toiletries() {
     }, []);
 
     return (
-        <div>
+        <div className='ItemDisplay'>
             <h3>Toiletries</h3>
             <div className='ItemList'>
                 {

@@ -14,7 +14,7 @@ export default function Vegetable() {
     }, []);
 
     return (
-        <div>
+        <div className='ItemDisplay'>
             <h3>Vegetables</h3>
             <div className='ItemList'>
                 {

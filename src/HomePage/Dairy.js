@@ -13,7 +13,7 @@ export default function Dairy() {
             }).catch((err) => console.log(err));
     }, []);
     return (
-        <div>
+        <div className='ItemDisplay'>
             <h3>Dairy</h3>
             <div className='ItemList'>
                 {

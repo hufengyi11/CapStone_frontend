@@ -16,7 +16,7 @@ export default function Wellbeing() {
     }, []);
 
     return (
-        <div>
+        <div className='ItemDisplay'>
             <h3>Well Being</h3>
             <div className='ItemList'>
                 {
