@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const AboutUs = () => {
     const navigate = useNavigate;
@@ -19,6 +20,10 @@ const AboutUs = () => {
         </p>
         <h2>How did GoMart start?</h2>
         <p></p>
+
+        <div>
+            <Footer />
+        </div>
         </>
     );
 }
