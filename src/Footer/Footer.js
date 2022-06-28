@@ -2,9 +2,10 @@ import React from "react";
 import { FaBeer, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import ReactDOM from 'react-dom';
 import './Footer.css'
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-
+const navigate = useNavigate();
 
     return (
         <footer className="footer">
@@ -13,7 +14,7 @@ const Footer = () => {
                     <div className="footer-col" >
                         <h4>GoMart</h4>
                         <ul>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="#" onClick={() => {navigate('aboutus', {replace:true})}}>About us</a></li>
                             <li><a href="#">FAQs</a></li>
                             <li><a href="#">Career</a></li>
                         </ul>
