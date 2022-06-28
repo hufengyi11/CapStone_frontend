@@ -14,7 +14,7 @@ export default function Meat() {
     }, []);
 
     return (
-        <div>
+        <div className='ItemDisplay'>
             <h3>Meat</h3>
             <div className='ItemList'>
                 {

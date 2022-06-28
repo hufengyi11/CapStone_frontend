@@ -1,5 +1,4 @@
 import React from 'react'
-import Navigation from '../Layout/Layout'
 import Footer from '../Footer/Footer';
 import Bakery from '../HomePage/Bakery';
 import Dairy from '../HomePage/Dairy.js';
@@ -9,8 +8,7 @@ import Meat from '../HomePage/Meat';
 import Toiletries from '../HomePage/Toiletries';
 import Vegetable from '../HomePage/Vegetable';
 import Wellbeing from '../HomePage/Wellbeing';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import './Home.css';
 
 export default function Home() {
     return (

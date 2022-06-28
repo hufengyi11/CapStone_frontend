@@ -8,7 +8,7 @@ const Navigation = () => {
         <>
             <nav className="topnav" id="myTopnav">
                 <ul>
-                <img  src={mainLogo} style={nbStyle.logo} alt="fireSpot"/>
+                {/* <img  src={mainLogo}/> */}
                     <Link to="/" className="active">Home</Link>
                     <Link to="/news">Happy hour?</Link>
                     <Link to="/userlogin" className='split'>

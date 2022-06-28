@@ -14,7 +14,7 @@ export default function Fruits() {
     }, []);
 
     return (
-        <div>
+        <div className='ItemDisplay'>
             <h3>Fruits</h3>
             <div className='ItemList'>
                 {

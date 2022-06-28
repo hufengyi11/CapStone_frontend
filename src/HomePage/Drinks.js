@@ -13,7 +13,7 @@ export default function Drinks() {
             }).catch((err) => console.log(err));
     }, [])
     return (
-        <div>
+        <div className='ItemDisplay'>
             <h3>Drinks</h3>
             <div className='ItemList'>
                 {
