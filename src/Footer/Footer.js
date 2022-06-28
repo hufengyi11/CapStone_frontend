@@ -1,4 +1,6 @@
 import React from "react";
+import { IconName } from "react-icons/ai";
+import ReactDOM from 'react-dom';
 
 
 const Footer = () => {
@@ -19,8 +21,8 @@ const Footer = () => {
 
                     <div className="footer-col">
                         <h4>Socials</h4>
-                        <li><a href="#">Facebook</a></li>
-  	 				        <li><a href="#">Twitter</a></li>
+                        <li><a className="facebook"href="#">Facebook</a></li>
+  	 				        <li><a href="#"><FaTwitter /></a></li>
   	 				        <li><a href="#">Instagram</a></li>
                     </ div>
 

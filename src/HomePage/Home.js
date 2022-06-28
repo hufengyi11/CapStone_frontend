@@ -1,19 +1,19 @@
 import React from 'react'
-import Footer from '../Footer/Footer'
 import Navigation from '../Navigation/Navigation'
-import Bakery from './ItemList/Bakery'
-import Dairy from './ItemList/Dairy'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 export default function Home() {
     return (
         <>
-            <Navigation />
-            <>
-                <Bakery />
-                <Dairy />
-            </>
-
-            <Footer />
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Navigation />}>
+                        <Route index element={<Home />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
         </>
+
     )
 }

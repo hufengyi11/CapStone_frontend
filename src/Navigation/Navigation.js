@@ -4,24 +4,35 @@ import './Nav.css'
 
 const Navigation = () => {
     return (
+        <>
         <div className="topnav">
         <a className="active" href="#home">
             Home
         </a>
-        <input type="text" placeholder="Search.."></input>
-        <a href="#basket">
-            Basket
-        </a>
         <a href="#Sign-up">
             Sign up
-        </a>      
-        
-        
+        </a>
+        <a href="#basket">
+            Basket
+        </a></div>
+         <input type="text" placeholder="Search..">
+         </input>
 
-      </div>
-
-    
+      
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </>
     );
+
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
 }
  
 export default Navigation;
