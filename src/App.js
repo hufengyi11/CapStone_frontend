@@ -11,18 +11,21 @@ import Toiletries from './HomePage/Toiletries';
 import Vegetable from './HomePage/Vegetable';
 import Wellbeing from './HomePage/Wellbeing';
 
+
 function App() {
+
   return (
     <>
       <Navigation />
-      <Vegetable />
-      <Bakery />
-      <Drinks />
-      <Dairy />
-      <Fruits/>
-      <Meat />
-      <Toiletries />
-      <Wellbeing />
+      <div className='ItemDisplay'></div>
+        <Vegetable />
+        <Bakery />
+        <Drinks />
+        <Dairy />
+        <Fruits />
+        <Meat />
+        <Toiletries />
+        <Wellbeing />
       <Footer />
     </>
   );

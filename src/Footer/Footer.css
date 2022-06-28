@@ -14,7 +14,7 @@
 }
 ul{
 	list-style: none;
-    text-align: center;
+    
 }
 .footer-col{
     width: 25%;
@@ -26,12 +26,13 @@ ul{
      font-size: 18px;
      color: black;
      text-transform: capitalize;
-     margin-bottom: 35px;
+     margin-bottom: 15px;
      font-weight: 500;
      position: relative;
      display: flex;
      flex-direction: column;
      text-align: center;
+     left: 15px;
  }
  .footer-col h4::before{
      content: '';
@@ -62,5 +63,5 @@ ul{
  }
  .social{
      font-size: 35px;
-
  }
+ 

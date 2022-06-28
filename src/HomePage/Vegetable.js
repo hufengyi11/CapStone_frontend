@@ -19,7 +19,7 @@ export default function Vegetable() {
             <div className='ItemList'>
                 {
                     items.map(item =>
-                        <li className='ItemCard' key={item.id}>{`${item.name}`}</li>
+                        <button className='ItemCard' key={item.id}>{`${item.name}`}</button>
                     )
                 }
             </div>

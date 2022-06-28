@@ -28,7 +28,7 @@ const Footer = () => {
                     </ div>
 
                     <div className="footer-col">
-                        <h4>Help and Support</h4>
+                        <h4>Support</h4>
                         <ul>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">FAQs</a></li>
