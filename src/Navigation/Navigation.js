@@ -9,7 +9,7 @@ const Navigation = () => {
             Home
         </a>
         <input type="text" placeholder="Search.."></input>
-        <a href="#contact">
+        <a href="#basket">
             Basket
         </a>
         <a href="#Sign-up">

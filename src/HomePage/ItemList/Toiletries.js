@@ -6,7 +6,7 @@ export default function Toiletries() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/items/vegetables')
+        axios.get('http://localhost:8080/items/toiletries')
             .then(res => {
                 const items = res.data;
                 setItems(items);
