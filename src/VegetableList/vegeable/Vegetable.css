@@ -1,0 +1,14 @@
+.ItemCard {
+    height: 250px;
+    width: 240px;
+    background-color: aqua;
+    border-radius: 20px;
+    border-color: black;
+}
+
+.ItemList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
