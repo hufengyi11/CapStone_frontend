@@ -30,7 +30,7 @@ const navigate = useNavigate();
                     <div className="footer-col">
                         <h4>Support</h4>
                         <ul>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#" onClick={() => {navigate('contact', {replace:true})}}>Contact Us</a></li>
                             <li><a href="#">Review</a></li>
                         </ul>
                     </div>

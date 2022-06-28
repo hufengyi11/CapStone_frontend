@@ -7,6 +7,7 @@ import Home from './HomePage/Home';
 import Layout from './Layout/Layout.js';
 import AboutUs from './AboutUs/AboutUs';
 import Faqs from './FAQs/Faqs';
+import ContactUs from './ContactUs/ContactUs';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="userlogin" element={<UserLogin />} />
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="faqs" element={<Faqs />} />
+            <Route path="contact" element={<ContactUs />} />
           </Route>
         </Routes>
       </BrowserRouter>
