@@ -80,6 +80,7 @@ align-content: flex-end;
 .shopping{
     color: #52c7e2;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 .categorycontainer1{
     display: flex;
@@ -101,4 +102,9 @@ align-content: flex-end;
 
 .category:hover{
     border: 3px solid black;
+}
+.categoryicon{
+    padding: 50px;
+    font-size: 50px;
+    color: #36bad7;
 }

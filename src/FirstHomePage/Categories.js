@@ -12,39 +12,39 @@ const Categories = () => {
         <p className="shopping">Start Shopping <button className="shoppingbutton" onClick={() => {navigate('shopping', {replace:true})}}><FaArrowRight /></button> </p>
         </div>
         <div className="categorycontainer1">
-            <div className="category">
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}>
                 <h3>Dairy</h3>
-                <div><GiMilkCarton /></div>
+                <div className="categoryicon"><GiMilkCarton /></div>
             </div>
-            <div className="category">
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}>
                 <h3>Drink</h3>
-                <div><GiSodaCan /></div>
+                <div className="categoryicon"><GiSodaCan /></div>
             </div>
-            <div className="category">
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}>
                 <h3>Bakery</h3>
-                <div><FaBreadSlice /></div>
+                <div className="categoryicon"><FaBreadSlice /></div>
             </div>
-            <div className="category">
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}>
                 <h3>Toiletries</h3>
-                <div><FaToiletPaper /></div>
+                <div className="categoryicon"><FaToiletPaper /></div>
             </div>
             </div>
             <div className="categorycontainer2">
-            <div className="category">
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}>
                 <h3>Wellbeing</h3>
-                <div><FaTablets /></div>
+                <div className="categoryicon"><FaTablets /></div>
             </div>
-            <div className="category">
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}>
                 <h3>Meat</h3>
-                <div><GiMeat /></div>
+                <div className="categoryicon"><GiMeat /></div>
             </div>
-            <div className="category">
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}>
                 <h3>Vegetable</h3>
-                <div><GiBroccoli /></div>
+                <div className="categoryicon"><GiBroccoli /></div>
             </div>
-            <div className="category"> 
+            <div className="category" onClick={() => {navigate('shopping', {replace:true})}}> 
                 <h3>Fruit</h3>
-                <div><GiFruitBowl /></div>
+                <div className="categoryicon"><GiFruitBowl /></div>
             </div>
             </div>
         </>
