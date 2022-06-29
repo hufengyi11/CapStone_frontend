@@ -14,12 +14,6 @@ const Navigation = () => {
                     <Link to="/">
                         Happy hour?
                     </Link>
-                    <Link to="/Contact">
-                        Contact Us
-                    </Link>
-                    <Link to="/Aboutus">
-                        About Us
-                    </Link>
                     <Link to="/login" className='split'>
                         Log In
                     </Link>
