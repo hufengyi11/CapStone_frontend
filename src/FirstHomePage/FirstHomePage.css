@@ -1,0 +1,69 @@
+.flexbox-container{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+align-content: flex-end;
+}
+
+.flexbox-item-1{
+    min-height: 300px;
+    width: 600px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #52c7e2;
+}
+
+.flexbox-item-2{
+    min-height: 200px;
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.flexbox-item-3 {
+    min-height: 300px;
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.delivery{
+    font-size: 70px;
+}
+.input {
+    width: 400px;
+    height: 20px;
+    margin-left: 30px;
+}
+.button {
+    border-radius: 15px;
+    border: 0.1px solid black;
+    width: 40px;
+    height: 40px;
+    background-color: white
+}
+
+.descriptioncontainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemnumber{
+    min-height: 10px;
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 30px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.descriptionicons{
+    font-size: 40px;
+}
+
+.guarantee{
+    text-align: center;
+    color: rgb(199, 191, 191);
+}

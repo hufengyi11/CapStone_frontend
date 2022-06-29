@@ -8,6 +8,7 @@ import Faqs from './FAQs/Faqs';
 import ContactUs from './ContactUs/ContactUs';
 import Login from './LogIn/Login';
 import Register from './LogIn/Register';
+import FirstHomePage from './FirstHomePage/FirstHomePage';
 
 
 function App (){
@@ -41,7 +42,8 @@ function App (){
         <Routes>
          
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route index element={<FirstHomePage />} />
+            <Route path="shopping" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />}/>
             <Route path="aboutus" element={<AboutUs />} />
