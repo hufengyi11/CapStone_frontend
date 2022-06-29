@@ -36,7 +36,7 @@ function App (){
 
   return (
     <>
-       <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
+       <button onClick={() => setDarkMode(!darkMode)}>🫥</button>
       <BrowserRouter>
         <Routes>
          

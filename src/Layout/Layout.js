@@ -7,8 +7,12 @@ const Navigation = () => {
     return (
         <>
             <nav className="topnav" id="myTopnav">
-            <img className="logo" src={require('../Images/gomartlogo.png')} alt="image"/>
+            
                 <ul>
+                <Link to="/" className="active2">
+                        
+                    <img className="logo" src={require('../Images/gomartlogo.png')} alt="image"/></Link>
+
                     <Link to="/" className="active">
                         Home</Link>
                     <Link to="/">
