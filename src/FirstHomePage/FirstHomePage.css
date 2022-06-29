@@ -3,6 +3,7 @@ display: flex;
 flex-wrap: wrap;
 align-items: center;
 align-content: flex-end;
+margin-top: 50px;
 }
 
 .flexbox-item-1{
@@ -36,13 +37,15 @@ align-content: flex-end;
     width: 400px;
     height: 20px;
     margin-left: 30px;
+    margin-bottom: 40px;
 }
+
 .button {
     border-radius: 15px;
     border: 0.1px solid black;
-    width: 40px;
-    height: 40px;
-    background-color: white
+    width: 30px;
+    height: 30px;
+    background-color: white;
 }
 
 .descriptioncontainer{
@@ -71,7 +74,7 @@ align-content: flex-end;
     border: none;
 }
 .title{
-    font-size: 50px;
+    font-size: 70px;
 }
 .categorytitle{
     text-align: center;
