@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
+import './ContactUs.css'
+import Footer from "../Footer/Footer";
+
 
 
 const Contact = () => {
@@ -33,14 +36,36 @@ const Contact = () => {
     }
 
     return (
-        <div id="contact-form">
-            <input type="text" placeholder="Your Full Name" value={name} onChange={e => setName(e.target.value)} />
-            <input type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
-            <textarea placeholder="Your message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-            <button onClick={submit}>Send Message</button>
+        <><div id="contact-form">
+            <label>Your Full Name:</label>
+            <input
+                type="text"
+                placeholder="Your Full Name"
+                value={name} onChange={e => setName(e.target.value)} />
 
-            <span className={emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
+            <label>Your Email Address</label>
+            <input
+                type="email"
+                placeholder="Your email address"
+                value={email} onChange={e => setEmail(e.target.value)} />
+            <label id='subject'>Subject</label>
+            <textarea
+                placeholder="Your message"
+                value={message} onChange={e => setMessage(e.target.value)}>
+            </textarea>
+
+            <button id="but" onClick={submit}>
+                Send Message
+            </button>
+
+            <span
+                className={emailSent ? 'visible' : null}>
+            </span>
+
         </div>
+            <Footer />
+        </>
+
     );
 };
 

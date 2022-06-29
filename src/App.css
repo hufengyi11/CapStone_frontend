@@ -3,11 +3,18 @@
 }
 
 .dark {
-  background: #121212;
+  background: rgb(56, 54, 54);
   color: aliceblue;
 
 }
-
+.dark textarea {
+background-color: rgb(56, 54, 54);
+color: white;
+}
+.dark input{
+background-color: rgb(56, 54, 54);
+color: aliceblue;
+}
 
 /* Mobile phones: iPhones, Samsung phones, Google pixel */
 
