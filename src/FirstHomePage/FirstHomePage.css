@@ -67,3 +67,17 @@ align-content: flex-end;
     text-align: center;
     color: rgb(199, 191, 191);
 }
+.shoppingbutton{
+    border: none;
+}
+.title{
+    font-size: 50px;
+}
+.categorytitle{
+    text-align: center;
+    margin-top:70px;
+}
+.shopping{
+    color: #52c7e2;
+    font-weight: bold;
+}
