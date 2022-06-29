@@ -81,3 +81,24 @@ align-content: flex-end;
     color: #52c7e2;
     font-weight: bold;
 }
+.categorycontainer1{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.categorycontainer2{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.category{
+    min-height: 200px;
+    width: 200px;
+    margin: 10px;
+    background-color: #dfdfdf;
+}
+
+.category:hover{
+    border: 3px solid black;
+}
