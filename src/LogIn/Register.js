@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useRef } from 'react'
+import './Register.css'
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3, 23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8, 24}$/;
@@ -49,10 +50,10 @@ const Register = () => {
 
     return (
         <div>
-            <section>
+            <section className='formwithtitle'>
                 <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live='assertive'>{errMsg}</p>
                 <h1>Register</h1>
-                <form>
+                <form className='formsection'>
                     <label htmlFor='username'>
                         Username:
                         <span className={validName ? "valid" : "hide"}>checked</span>
