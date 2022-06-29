@@ -9,15 +9,29 @@ const Navigation = () => {
             <nav className="topnav" id="myTopnav">
             <img className="logo" src={require('../Images/gomartlogo.png')} alt="image"/>
                 <ul>
-                    <Link to="/" className="active">Home</Link>
-                    <Link to="/news">Happy hour?</Link>
-                    <Link to="/userlogin" className='split'>
+                    <Link to="/" className="active">
+                        Home</Link>
+                    <Link to="/">
+                        Happy hour?
+                    </Link>
+                    <Link to="/Contact">
+                        Contact Us
+                    </Link>
+                    <Link to="/Aboutus">
+                        About Us
+                    </Link>
+                    <Link to="/login" className='split'>
                         Log In
                     </Link>
-                    <Link to="/basket" className='split'>Basket<FaShoppingBasket />
+                    <Link to="/register" className='split'>
+                        Register
+                    </Link>
+                    <Link to="/basket" className='split'>
+                        Basket
+                    <FaShoppingBasket />
                     </Link>
                     <input type="text" placeholder="Search.."></input>
-                    {/* <a href="javascript:void(0);" className="icon" onclick="myFunction()"> <FaBars /></a> */}
+                    <a href="javascript:void(0);" className="icon" onclick="myFunction()"> <FaBars /></a> 
                 </ul>
             </nav>
             <Outlet />
