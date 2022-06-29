@@ -1,16 +1,36 @@
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
 import './Nav.css'
-import { FaShoppingBasket, FaBars } from 'react-icons/fa';
+import { FaShoppingBasket, FaBars, FaSun } from 'react-icons/fa';
 
 const Navigation = () => {
+    const [darkMode, setDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    const json = localStorage.getItem("site-dark-mode");
+    const currentMode = JSON.parse(json);
+    if (currentMode) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+    const json = JSON.stringify(darkMode);
+    localStorage.setItem("site-dark-mode", json);
+  }, [darkMode]);
     return (
         <>
             <nav className="topnav" id="myTopnav">
             
                 <ul>
                 <Link to="/" className="active2">
-                        
                     <img className="logo" src={require('../Images/gomartlogo.png')} alt="image"/></Link>
 
                     <Link to="/" className="active">
@@ -18,9 +38,10 @@ const Navigation = () => {
                     <Link to="/">
                         Happy hour?
                     </Link>
+                    
                     <Link to="/login" className='split'>
                         Log In
-                    </Link>
+                    </Link> 
                     <Link to="/register" className='split'>
                         Register
                     </Link>
@@ -29,7 +50,10 @@ const Navigation = () => {
                     <FaShoppingBasket />
                     </Link>
                     <input type="text" placeholder="Search.."></input>
-                    <a href="javascript:void(0);" className="icon" onclick="myFunction()"> <FaBars /></a> 
+                    <a href="javascript:void(0);" className="icon" onclick="myFunction()"> <FaBars /></a>   
+                    
+                    <button onClick={() => setDarkMode(!darkMode)}> 
+                    <FaSun/></button>
                 </ul>
             </nav>
             <Outlet />
