@@ -2,6 +2,12 @@
     padding: 30px;
 }
 
+.dark {
+  background: #121212;
+  color: aliceblue;
+
+}
+
 
 /* Mobile phones: iPhones, Samsung phones, Google pixel */
 
