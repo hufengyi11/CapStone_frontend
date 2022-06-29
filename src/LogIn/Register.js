@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from './api/axios';
-import './Register.css'
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -61,7 +60,7 @@ const Register = () => {
                     withCredentials: true
                 }
             );
-            // remove console.logs before deployment
+            // TODO: remove console.logs before deployment
             console.log(JSON.stringify(response?.data));
             //console.log(JSON.stringify(response))
             setSuccess(true);
@@ -168,14 +167,13 @@ const Register = () => {
 
                         <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                     </form>
-                    
-                    {/* <p>
+                    <p>
                         Already registered?<br />
                         <span className="line">
+                            {/*put router link here*/}
                             <a href="#">Sign In</a>
                         </span>
-                    </p> */}
-
+                    </p>
                 </section>
             )}
         </>
