@@ -4,6 +4,15 @@ import './Nav.css'
 import { FaShoppingBasket, FaBars, FaSun } from 'react-icons/fa';
 
 const Navigation = () => {
+  
+  function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
     const [darkMode, setDarkMode] = React.useState(false);
 
   React.useEffect(() => {
@@ -50,6 +59,7 @@ const Navigation = () => {
                     <FaShoppingBasket />
                     </Link>
                     <input type="text" placeholder="Search.."></input>
+                    
                     <a href="javascript:void(0);" className="icon" onclick="myFunction()"> <FaBars /></a>   
                     
                     <button onClick={() => setDarkMode(!darkMode)}> 
@@ -59,14 +69,7 @@ const Navigation = () => {
             <Outlet />
         </>
     );
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
+    
 }
 
 export default Navigation;
