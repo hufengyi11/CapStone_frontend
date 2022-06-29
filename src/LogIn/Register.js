@@ -95,7 +95,24 @@ const Register = () => {
                         8 to 24 characters. <br />
                         Must include uppercase and lowercase letters, a number and a speical character. <br />
                         Allowed special characters: <span aria-label='exclamation mark'>!</span> <span aria-label="at symboe">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
-
+                    </p>
+                    <label htmlFor='confirm_pwd'>
+                        Confirm Password:
+                        <span className={validMatch && matchPwd ? "valid" : "hide"}>checked</span>
+                        <span className={validMatch || !matchPwd ? "hide" : "invalid"}>Invalid</span>
+                    </label>
+                    <input
+                        type="password"
+                        id="confirm_pwd"
+                        onChange={(e) => setMatchPwd(e.target.value)}
+                        required
+                        aria-invalid={validMatch ? "false" : "true"}
+                        aria-describedby="confirmnote"
+                        onFocus={() => setMatchFocus(true)}
+                        onBlur={() => setMatchFocus(false)}
+                    />
+                    <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
+                        Must match the first password input field.
                     </p>
                 </form>
             </section>

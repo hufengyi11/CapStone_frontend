@@ -23,6 +23,9 @@ const Navigation = () => {
                     <Link to="/login" className='split'>
                         Log In
                     </Link>
+                    <Link to="/register" className='split'>
+                        Register
+                    </Link>
                     <Link to="/basket" className='split'>
                         Basket
                     <FaShoppingBasket />
