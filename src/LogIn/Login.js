@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from "./context/AuthProvider";
 import { Outlet, Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 
 
@@ -104,6 +105,7 @@ const Login = () => {
                     </p>
                 </section>
             )}
+            <Footer/>
         </>
     )
 }

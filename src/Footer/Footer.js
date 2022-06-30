@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import './Footer.css'
 import { Link, useNavigate } from "react-router-dom";
 
+
 const Footer = () => {
 const navigate = useNavigate();
 
@@ -15,8 +16,8 @@ const navigate = useNavigate();
                         <h4>GoMart</h4>
                         <ul>
  
-                            <li><a href="#" onClick={() => {navigate('aboutus', {replace:true})}}>About us</a></li>
-                            <li><a href="#" onClick={() => {navigate('faqs', {replace:true})}}>FAQs</a></li>
+                            <li><a href="aboutus" onClick={() => {navigate('aboutus', {replace:true})}}>About us</a></li>
+                            <li><a href="faqs" onClick={() => {navigate('faqs', {replace:true})}}>FAQs</a></li>
                             <li><a href="#">Career</a></li>
                         </ul>
                     </ div>
@@ -32,18 +33,16 @@ const navigate = useNavigate();
                         <h4>Support</h4>
                         <ul>
                         
-                       <li><a href="#" onClick={() => {navigate('contact', {replace:true})}}> Contact Us</a></li>
-        
+                       <li><a href="contact" onClick={() => {navigate('contact', {replace:true})}}> Contact Us</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-col">
                         <h4>Vendor</h4>
                         <ul>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="login">Login</a></li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </footer>

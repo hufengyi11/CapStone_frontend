@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Basket from './Basket/Basket';
 import Home from './HomePage/Home';
 import Layout from './Layout/Layout.js';
 import AboutUs from './AboutUs/AboutUs';
@@ -9,7 +10,6 @@ import ContactUs from './ContactUs/ContactUs';
 import Login from './LogIn/Login';
 import Register from './LogIn/Register';
 import FirstHomePage from './FirstHomePage/FirstHomePage';
-
 
 function App (){
 
@@ -37,7 +37,6 @@ function App (){
 
   return (
     <>
-       
       <BrowserRouter>
         <Routes>
          
@@ -49,8 +48,8 @@ function App (){
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="faqs" element={<Faqs />} />
             <Route path="contact" element={<ContactUs />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="preferences" element={<Preferences />} />
+            <Route path="basket" element={<Basket />} />
+            
           </Route>
         </Routes>
       </BrowserRouter>

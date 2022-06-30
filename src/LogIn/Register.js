@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from './api/axios';
 import './Register.css'
 import { Outlet, Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
+
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -178,6 +180,7 @@ const Register = () => {
                     </p>
                 </section>
             )}
+            <Footer/>
         </>
     )
 }
