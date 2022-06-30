@@ -14,7 +14,7 @@ export default function Fruits() {
     }, []);
 
     const handleClick = (item) => {
-        console.log(item.id)
+        console.log(item)
     }
 
     return (

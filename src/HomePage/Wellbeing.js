@@ -16,7 +16,7 @@ export default function Wellbeing() {
     }, []);
 
     const handleClick = (item) => {
-        console.log(item.id)
+        console.log(item)
     }
 
     return (
@@ -29,6 +29,7 @@ export default function Wellbeing() {
                             <div className='ItemCard'></div>
                             {`${item.name}`}
                             <button onClick={() => handleClick(item)}>Add to cart</button>
+                            <span></span>
                         </div>
                     )
                 }

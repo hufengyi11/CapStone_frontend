@@ -6,7 +6,7 @@ export default function Drinks() {
     const [items, setItems] = useState([]);
 
     const handleClick = (item) => {
-        console.log(item.id)
+        console.log(item)
     }
 
     useEffect(() => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './Item.css'
 
-export default function Bakery() {
+export default function Bakery(item) {
     const [items, setItems] = useState([]);
     const [addToBasketItem, setAddToBasketItem] = useState();
 
@@ -15,7 +15,7 @@ export default function Bakery() {
     }, []);
 
     const handleClick = (item) => {
-        console.log(item.id)
+        console.log(item)
     }
     
 

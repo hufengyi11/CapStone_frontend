@@ -3,11 +3,11 @@ import './Basket.css'
 import Footer from "../Footer/Footer";
 import Bakery from '../HomePage/Bakery';
 
-const Basket = ({handleClick}) => {
+const Basket = (item) => {
     const [basketItems, setBasketItems] = useState([]);
 
     const addToBasket = (item) => {
-
+        console.log(item)
         setBasketItems([...basketItems, item])
     }
 
