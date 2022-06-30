@@ -1,0 +1,16 @@
+.Container{
+
+    display: flex;
+    height: 10vh;
+    width: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container-dark{
+    background-color: black;
+}
+
+.Container-light{
+    background-color: whitesmoke;
+}

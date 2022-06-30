@@ -1,0 +1,42 @@
+#contact-form {
+
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: grid;
+}
+#input,
+textarea {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+textarea {
+    height: 200px;
+    resize: vertical;
+    
+}
+
+#but {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background: lightskyblue;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.contacttitle{
+    font-size: 100px;
+    
+    font-weight: bold;
+    color: #36bad7;
+}
+.contact{
+    text-align: center;
+}
