@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './Basket.css'
 import Footer from "../Footer/Footer";
+import Bakery from '../HomePage/Bakery';
 
-const Basket = () => {
+const Basket = ({handleClick}) => {
     const [basketItems, setBasketItems] = useState([]);
 
     const addToBasket = (item) => {

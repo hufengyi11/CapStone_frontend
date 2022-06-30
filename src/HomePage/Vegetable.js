@@ -13,6 +13,10 @@ export default function Vegetable() {
             }).catch((err) => console.log(err));
     }, []);
 
+    const handleClick = (item) => {
+        console.log(item.id)
+    }
+
     return (
         <div className='ItemDisplay'>
             <h3>Vegetables</h3>
@@ -22,7 +26,7 @@ export default function Vegetable() {
                         <div key={item.id} className='ItemGroup'>
                             <div className='ItemCard'></div>
                             {`${item.name}`}
-                            <button>Add to cart</button>
+                            <button onClick={() => handleClick(item)}>Add to cart</button>
                         </div>
                     )
                 }
