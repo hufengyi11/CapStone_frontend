@@ -39,3 +39,8 @@
     margin: 0px;
 }
 
+.itemtitle{
+    width: 130px;
+    font-size: medium;
+    text-align: center;
+}

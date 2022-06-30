@@ -6,7 +6,7 @@ function ItemCard({ name, price, rating }) {
       <article className='itemcontainer'>
         <p>image</p>
       </article>
-      <h2>{name}</h2>
+      <h2 className='itemtitle'>{name}</h2>
       <p>£{price}</p>
       <p>{rating} star</p>
       <button className='Addtocart'>Add to Cart</button>
