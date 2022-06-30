@@ -45,10 +45,12 @@ function App (){
             <Route index element={<FirstHomePage />} />
             <Route path="shopping" element={<Home />} />
             <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />}/>
+            <Route path="register" element={<Register />} />
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="faqs" element={<Faqs />} />
             <Route path="contact" element={<ContactUs />} />
+            {/* <Route path="dashboard" element={<Dashboard />} />
+            <Route path="preferences" element={<Preferences />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
