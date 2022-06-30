@@ -1,11 +1,12 @@
-import { useRef, useState, useEffect, useContext } from 'react';
-import AuthContext from "./context/AuthProvider";
+import React, { useState, useRef, useEffect, useContext } from 'react'
+import Footer from '../Footer/Footer';
+import AuthContext from './context/AuthProvider';
+import './Login.css'
 import { Outlet, Link } from "react-router-dom";
-
-
-
 import axios from './api/axios';
+import { Link } from 'react-router-dom';
 const LOGIN_URL = '/auth';
+
 
 const Login = () => {
     const { setAuth } = useContext(AuthContext);
@@ -96,14 +97,13 @@ const Login = () => {
                     </form>
                     <p>
                         Need an Account?<br />
-                        <span className="line">
                         <Link to="/register">
-                                Sign up
-                            </Link>
-                        </span>
+                            Register
+                        </Link>
                     </p>
                 </section>
             )}
+            <Footer />
         </>
     )
 }
