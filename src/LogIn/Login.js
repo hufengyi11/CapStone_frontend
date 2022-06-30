@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 const LOGIN_URL = '/auth';
 
 
+
+
 const Login = () => {
     const { setAuth } = useContext(AuthContext);
     const userRef = useRef();
@@ -99,9 +101,7 @@ const Login = () => {
                     </form>
                     <p>
                         Need an Account?<br />
-                        <Link to="/register">
-                            Register
-                        </Link>
+                        <Link to="/register">Register</Link>
                     </p>
                 </section>
             )}
