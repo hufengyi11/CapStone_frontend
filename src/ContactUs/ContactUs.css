@@ -31,3 +31,12 @@ textarea {
     margin-bottom: 15px;
     text-transform: uppercase;
 }
+.contacttitle{
+    font-size: 100px;
+    
+    font-weight: bold;
+    color: #36bad7;
+}
+.contact{
+    text-align: center;
+}

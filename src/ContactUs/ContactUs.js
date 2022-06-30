@@ -36,7 +36,12 @@ const Contact = () => {
     }
 
     return (
-        <><div id="contact-form">
+        <>
+        <div className='contact'>
+            <h1 className='contacttitle'>Contact Us</h1>
+            <p>We want to make sure your GoMart experience is perfect. Contact us using the form below!</p>
+        </div>
+        <div id="contact-form">
             <label>Your Full Name:</label>
             <input
                 type="text"
