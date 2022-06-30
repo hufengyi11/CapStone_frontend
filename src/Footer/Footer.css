@@ -64,4 +64,7 @@ ul{
  .social{
      font-size: 35px;
  }
- 
+ .links{
+     text-decoration: none;
+     list-style: none;
+ }

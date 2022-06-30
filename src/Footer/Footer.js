@@ -15,9 +15,12 @@ const navigate = useNavigate();
                     <div className="footer-col" >
                         <h4>GoMart</h4>
                         <ul>
- 
+                        <Link className="links" to="/aboutus" >
                             <li><a href="aboutus" onClick={() => {navigate('aboutus', {replace:true})}}>About us</a></li>
+                            </Link>
+                            <Link className="links" to="/faqs" >
                             <li><a href="faqs" onClick={() => {navigate('faqs', {replace:true})}}>FAQs</a></li>
+                            </Link>
                             <li><a href="#">Career</a></li>
                         </ul>
                     </ div>
@@ -32,8 +35,9 @@ const navigate = useNavigate();
                     <div className="footer-col">
                         <h4>Support</h4>
                         <ul>
-                        
+                        <Link className="links" to="/contact" >
                        <li><a href="contact" onClick={() => {navigate('contact', {replace:true})}}> Contact Us</a></li>
+                       </Link>
                         </ul>
                     </div>
 
