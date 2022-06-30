@@ -51,10 +51,10 @@ const Navigation = () => {
                     <Link to="/login" className='split'>
                         Log In
                     </Link> 
-                    <Link to="/register" className='split'>
+                    <Link to="/register">
                         Register
                     </Link>
-                    <Link to="/basket" className='split'>
+                    <Link to="/basket">
                         Basket
                     <FaShoppingBasket />
                     </Link>

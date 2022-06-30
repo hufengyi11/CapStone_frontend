@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useContext } from 'react'
 import AuthContext from './context/AuthProvider';
 import './Login.css'
 import axios from './api/axios';
+import { Link } from 'react-router-dom';
 const LOGIN_URL = '/auth';
 
 
@@ -67,7 +68,7 @@ export default function Login() {
                     </p>
                 </section>
             ) : (
-                <section className='loginsection'>
+                <section className='login-wrapper'>
                     {/* error message, aria-live assertive have the screen reader sets to error message as soon as the error occurs */}
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live='assertive'>{errMsg}</p>
                     <h1 className='signinslogn'>Sign In</h1>
@@ -94,9 +95,9 @@ export default function Login() {
                     </form>
                     <p>
                         Need an Account?<br />
-                        <span className='line'>
-                            <a href='#'>Sign Up</a>
-                        </span>
+                        <Link to="/register">
+                            Register
+                        </Link>
                     </p>
                 </section>
             )}

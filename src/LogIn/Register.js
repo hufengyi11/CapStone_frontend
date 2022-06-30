@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useRef } from 'react'
+import { Link } from "react-router-dom";
+import './Register.css'
+
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3, 23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8, 24}$/;
@@ -49,14 +52,14 @@ const Register = () => {
 
     return (
         <div>
-            <section>
+            <section className='login-wrapper'>
                 <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live='assertive'>{errMsg}</p>
                 <h1>Register</h1>
                 <form>
                     <label htmlFor='username'>
                         Username:
-                        <span className={validName ? "valid" : "hide"}>checked</span>
-                        <span className={validName || !user ? "hide" : "invalid"}>Invalid</span>
+                        {/* <span className={validName ? "valid" : "hide"}>checked</span>
+                        <span className={validName || !user ? "hide" : "invalid"}>Invalid</span> */}
                     </label>
                     <input
                         type="text"
@@ -78,8 +81,8 @@ const Register = () => {
 
                     <label htmlFor='password'>
                         Password:
-                        <span className={validPwd ? "valid" : "hide"}>checked</span>
-                        <span className={validPwd || !pwd ? "hide" : "invalid"}>Invalid</span>
+                        {/* <span className={validPwd ? "valid" : "hide"}>checked</span>
+                        <span className={validPwd || !pwd ? "hide" : "invalid"}>Invalid</span> */}
                     </label>
                     <input
                         type="password"
@@ -98,8 +101,8 @@ const Register = () => {
                     </p>
                     <label htmlFor='confirm_pwd'>
                         Confirm Password:
-                        <span className={validMatch && matchPwd ? "valid" : "hide"}>checked</span>
-                        <span className={validMatch || !matchPwd ? "hide" : "invalid"}>Invalid</span>
+                        {/* <span className={validMatch && matchPwd ? "valid" : "hide"}>checked</span>
+                        <span className={validMatch || !matchPwd ? "hide" : "invalid"}>Invalid</span> */}
                     </label>
                     <input
                         type="password"
@@ -115,6 +118,12 @@ const Register = () => {
                         Must match the first password input field.
                     </p>
                 </form>
+                <p>
+                        Already have an Account?<br />
+                        <Link to="/login">
+                            Log In
+                        </Link>
+                    </p>
             </section>
         </div>
     )
