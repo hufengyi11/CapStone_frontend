@@ -4,6 +4,7 @@ import './Item.css'
 
 export default function Bakery() {
     const [items, setItems] = useState([]);
+    const [addToBasketItem, setAddToBasketItem] = useState();
 
     useEffect(() => {
         axios.get('http://localhost:8080/items/bakery')
@@ -12,6 +13,11 @@ export default function Bakery() {
                 setItems(items);
             }).catch((err) => console.log(err));
     }, []);
+
+    const handleClick = (item) => {
+        console.log(item.id)
+    }
+    
 
     return (
         <div className='ItemDisplay'>
@@ -22,7 +28,7 @@ export default function Bakery() {
                         <div key={item.id} className='ItemGroup'>
                             <div className='ItemCard'></div>
                             {`${item.name}`}
-                            <button>Add to cart</button>
+                            <button onClick={() => handleClick(item)}>Add to cart</button>
                         </div>
                     )
                 }

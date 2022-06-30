@@ -5,6 +5,10 @@ import './Item.css'
 export default function Dairy() {
     const [items, setItems] = useState([]);
 
+    const handleClick = (item) => {
+        console.log(item.id)
+    }
+
     useEffect(() => {
         axios.get('http://localhost:8080/items/dairy')
             .then(res => {
@@ -22,7 +26,7 @@ export default function Dairy() {
                         <div key={item.id} className='ItemGroup'>
                             <div className='ItemCard'></div>
                             {`${item.name}`}
-                            <button>Add to cart</button>
+                            <button onClick={() => handleClick(item)}>Add to cart</button>
                         </div>
                     )
                 }

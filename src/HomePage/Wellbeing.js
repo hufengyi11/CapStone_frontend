@@ -15,6 +15,10 @@ export default function Wellbeing() {
             .catch((err) => console.log(err));
     }, []);
 
+    const handleClick = (item) => {
+        console.log(item.id)
+    }
+
     return (
         <div className='ItemDisplay'>
             <h3>Well Being</h3>
@@ -24,7 +28,7 @@ export default function Wellbeing() {
                         <div key={item.id} className='ItemGroup'>
                             <div className='ItemCard'></div>
                             {`${item.name}`}
-                            <button>Add to cart</button>
+                            <button onClick={() => handleClick(item)}>Add to cart</button>
                         </div>
                     )
                 }
