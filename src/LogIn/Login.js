@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 
 
 import axios from './api/axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 const LOGIN_URL = '/auth';
 
 
