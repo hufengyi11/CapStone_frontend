@@ -1,25 +1,25 @@
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
 import './Item.css'
 
-export default function Drinks() {
+export default function Meat() {
     const [items, setItems] = useState([]);
 
-    const handleClick = (item) => {
-        console.log(item.id)
-    }
-
     useEffect(() => {
-        axios.get('http://localhost:8080/items/drinks')
+        axios.get('http://localhost:8080/items/meat')
             .then(res => {
                 const items = res.data;
                 setItems(items);
             }).catch((err) => console.log(err));
-    }, [])
+    }, []);
+
+    const handleClick = (item) => {
+        console.log(item)
+    }
 
     return (
         <div className='ItemDisplay'>
-            <h3>Drinks</h3>
+            <h3>Meat</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>

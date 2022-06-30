@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import './Register.css'
 import RegisterAPI from './RegisterAPI.js'
-import { faL } from "@fortawesome/free-solid-svg-icons";
+import Layout from '../Layout/Layout'
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -97,6 +97,7 @@ const Register = () => {
 
     return (
         <>
+        <Layout/>
             {success ? (
                 <section>
                     <h1>Success!</h1>
@@ -137,7 +138,7 @@ const Register = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             value={email}
                             required
-                            aria-invalid={validName ? "false" : "true"}
+                            aria-invalid={validEmail ? "false" : "true"}
                             aria-describedby="uidnote"
                             onFocus={() => setEmailFocus(true)}
                             onBlur={() => setEmailFocus(false)}

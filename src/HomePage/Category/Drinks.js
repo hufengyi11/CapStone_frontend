@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import './Item.css'
 
-export default function Fruits() {
+export default function Drinks() {
     const [items, setItems] = useState([]);
 
+    const handleClick = (item) => {
+        console.log(item)
+    }
+
     useEffect(() => {
-        axios.get('http://localhost:8080/items/fruit')
+        axios.get('http://localhost:8080/items/drinks')
             .then(res => {
                 const items = res.data;
                 setItems(items);
             }).catch((err) => console.log(err));
-    }, []);
-
-    const handleClick = (item) => {
-        console.log(item.id)
-    }
+    }, [])
 
     return (
         <div className='ItemDisplay'>
-            <h3>Fruits</h3>
+            <h3>Drinks</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>
@@ -31,8 +31,6 @@ export default function Fruits() {
                     )
                 }
             </div>
-
         </div>
-
     )
 }

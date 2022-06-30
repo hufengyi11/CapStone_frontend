@@ -14,7 +14,7 @@ export default function Toiletries() {
     }, []);
 
     const handleClick = (item) => {
-        console.log(item.id)
+        console.log(item)
     }
 
     return (
