@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './Item.css'
-import { Link } from 'react-router-dom';
 
 export default function Bakery() {
     const [items, setItems] = useState([]);
-    const [addToBasketItem, setAddToBasketItem] = useState();
-    const item = 
+    // const [addToBasketItem, setAddToBasketItem] = useState();
 
     useEffect(() => {
         axios.get('http://localhost:8080/items/bakery')

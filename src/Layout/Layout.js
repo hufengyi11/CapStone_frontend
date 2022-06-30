@@ -42,11 +42,6 @@ const Navigation = ({ searchFunction }) => {
     localStorage.setItem("site-dark-mode", json);
   }, [darkMode]);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    searchFunction(searchInput);
-  }
-
   return (
     <>
       <nav className="topnav" id="myTopnav">

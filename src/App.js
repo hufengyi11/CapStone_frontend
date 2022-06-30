@@ -40,7 +40,7 @@ function App (){
       <BrowserRouter>
         <Routes>
          
-          <Route path="/" element={<Layout />}>
+          <Route path="/">
             <Route index element={<FirstHomePage />} />
             <Route path="shopping" element={<Home />} />
             <Route path="login" element={<Login />} />
