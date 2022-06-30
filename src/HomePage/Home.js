@@ -1,27 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
-import Bakery from '../HomePage/Bakery';
-import Dairy from '../HomePage/Dairy.js';
-import Drinks from '../HomePage/Drinks.js';
-import Fruits from '../HomePage/Fruits.js';
-import Meat from '../HomePage/Meat';
-import Toiletries from '../HomePage/Toiletries';
-import Vegetable from '../HomePage/Vegetable';
-import Wellbeing from '../HomePage/Wellbeing';
-
+import Layout from '../Layout/Layout.js';
+import axios from '../LogIn/api/axios';
+import ItemCard from './ItemCard';
 
 export default function Home() {
+
+    const [items, setItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState();
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/items')
+            .then(res => {
+                const items = res.data;
+                setItems(items);
+            }).catch((err) => console.log(err));
+    }, [])
+
+    const ItemList = ({items}) => {
+        let mappedItem = items.map(item => {
+            return (
+                <ItemCard
+                    name={item.name}
+                    price={item.price}
+                    rating={item.rating}
+                    description={item.description}
+                    key={item.id}
+                />
+            )
+        })
+
+        return (
+            <>
+                {mappedItem}
+            </>
+        )
+    }
+
+    function searchFunction(searchInput) {
+        const filtered = items.filter(item => item.name.toLowerCase().includes(searchInput.toLowerCase()));
+        setFilteredItems(filtered);
+    }
+
     return (
         <>
-            <div className='ItemDisplay'></div>
-            <Vegetable />
-            <Bakery />
-            <Drinks />
-            <Dairy />
-            <Fruits />
-            <Meat />
-            <Toiletries />
-            <Wellbeing />
+            <Layout searchFunction={searchFunction} />
+            <div className='ItemDisplay'>
+                <ItemList items={filteredItems ? filteredItems : items} />
+            </div>
             <Footer />
         </>
 

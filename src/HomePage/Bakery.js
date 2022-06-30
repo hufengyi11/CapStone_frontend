@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './Item.css'
+import { Link } from 'react-router-dom';
 
-export default function Bakery(item) {
+export default function Bakery() {
     const [items, setItems] = useState([]);
     const [addToBasketItem, setAddToBasketItem] = useState();
+    const item = 
 
     useEffect(() => {
         axios.get('http://localhost:8080/items/bakery')
@@ -15,9 +17,10 @@ export default function Bakery(item) {
     }, []);
 
     const handleClick = (item) => {
+        item.preventDefault();
         console.log(item)
     }
-    
+
 
     return (
         <div className='ItemDisplay'>
@@ -27,7 +30,7 @@ export default function Bakery(item) {
                     items.map(item =>
                         <div key={item.id} className='ItemGroup'>
                             <div className='ItemCard'></div>
-                            {`${item.name}`}
+                            {item.name}
                             <button onClick={() => handleClick(item)}>Add to cart</button>
                         </div>
                     )
