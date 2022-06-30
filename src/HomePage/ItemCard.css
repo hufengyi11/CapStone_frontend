@@ -8,6 +8,7 @@
 
 .itemcontainer{
     width: 150px;
+    height: 120px;
     margin: 10px;
     border-radius: 10px;
     background: #D9D9D9;
@@ -35,5 +36,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    margin: 0px;
 }
 
