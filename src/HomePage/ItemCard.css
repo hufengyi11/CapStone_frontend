@@ -1,0 +1,19 @@
+.ItemListContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.itemcontainer{
+    width: 480px;
+    margin: 10px;
+    border-radius: 20px;
+    border: black;
+}
+
+.ItemCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+

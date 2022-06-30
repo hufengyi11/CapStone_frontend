@@ -3,6 +3,7 @@ import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
 import ItemCard from './ItemCard';
+import './ItemCard.css'
 
 export default function Home() {
 
@@ -31,9 +32,10 @@ export default function Home() {
         })
 
         return (
-            <>
-                {mappedItem}
-            </>
+            <div className='ItemListContainer'>
+                
+                <div className='ItemCardContainer'>{mappedItem}</div>
+            </div>
         )
     }
 
