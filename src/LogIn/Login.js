@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect, useContext } from 'react'
+import Footer from '../Footer/Footer';
 import AuthContext from './context/AuthProvider';
 import './Login.css'
 import axios from './api/axios';
 import { Link } from 'react-router-dom';
 const LOGIN_URL = '/auth';
-
 
 export default function Login() {
     const { setAuth } = useContext(AuthContext);
@@ -101,6 +101,7 @@ export default function Login() {
                     </p>
                 </section>
             )}
+            <Footer />
         </>
     )
 }

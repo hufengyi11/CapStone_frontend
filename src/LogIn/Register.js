@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Footer from '../Footer/Footer';
 import { useRef } from 'react'
 import { Link } from "react-router-dom";
 import './Register.css'
@@ -125,6 +126,7 @@ const Register = () => {
                         </Link>
                     </p>
             </section>
+            <Footer />
         </div>
     )
 }
