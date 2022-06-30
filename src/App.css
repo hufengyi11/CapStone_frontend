@@ -1,26 +1,82 @@
 body{
   font-family: 'Roboto' ,sans-serif;
 }
+
 .ItemDisplay{
-    padding: 30px;
+  padding: 30px;
 }
+
+/* darkmode section for all pages */
 
 .dark {
   background: rgb(56, 54, 54);
   color: aliceblue;
-
 }
 .dark textarea {
-background-color: rgb(56, 54, 54);
-color: white;
+  background-color: rgb(56, 54, 54);
+  color: rgb(255, 255, 255);
 }
 .dark input{
-background-color: rgb(56, 54, 54);
-color: aliceblue;
+  background-color: rgb(56, 54, 54);
+  color: aliceblue;
 }
 .dark .category{
   background-color: rgb(56, 54, 54);
+}
+.dark .footer{
+  background-color: rgb(56, 54, 54);
+}
 
+.dark .footer-col ul li a{
+  color: white;
+}
+
+.dark .footer-col h4{
+  color: white;
+}
+
+.dark .social{
+  font-size: 35px;
+  color: white;
+}
+
+.dark .topnav{
+  background-color: rgb(56, 54, 54);
+}
+
+.dark .topnav a.active{
+  background-color: rgb(56, 54, 54);
+  color: white;
+}
+
+.dark .topnav a {
+  color: white;
+}
+
+.dark .topnav a.split{
+  background-color: rgb(56, 54, 54);
+  color: white;
+}
+
+.dark ::placeholder{
+  color:black;
+  border: 1px solid white;
+  background-color: aliceblue;
+}
+
+.dark #username{
+  background-color: white;
+  color: black;
+}
+
+.dark #password{
+  background-color: white;
+  color: black;
+}
+ 
+.dark #confirm_pwd{
+  background-color: white;
+  color: black;
 }
 
 /* Mobile phones: iPhones, Samsung phones, Google pixel */
