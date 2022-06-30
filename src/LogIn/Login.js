@@ -15,6 +15,7 @@ const Login = () => {
 
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
+    const [email, setEmail] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
@@ -82,6 +83,17 @@ const Login = () => {
                             autoComplete="off"
                             onChange={(e) => setUser(e.target.value)}
                             value={user}
+                            required
+                        />
+
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            type="text"
+                            id="email"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
                             required
                         />
 

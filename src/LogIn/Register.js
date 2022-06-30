@@ -1,10 +1,10 @@
 import { useRef, useState, useEffect } from "react";
-import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from './api/axios';
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import './Register.css'
+import RegisterAPI from './RegisterAPI.js'
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -23,12 +23,21 @@ const Register = () => {
     const [validPwd, setValidPwd] = useState(false);
     const [pwdFocus, setPwdFocus] = useState(false);
 
+    const [email, setEmail] = useState('');
+    const [validEmail, setValidEmail] = useState(false);
+    const [emailFocus, setEmailFocus] = useState(false);
+
     const [matchPwd, setMatchPwd] = useState('');
     const [validMatch, setValidMatch] = useState(false);
     const [matchFocus, setMatchFocus] = useState(false);
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
+
+    const toRegister = async (user) => {
+        const result = await RegisterAPI(JSON.stringify(user))
+        console.log(result)
+    }
 
     useEffect(() => {
         userRef.current.focus();
@@ -83,6 +92,7 @@ const Register = () => {
             }
             errRef.current.focus();
         }
+        toRegister(user)
     }
 
     return (
@@ -114,6 +124,23 @@ const Register = () => {
                             aria-describedby="uidnote"
                             onFocus={() => setUserFocus(true)}
                             onBlur={() => setUserFocus(false)}
+                        />
+
+                        <label htmlFor="email">
+                            Email Address:
+                        </label>
+                        <input
+                            type="text"
+                            id="email"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            required
+                            aria-invalid={validName ? "false" : "true"}
+                            aria-describedby="uidnote"
+                            onFocus={() => setEmailFocus(true)}
+                            onBlur={() => setEmailFocus(false)}
                         />
 
                         <label htmlFor="password">
