@@ -4,7 +4,6 @@ import Categories from "./Categories";
 import Description from "./Description";
 import EnterAdress from "./EnterAddress";
 
-
 function FirstHomePage() {
     return(
         <>
