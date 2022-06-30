@@ -49,8 +49,6 @@ function App (){
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="faqs" element={<Faqs />} />
             <Route path="contact" element={<ContactUs />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="preferences" element={<Preferences />} />
           </Route>
         </Routes>
       </BrowserRouter>
