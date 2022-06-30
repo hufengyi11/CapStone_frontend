@@ -2,10 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from './api/axios';
-import './Register.css'
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
-
+import './Register.css'
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -65,9 +64,12 @@ const Register = () => {
                     withCredentials: true
                 }
             );
-            console.log(JSON.stringify(response?.data));
-            //console.log(JSON.stringify(response))
+            console.log(response?.data);
+            console.log(response?.accessToken);
+            console.log(JSON.stringify(response))
             setSuccess(true);
+            //clear state and controlled inputs
+            //need value attrib on inputs for this
             setUser('');
             setPwd('');
             setMatchPwd('');
@@ -97,7 +99,7 @@ const Register = () => {
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <h1>Register</h1>
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="username">
+                        <label htmlFor="username" className="formsection">
                             Username:
                             {/* <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
                             <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} /> */}
@@ -116,11 +118,12 @@ const Register = () => {
                             onBlur={() => setUserFocus(false)}
                         />
                         <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
+                            {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
                             4 to 24 characters.<br />
                             Must begin with a letter.<br />
                             Letters, numbers, underscores, hyphens allowed.
                         </p>
+
 
                         <label htmlFor="password">
                             Password:
@@ -139,7 +142,7 @@ const Register = () => {
                             onBlur={() => setPwdFocus(false)}
                         />
                         <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
+                            {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
                             8 to 24 characters.<br />
                             Must include uppercase and lowercase letters, a number and a special character.<br />
                             Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
@@ -163,7 +166,7 @@ const Register = () => {
                             onBlur={() => setMatchFocus(false)}
                         />
                         <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
-                            <FontAwesomeIcon icon={faInfoCircle} />
+                            {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
                             Must match the first password input field.
                         </p>
 
@@ -171,12 +174,9 @@ const Register = () => {
                     </form>
                     <p>
                         Already registered?<br />
-                        <span className="line">
-                            {/*put router link here*/}
-                            <Link to="/login">
-                                Log In
-                            </Link>
-                        </span>
+                        <Link to="/login">
+                            Log In
+                        </Link>
                     </p>
                 </section>
             )}

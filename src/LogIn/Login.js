@@ -6,7 +6,9 @@ import Footer from "../Footer/Footer";
 
 
 import axios from './api/axios';
+import { Link } from 'react-router-dom';
 const LOGIN_URL = '/auth';
+
 
 const Login = () => {
     const { setAuth } = useContext(AuthContext);
@@ -70,10 +72,10 @@ const Login = () => {
                     </p>
                 </section>
             ) : (
-                <section>
+                <section className='login-wrapper'>
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <h1>Sign In</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className='loginsection'>
                         <label htmlFor="username">Username:</label>
                         <input
                             type="text"
@@ -97,15 +99,13 @@ const Login = () => {
                     </form>
                     <p>
                         Need an Account?<br />
-                        <span className="line">
                         <Link to="/register">
-                                Sign up
-                            </Link>
-                        </span>
+                            Register
+                        </Link>
                     </p>
                 </section>
             )}
-            <Footer/>
+            <Footer />
         </>
     )
 }
