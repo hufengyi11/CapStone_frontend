@@ -12,13 +12,18 @@ export default function Dairy() {
                 setItems(items);
             }).catch((err) => console.log(err));
     }, []);
+
     return (
         <div className='ItemDisplay'>
             <h3>Dairy</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>
-                        <button className='ItemCard' key={item.id}>{`${item.name}`}</button>
+                        <div key={item.id} className='ItemGroup'>
+                            <div className='ItemCard'></div>
+                            {`${item.name}`}
+                            <button>Add to cart</button>
+                        </div>
                     )
                 }
             </div>

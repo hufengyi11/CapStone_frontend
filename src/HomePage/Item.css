@@ -14,3 +14,12 @@
     gap: 40px;
     padding: 40px;
 }
+.ItemDisplay{
+    display: flex;
+    flex-direction: column;
+}
+
+.ItemGroup{
+    display: flex;
+    flex-direction: column;
+}

@@ -19,7 +19,11 @@ export default function Bakery() {
             <div className='ItemList'>
                 {
                     items.map(item =>
-                        <button className='ItemCard' key={item.id}>{`${item.name}`}</button>
+                        <div key={item.id} className='ItemGroup'>
+                            <div className='ItemCard'></div>
+                            {`${item.name}`}
+                            <button>Add to cart</button>
+                        </div>
                     )
                 }
             </div>
