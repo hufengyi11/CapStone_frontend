@@ -37,30 +37,30 @@ const Navigation = () => {
     return (
         <>
             <nav className="topnav" id="myTopnav">
-            
                 <ul>
                 <Link to="/" className="active2">
                     <img className="logo" src={require('../Images/gomartlogo.png')} alt="image"/></Link>
-
                     <Link to="/" className="active">
-                        Home</Link>
+                      Home
+                    </Link>
+
                     <Link to="/">
-                        Happy hour?
+                      Happy hour?
                     </Link>
                     
                     <Link to="/login" className='split'>
-                        Log In
+                      Log In
                     </Link> 
-                    <Link to="/register">
-                        Register
+                    <Link to="/register" className='split'>
+                      Register
                     </Link>
-                    <Link to="/basket">
-                        Basket
+                    <Link to="/basket" className='split'>
+                      Basket
                     <FaShoppingBasket />
                     </Link>
-                    <input type="text" placeholder="Search.."></input>
+                    <input type="text" placeholder="Search.." className='texts'></input>
                     
-                    <a href="javascript:void(0);" className="icon" onclick="myFunction()"> <FaBars /></a>   
+                    <a href="javascript:void(0);" className="icon" onclick="myFunction()"><FaBars /></a>   
                     
                     <button onClick={() => setDarkMode(!darkMode)}> 
                     <FaSun/></button>

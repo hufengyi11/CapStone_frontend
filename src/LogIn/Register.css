@@ -1,4 +1,13 @@
 .login-wrapper {
+
+.formsection {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.formwithtitle {
+
     display: flex;
     flex-direction: column;
     align-items: center;
