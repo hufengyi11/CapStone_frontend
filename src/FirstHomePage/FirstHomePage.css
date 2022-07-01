@@ -6,36 +6,25 @@ align-content: flex-end;
 margin-top: 50px;
 justify-content: flex-start;
 align-content: stretch;
-
+margin-left: 30px;
 }
 
 .flexbox-item-1{
-    min-height: 300px;
+    min-height: 200px;
     width: 600px;
     margin: 10px;
-    border: 3px solid #333;
     background-color: #52c7e2;
     
 }
 
-.flexbox-item-2{
-    min-height: 200px;
-    width: 200px;
-    margin: 10px;
-    border: 3px solid #333;
-    background-color: #dfdfdf;
-}
 
-.flexbox-item-3 {
-    min-height: 300px;
-    width: 200px;
-    margin: 10px;
-    border: 3px solid #333;
-    background-color: #dfdfdf;
-}
 .imagecontainer{
     justify-content: center;
     align-items: stretch;
+    min-height: 300px;
+    width: 700px;
+    
+    margin: 10px;
 }
 
 .delivery{
@@ -120,4 +109,7 @@ align-content: stretch;
     padding: 50px;
     font-size: 50px;
     color: #36bad7;
+}
+.reviews{
+    margin-left: 5px;
 }
