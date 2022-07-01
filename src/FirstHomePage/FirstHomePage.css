@@ -6,11 +6,11 @@ align-content: flex-end;
 margin-top: 50px;
 justify-content: flex-start;
 align-content: stretch;
-
+margin-left: 30px;
 }
 
 .flexbox-item-1{
-    min-height: 300px;
+    min-height: 200px;
     width: 600px;
     margin: 10px;
     background-color: #52c7e2;
@@ -21,8 +21,9 @@ align-content: stretch;
 .imagecontainer{
     justify-content: center;
     align-items: stretch;
-    min-height: 200px;
-    width: 200px;
+    min-height: 300px;
+    width: 700px;
+    
     margin: 10px;
 }
 
