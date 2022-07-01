@@ -2,27 +2,34 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './Item.css'
 
-export default function Bakery() {
+export default function Wellbeing() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/items/bakery')
+        axios
+            .get('http://localhost:8080/items/wellbeing')
             .then(res => {
                 const items = res.data;
                 setItems(items);
-            }).catch((err) => console.log(err));
+            })
+            .catch((err) => console.log(err));
     }, []);
+
+    const handleClick = (item) => {
+        console.log(item)
+    }
 
     return (
         <div className='ItemDisplay'>
-            <h3>Bakery</h3>
+            <h3>Well Being</h3>
             <div className='ItemList'>
                 {
                     items.map(item =>
                         <div key={item.id} className='ItemGroup'>
                             <div className='ItemCard'></div>
                             {`${item.name}`}
-                            <button>Add to cart</button>
+                            <button onClick={() => handleClick(item)}>Add to cart</button>
+                            <span></span>
                         </div>
                     )
                 }

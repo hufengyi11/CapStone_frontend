@@ -4,6 +4,7 @@ import AuthContext from "./context/AuthProvider";
 import Footer from "../Footer/Footer";
 import axios from './api/axios';
 import { Link } from 'react-router-dom';
+import Layout from '../Layout/Layout'
 const LOGIN_URL = '/auth';
 
 
@@ -62,6 +63,7 @@ const Login = () => {
 
     return (
         <>
+            <Layout />
             {success ? (
                 <section>
                     <h1>You are logged in!</h1>
