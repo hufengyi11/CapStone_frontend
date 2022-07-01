@@ -4,7 +4,7 @@ const Reviews = () => {
     return(
         <>
         <div>
-        <img className="reviews" src={require("/Users/mohamedismail/coursework/week_12/day_1/CapStone_frontend/src/Images/reviews.png")}  alt="reviews"/>
+        <img className="reviews" src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/reviews.png")}  alt="reviews"/>
         </div>
         </>
     );

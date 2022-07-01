@@ -27,26 +27,26 @@ const EnterAdress = () => {
             <div className="flexbox-item-2">
                 <Carousel>
                 <CarouselItem>
-                <img src={require("/Users/mohamedismail/coursework/week_12/day_1/CapStone_frontend/src/Images/bread.webp")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/bread.webp")}  alt="Minions" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/mohamedismail/coursework/week_12/day_1/CapStone_frontend/src/Images/milk.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/milk.jpeg")}  alt="Minions" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/mohamedismail/coursework/week_12/day_1/CapStone_frontend/src/Images/egss.webp")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/egss.webp")}  alt="Minions" width="700px" height="400px"/>
                 </CarouselItem>
             </Carousel>
             </div>
             <div className="flexbox-item-3">
             <Carousel>
                 <CarouselItem>
-                <img src={require("/Users/mohamedismail/coursework/week_12/day_1/CapStone_frontend/src/Images/cleaning.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/cleaning.jpeg")}  alt="Minions" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/mohamedismail/coursework/week_12/day_1/CapStone_frontend/src/Images/toothpaste.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/toothpaste.jpeg")}  alt="Minions" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/mohamedismail/coursework/week_12/day_1/CapStone_frontend/src/Images/fruits.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/fruits.jpeg")}  alt="Minions" width="700px" height="400px"/>
                 </CarouselItem>
             </Carousel>
 
