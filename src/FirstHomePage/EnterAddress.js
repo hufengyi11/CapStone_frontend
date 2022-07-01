@@ -8,7 +8,7 @@ import Geolocation from "./Geolocation";
 
 
 const EnterAdress = () => {
-
+    const location = Geolocation();
     const navigate = useNavigate();
     return(
         <>
@@ -17,7 +17,10 @@ const EnterAdress = () => {
             <div className="flexbox-item-1">
             <h1 className="delivery">Daily groceries delivered to you in minutes.</h1>
             
-            <input className="input" type="text" placeholder="Enter delivery address">
+            <input className="input" type="text" placeholder="Enter delivery address" onClick={()=>{
+                   console.log(location.loaded ? JSON.stringify(location): "location data not available yet.")
+                }}>
+                
                 </input>
                 
             <button type="submit" className="arrowbutton" onClick={() => {navigate('shopping', {replace:true})}}>
