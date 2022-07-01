@@ -38,15 +38,22 @@ background-color: hsl(191, 71%, 60%);
     height: 20px;
     margin-left: 30px;
     margin-bottom: 40px;
+    border-radius: 15px;
+    border:hsl(191, 71%, 60%)
 }
 
-.button {
+.arrowbutton {
     border-radius: 15px;
-    border: 0.1px solid black;
-    width: 30px;
-    height: 30px;
+    border: 0.01px solid hsl(191, 71%, 60%);
+    width: 20px;
+    height: 26px;
     background-color: white;
+    position: relative;
+    right: 30px;
+    top: 5px
+
 }
+
 
 .descriptioncontainer{
     display: flex;
