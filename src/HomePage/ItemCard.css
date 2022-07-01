@@ -24,11 +24,13 @@
 }
 
 .Addtocart{
-    background-color: hotpink;
-    width: 130px;
+    background-color: rgb(26, 215, 222);
+    width: 40px;
     height: 40px;
     font-size: large;
-    border-radius: 10px;
+    border-radius: 50%;
+    color: white;
+
 }
 
 .itemcontainerwithcart{

@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaCartPlus, FaPlus, FaPlusCircle } from "react-icons/fa";
 
 function ItemCard({ name, price, rating }) {
   return (
@@ -9,7 +10,7 @@ function ItemCard({ name, price, rating }) {
       <h2>{name}</h2>
       <p>£{price}</p>
       <p>{rating} star</p>
-      <button className='Addtocart'>Add to Cart</button>
+      <button className='Addtocart'><FaPlus /></button>
     </div>
 
   )
