@@ -47,7 +47,7 @@ margin-left: 30px;
 
 .descriptioncontainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .itemnumber{
@@ -84,14 +84,14 @@ margin-left: 30px;
 }
 .categorycontainer1{
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     margin-bottom: 50px;
     text-align: center;
     
 }
 .categorycontainer2{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -112,5 +112,5 @@ margin-left: 30px;
 }
 .reviews{
     margin-left: 5px;
-    width: 1910px
+    width: 1910px;
 }
