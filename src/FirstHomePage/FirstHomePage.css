@@ -13,7 +13,6 @@ align-content: stretch;
     min-height: 300px;
     width: 600px;
     margin: 10px;
-    border: 3px solid #333;
     background-color: #52c7e2;
     
 }
@@ -22,16 +21,12 @@ align-content: stretch;
     min-height: 200px;
     width: 200px;
     margin: 10px;
-    border: 3px solid #333;
-    background-color: #dfdfdf;
 }
 
 .flexbox-item-3 {
-    min-height: 300px;
+    min-height: 200px;
     width: 200px;
     margin: 10px;
-    border: 3px solid #333;
-    background-color: #dfdfdf;
 }
 .imagecontainer{
     justify-content: center;
