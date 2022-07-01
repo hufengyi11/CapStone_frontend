@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import './Nav.css'
 import { FaShoppingBasket, FaBars, FaSun } from 'react-icons/fa';
 
+
 const Navigation = () => {
   
   function myFunction() {
