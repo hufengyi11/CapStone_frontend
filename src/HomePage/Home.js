@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
-import ItemCard from './ItemCard';
 import './ItemCard.css'
 
 export default function Home() {
 
     const [items, setItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState();
+    const [basketItem, setBasketItem] = useState();
 
     useEffect(() => {
         axios.get('http://localhost:8080/items')
@@ -18,7 +18,26 @@ export default function Home() {
             }).catch((err) => console.log(err));
     }, [])
 
-    const ItemList = ({items}) => {
+    function ItemCard({ name, price, rating, id }) {
+        return (
+            <div className='itemcontainerwithcart'>
+                <article className='itemcontainer'>
+                    <p>image</p>
+                </article>
+                <h2 className='itemtitle'>{name}</h2>
+                <p>£{price}</p>
+                <p>{rating} star</p>
+                <button id={id} className='Addtocart' onClick={handelAddToCard}>Add to Cart</button>
+            </div>
+
+        )
+    }
+
+    function handelAddToCard() {
+        console.log('button clicked')
+    }
+
+    const ItemList = ({ items }) => {
         let mappedItem = items.map(item => {
             return (
                 <ItemCard
@@ -33,7 +52,7 @@ export default function Home() {
 
         return (
             <div className='ItemListContainer'>
-                
+
                 <div className='ItemCardContainer'>{mappedItem}</div>
             </div>
         )
@@ -54,4 +73,18 @@ export default function Home() {
         </>
 
     )
+
+
+        // function ItemDetail(item) {
+    //     return (
+    //         <>
+    //             <h1>{item.name}</h1>
+    //             <p>{item.price}</p>
+    //             <p>{item.detail}</p>
+    //             <p>{item.rating}</p>
+    //             <p>{item.store_id}</p>
+    //         </>
+
+    //     )
+    // }
 }
