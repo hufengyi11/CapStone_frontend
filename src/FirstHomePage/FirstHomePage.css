@@ -17,20 +17,13 @@ align-content: stretch;
     
 }
 
-.flexbox-item-2{
-    min-height: 200px;
-    width: 200px;
-    margin: 10px;
-}
 
-.flexbox-item-3 {
-    min-height: 200px;
-    width: 200px;
-    margin: 10px;
-}
 .imagecontainer{
     justify-content: center;
     align-items: stretch;
+    min-height: 200px;
+    width: 200px;
+    margin: 10px;
 }
 
 .delivery{
