@@ -4,6 +4,7 @@ import { Button } from "@material-ui/core";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Carousel, { CarouselItem } from "./Carousel/Carousel";
+import Geolocation from "./Geolocation";
 
 
 const EnterAdress = () => {
@@ -16,9 +17,12 @@ const EnterAdress = () => {
             <div className="flexbox-item-1">
             <h1 className="delivery">Daily groceries delivered to you in minutes.</h1>
             
-            <input className="input" type="text" placeholder="Enter delivery address"></input>
-            <Button><button type="submit" className="button" onClick={() => {navigate('shopping', {replace:true})}}><FaArrowRight /></button>
-            </Button>
+            <input className="input" type="text" placeholder="Enter delivery address">
+                </input>
+                
+            <button type="submit" className="arrowbutton" onClick={() => {navigate('shopping', {replace:true})}}>
+                <FaArrowRight />
+                </button>
             </div>
             
                 

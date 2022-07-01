@@ -8,7 +8,7 @@ const Description = () => {
         <div className="itemnumber">
             
             <h2 className="descriptionicons"><div><FaShoppingBag /></div>
-                Plenty of items to choose from!</h2>
+                Plenty of items!</h2>
             <p>From cleaning supplies and over-the-counter medicine to food, drinks, electronics,
                  baby essentials and more.</p>
         </div>
