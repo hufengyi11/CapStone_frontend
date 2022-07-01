@@ -34,26 +34,26 @@ const EnterAdress = () => {
             <div className="flexbox-item-2">
                 <Carousel>
                 <CarouselItem>
-                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/bread.webp")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("../Images/bread.webp")}  alt="bread" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/milk.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("../Images/milk.jpeg")}  alt="milk" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/egss.webp")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("../Images/egss.webp")}  alt="eggs" width="700px" height="400px"/>
                 </CarouselItem>
             </Carousel>
             </div>
             <div className="flexbox-item-3">
             <Carousel>
                 <CarouselItem>
-                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/cleaning.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("../Images/cleaning.jpeg")}  alt="cleaning" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/toothpaste.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("../Images/toothpaste.jpeg")}  alt="toothpaste" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("/Users/hamzaabdilahi/coursework/fullStackProject/CapStone_frontend/src/Images/fruits.jpeg")}  alt="Minions" width="700px" height="400px"/>
+                <img src={require("../Images/fruits.jpeg")}  alt="fruits" width="700px" height="400px"/>
                 </CarouselItem>
             </Carousel>
 
