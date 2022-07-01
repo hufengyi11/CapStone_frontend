@@ -7,10 +7,14 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
+import Navigation from "../Layout/Layout";
 const AboutUs = () => {
     const navigate = useNavigate;
     return(
         <>
+        <div>
+            <Navigation />
+        </div>
             <div className="about" >
                 <div className="aboutus">
                     <h1 className="aboutustitle">About Us</h1>

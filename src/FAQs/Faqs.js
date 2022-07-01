@@ -6,11 +6,15 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
+import Navigation from "../Layout/Layout";
 
 const Faqs= () =>{
     
     return(
         <>
+        <div>
+            <Navigation />
+        </div>
             <h1 className="names">GoMart FAQs</h1>
             <div>
                 <Accordion className="accordion">
