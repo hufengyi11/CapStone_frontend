@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import './ContactUs.css'
 import Footer from "../Footer/Footer";
+import Navigation from '../Layout/Layout';
 
 
 
@@ -38,6 +39,9 @@ const Contact = () => {
 
     return (
         <>
+        <div>
+            <Navigation />
+        </div>
         <div className='contact'>
             <h1 className='contacttitle'>Contact Us</h1>
             <p>We want to make sure your GoMart experience is perfect. Contact us using the form below!</p>
