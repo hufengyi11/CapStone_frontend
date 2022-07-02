@@ -16,12 +16,9 @@ function BestSeller() {
     }, [])
 
     const fiveStarItems = items.filter(i => i.rating == 5)
-    const listItem = fiveStarItems.map((item) => {
-        <li key={item.id}>{item.name}</li>
-    })
 
     function click(){
-        console.log(listItem)
+        console.log(fiveStarItems)
     }
 
 
