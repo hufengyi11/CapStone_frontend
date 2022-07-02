@@ -175,13 +175,14 @@ const Register = () => {
                             onBlur={() => setMatchFocus(false)}
                         />
                         <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
-                    </form>
-                    <p>
+                        <p>
                         Already registered?<br />
                         <Link to="/login">
                             Log In
                         </Link>
                     </p>
+                    </form>
+                    
                 </section>
             )}
             <Footer />
