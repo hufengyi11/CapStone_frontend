@@ -2,6 +2,7 @@ import Layout from "../Layout/Layout"
 import Footer from "../Footer/Footer"
 import React, { useEffect, useState } from 'react'
 import axios from "../LogIn/api/axios";
+import "./BestSeller.css"
 
 function BestSeller() {
     const [items, setItems] = useState([])
@@ -19,11 +20,15 @@ function BestSeller() {
         <li key={item.id}>{item.name}</li>
     })
 
+    function click(){
+        console.log(listItem)
+    }
+
 
     return (
         <div>
             <Layout />
-            <ul>{listItem}</ul>
+            <button className="itemlist" onClick={click}>Clicke me</button>
             <Footer />
         </div>
     )
