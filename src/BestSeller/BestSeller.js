@@ -69,8 +69,7 @@ function BestSeller() {
     return (
         <div>
             <Layout searchFunction={searchFunction} />
-            {/* <Layout /> */}
-            <div className="padding"></div>
+             <div className="padding"></div>
             <div className='ItemDisplay'>
                 <ItemList items={fiveStarItems} handelAddToCard={AddToCart} />
             </div>
