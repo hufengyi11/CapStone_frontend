@@ -24,7 +24,7 @@ const EnterAdress = () => {
                 </input>
                 
             <button type="submit" className="arrowbutton" onClick={() => {navigate('shopping', {replace:true})}}>
-                <FaArrowRight />
+                <div className="arrow"><FaArrowRight /></div>
                 </button>
             </div>
             
@@ -47,13 +47,13 @@ const EnterAdress = () => {
             <div className="flexbox-item-3">
             <Carousel>
                 <CarouselItem>
-                <img src={require("../Images/cleaning.jpeg")}  alt="cleaning" width="700px" height="400px"/>
+                <img className="images" src={require("../Images/cleaning.jpeg")}  alt="cleaning" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("../Images/toothpaste.jpeg")}  alt="toothpaste" width="700px" height="400px"/>
+                <img className="images" src={require("../Images/toothpaste.jpeg")}  alt="toothpaste" width="700px" height="400px"/>
                 </CarouselItem>
                 <CarouselItem>
-                <img src={require("../Images/fruits.jpeg")}  alt="fruits" width="700px" height="400px"/>
+                <img className="images" src={require("../Images/fruits.jpeg")}  alt="fruits" width="700px" height="400px"/>
                 </CarouselItem>
             </Carousel>
 
