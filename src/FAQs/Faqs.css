@@ -1,4 +1,20 @@
 /* Style the buttons that are used to open and close the accordion panel */
+.faqtitle{
+  font-size: 100px;
+  font-weight: bold;
+  color: #36bad7;
+}
+.faq{
+  text-align:center;
+  overflow: hidden;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    margin-bottom: 150px;
+}
 .names{
     text-align: center;
     

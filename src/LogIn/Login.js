@@ -108,11 +108,12 @@ const Login = () => {
                             required
                         />
                         <button>Sign In</button>
-                    </form>
-                    <p>
+                        <p>
                         Need an Account?<br />
                         <Link to="/register">Register</Link>
                     </p>
+                    </form>
+                    
                 </section>
             )}
             <Footer />

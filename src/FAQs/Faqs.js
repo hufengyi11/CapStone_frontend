@@ -15,8 +15,9 @@ const Faqs= () =>{
         <div>
             <Navigation />
         </div>
-            <h1 className="names">GoMart FAQs</h1>
-            <div>
+        <div className="faq">
+            <div className="faqs">
+            <h1 className="faqtitle">GoMart FAQs</h1>
                 <Accordion className="accordion">
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
@@ -132,6 +133,8 @@ const Faqs= () =>{
                     </AccordionDetails>
                 </Accordion>
             </div>
+            </div>
+            
 
             <Footer />        
         </>
