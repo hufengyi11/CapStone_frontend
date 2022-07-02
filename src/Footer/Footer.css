@@ -1,30 +1,31 @@
-
 .container{
 	max-width: 1170px;
 	margin:auto;
 }
-
 
 .row{
 	display: flex;
 	flex-wrap: wrap;
     flex-direction: row;
 }
+
 .footer{
     overflow: hidden;
     background-color: #e9e9e9;
     margin-top: -70px;
 }
+
 ul{
 	list-style: none;
     
 }
+
 .footer-col{
     width: 25%;
     padding: -1px 15px;
     text-align: center;
-    
  }
+
  .footer-col h4{
      font-size: 25px;
      color: black;
@@ -38,6 +39,7 @@ ul{
      left: 15px;
      font-weight: bold;
  }
+
  .footer-col h4::before{
      content: '';
      position: absolute;
@@ -48,9 +50,11 @@ ul{
      box-sizing: border-box;
      width: 50px;
  }
+
  .footer-col ul li:not(:last-child){
      margin-bottom: 10px;
  }
+
  .footer-col ul li a{
      font-size: 16px;
      text-transform: capitalize;
@@ -62,36 +66,45 @@ ul{
      transition: all 0.3s ease;
      margin-bottom: 10px;
  }
+
  .footer-col ul li a:hover{
     background-color: hsl(191, 71%, 60%);
     color: black;
  }
+
  .gomartfooter{
      position: relative;
      top: 80px
  }
+
  .social{
      font-size: 35px;
  }
+ 
  .links{
      text-decoration: none;
      list-style: none;
  }
+
  .socialmedia{
     margin-top: 100px;
     display: flex;
     float: right;
     margin-right: 450px;
  }
+
  .facebook{
      margin-right: 30px;
  }
+
  .twitter{
     margin-right: 30px;
  }
+
  .flag{
      font-size: 10px;
  }
+
  .privacy{
     margin-top: 100px;
     display: flex;
@@ -103,9 +116,11 @@ ul{
      left: 100px;
      color: rgb(76, 76, 76)
  }
+
  .privnotice{
     margin-left: 30px;
  }
+
  .terms{
      margin-left: 30px;
  }

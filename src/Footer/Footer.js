@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBeer, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import ReactDOM from 'react-dom';
 import './Footer.css'
 import { Link, useNavigate } from "react-router-dom";
@@ -48,7 +48,9 @@ const navigate = useNavigate();
                         </ul>
                         
                         <h4>Language</h4>
-                       <div className="flag"><GB /></div>
+                       <div className="flag">
+                           <a className="flag"><GB/></a>
+                        </div>
                     </div>
 
                     <div className="footer-col">
