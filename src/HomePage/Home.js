@@ -6,10 +6,6 @@ import './ItemCard.css'
 
 export default function Home() {
 
-    const [items, setItems] = useState([]);
-    const [filteredItems, setFilteredItems] = useState();
-    const [basketItem, setBasketItem] = useState();
-
     useEffect(() => {
         axios.get('http://localhost:8080/items')
             .then(res => {
@@ -18,7 +14,11 @@ export default function Home() {
             }).catch((err) => console.log(err));
     }, [])
 
-    function ItemCard({ name, price, rating, id }) {
+    const [items, setItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState();
+    const [basketItem, setBasketItem] = useState([]);
+
+    const ItemCard = ({ name, price, rating, handelAddToCard }) => {
         return (
             <div className='itemcontainerwithcart'>
                 <article className='itemcontainer'>
@@ -27,35 +27,36 @@ export default function Home() {
                 <h2 className='itemtitle'>{name}</h2>
                 <p>£{price}</p>
                 <p>{rating} star</p>
-                <button id={id} className='Addtocart' onClick={handelAddToCard}>Add to Cart</button>
+                <button className='AddtocartButton' onClick={(id) => handelAddToCard(id.target.parentElement.childNodes.item(1).innerText)}>+</button>
             </div>
-
         )
     }
 
-    function handelAddToCard() {
-        console.log('button clicked')
-    }
-
-    const ItemList = ({ items }) => {
+    const ItemList = ({ items, handelAddToCard }) => {
         let mappedItem = items.map(item => {
             return (
                 <ItemCard
                     name={item.name}
                     price={item.price}
                     rating={item.rating}
-                    description={item.description}
                     key={item.id}
+                    handelAddToCard={handelAddToCard}
                 />
             )
         })
 
         return (
             <div className='ItemListContainer'>
-
                 <div className='ItemCardContainer'>{mappedItem}</div>
             </div>
         )
+    }
+
+    const AddToCart = (input) => {
+        const purchasingItem = items.filter(item => item.name == input);
+        console.log(purchasingItem)
+        basketItem.push(purchasingItem)
+        console.log(basketItem)
     }
 
     function searchFunction(searchInput) {
@@ -66,8 +67,13 @@ export default function Home() {
     return (
         <>
             <Layout searchFunction={searchFunction} />
+            <div className='BasketContainer'>
+                <h2>Basket</h2>
+                <p>can't show stuff, but can print out in console</p>
+                {/* {basketItem.map(item => item.name)} */}
+            </div>
             <div className='ItemDisplay'>
-                <ItemList items={filteredItems ? filteredItems : items} />
+                <ItemList items={filteredItems ? filteredItems : items} handelAddToCard={AddToCart} />
             </div>
             <Footer />
         </>
@@ -75,16 +81,5 @@ export default function Home() {
     )
 
 
-        // function ItemDetail(item) {
-    //     return (
-    //         <>
-    //             <h1>{item.name}</h1>
-    //             <p>{item.price}</p>
-    //             <p>{item.detail}</p>
-    //             <p>{item.rating}</p>
-    //             <p>{item.store_id}</p>
-    //         </>
 
-    //     )
-    // }
 }
