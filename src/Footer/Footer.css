@@ -1,7 +1,11 @@
+.footer{
+    margin-top: -70px;
+}
 .container{
 	max-width: 1170px;
 	margin:auto;
 }
+
 
 .row{
 	display: flex;
@@ -23,16 +27,17 @@ ul{
     
  }
  .footer-col h4{
-     font-size: 18px;
+     font-size: 25px;
      color: black;
      text-transform: capitalize;
-     margin-bottom: 15px;
+     margin-bottom: 30px;
      font-weight: 500;
      position: relative;
      display: flex;
      flex-direction: column;
      text-align: center;
      left: 15px;
+     font-weight: bold;
  }
  .footer-col h4::before{
      content: '';
@@ -56,10 +61,15 @@ ul{
      /* color: #bbbbbb; */
      display: block;
      transition: all 0.3s ease;
+     margin-bottom: 10px;
  }
  .footer-col ul li a:hover{
-    background-color: #ddd;
+    background-color: hsl(191, 71%, 60%);
     color: black;
+ }
+ .gomartfooter{
+     position: relative;
+     top: 80px
  }
  .social{
      font-size: 35px;
@@ -67,4 +77,36 @@ ul{
  .links{
      text-decoration: none;
      list-style: none;
+ }
+ .socialmedia{
+    margin-top: 100px;
+    display: flex;
+    float: right;
+    margin-right: 450px;
+ }
+ .facebook{
+     margin-right: 30px;
+ }
+ .twitter{
+    margin-right: 30px;
+ }
+ .flag{
+     font-size: 10px;
+ }
+ .privacy{
+    margin-top: 100px;
+    display: flex;
+    float: left;
+    margin-left: 100px;
+ }
+ .gomartfooter{
+     position: relative;
+     left: 100px;
+     color: rgb(76, 76, 76)
+ }
+ .privnotice{
+    margin-left: 30px;
+ }
+ .terms{
+     margin-left: 30px;
  }
