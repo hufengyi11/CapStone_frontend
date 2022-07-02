@@ -52,8 +52,8 @@ const Navigation = ({ searchFunction }) => {
             Home
           </Link>
 
-          <Link to="/">
-            Happy hour?
+          <Link to="/" className='active'>
+            Happy Hour?
           </Link>
 
           <Link to="/login" className='split'>
@@ -66,17 +66,17 @@ const Navigation = ({ searchFunction }) => {
             Basket
             <FaShoppingBasket />
           </Link>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} >
             <input
               type="text"
-              placeholder="Search.."
+              placeholder="Search GoMart"
               className='texts'
               onChange={e => setSearchInput(e.target.value)}
             ></input>
           </form>
           <a href="javascript:void(0);" className="icon" onClick="myFunction()"><FaBars /></a>
 
-          <button onClick={() => setDarkMode(!darkMode)}>
+          <button className="darkbutton" onClick={() => setDarkMode(!darkMode)}>
             <FaSun /></button>
         </ul>
       </nav>
