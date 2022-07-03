@@ -97,6 +97,7 @@ const Register = () => {
 
     return (
         <>
+        <div className="padding"></div>
         <Layout/>
             {success ? (
                 <section>
@@ -177,12 +178,9 @@ const Register = () => {
                         <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                         <p>
                         Already registered?<br />
-                        <Link to="/login">
-                            Log In
-                        </Link>
+                        <Link to="/login">Log In</Link>
                     </p>
                     </form>
-                    
                 </section>
             )}
             <Footer />
