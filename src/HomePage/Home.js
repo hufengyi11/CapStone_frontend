@@ -33,7 +33,7 @@ export default function Home() {
     }
 
     const ItemList = ({ items, handelAddToCard }) => {
-        let mappedItem = items.map(item => {
+        let mappedshoppingItem = items.map(item => {
             return (
                 <ItemCard
                     name={item.name}
@@ -47,14 +47,36 @@ export default function Home() {
 
         return (
             <div className='ItemListContainer'>
-                <div className='ItemCardContainer'>{mappedItem}</div>
+                <div className='ItemCardContainer'>{mappedshoppingItem}</div>
             </div>
         )
     }
 
-    const AddToCart = (input) => {
+    const BasketItemCard = ({ name, price }) => {
+        return (
+            <div>
+                <h2>{name}</h2>
+                <h4>{price}</h4>
+            </div>
+        )
+    }
+
+    const BasketList = ({ items }) => {
+        let mappedBasketItem = items.map(item => {
+            return (
+                <BasketItemCard
+                    name={item.name}
+                    price={item.price}
+                />
+            )
+        })
+        return(
+            <div className='BasketItemList'>{mappedBasketItem}</div>
+        )
+    }
+
+    function AddToCart (input) {
         const purchasingItem = items.filter(item => item.name == input);
-        console.log(purchasingItem)
         basketItem.push(purchasingItem)
         console.log(basketItem)
     }
@@ -67,11 +89,12 @@ export default function Home() {
     return (
         <>
             <Layout searchFunction={searchFunction} />
+            <div className='padding'></div>
             <div className='BasketContainer'>
                 <h2>Basket</h2>
-                <p>can't show stuff, but can print out in console</p>
-                {/* {basketItem.map(item => item.name)} */}
+                <BasketList items={basketItem} />
             </div>
+            <hr />
             <div className='ItemDisplay'>
                 <ItemList items={filteredItems ? filteredItems : items} handelAddToCard={AddToCart} />
             </div>
