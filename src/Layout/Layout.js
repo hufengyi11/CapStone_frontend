@@ -74,7 +74,7 @@ const Navigation = ({ searchFunction }) => {
               onChange={e => setSearchInput(e.target.value)}
             ></input>
           </form>
-          <a href="javascript:void(0);" className="icon" onClick="myFunction()"><FaBars /></a>
+          <a href="javascript:void(0);" className="icon" onClick={myFunction()}><FaBars /></a>
 
           <button className="darkbutton" onClick={() => setDarkMode(!darkMode)}>
             <FaSun /></button>
