@@ -1,10 +1,13 @@
+import Layout from "../Layout/Layout"
+import Footer from "../Footer/Footer"
 import React, { useEffect, useState } from 'react'
-import Footer from '../Footer/Footer';
-import Layout from '../Layout/Layout.js';
-import axios from '../LogIn/api/axios';
-import './ItemCard.css'
+import axios from "../LogIn/api/axios";
+import "./BestSeller.css"
 
-export default function Home() {
+function BestSeller() {
+    const [items, setItems] = useState([])
+    const [filteredItems, setFilteredItems] = useState();
+    const [basketItem, setBasketItem] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:8080/items')
@@ -14,9 +17,8 @@ export default function Home() {
             }).catch((err) => console.log(err));
     }, [])
 
-    const [items, setItems] = useState([]);
-    const [filteredItems, setFilteredItems] = useState();
-    const [basketItem, setBasketItem] = useState([]);
+    const fiveStarItems = items.filter(i => i.rating == 5)
+
 
     const ItemCard = ({ name, price, rating, handelAddToCard }) => {
         return (
@@ -33,7 +35,7 @@ export default function Home() {
     }
 
     const ItemList = ({ items, handelAddToCard }) => {
-        let mappedshoppingItem = items.map(item => {
+        let mappedItem = items.map(item => {
             return (
                 <ItemCard
                     name={item.name}
@@ -47,36 +49,14 @@ export default function Home() {
 
         return (
             <div className='ItemListContainer'>
-                <div className='ItemCardContainer'>{mappedshoppingItem}</div>
+                <div className='ItemCardContainer'>{mappedItem}</div>
             </div>
         )
     }
 
-    const BasketItemCard = ({ name, price }) => {
-        return (
-            <div>
-                <h2>{name}</h2>
-                <h4>{price}</h4>
-            </div>
-        )
-    }
-
-    const BasketList = ({ items }) => {
-        let mappedBasketItem = items.map(item => {
-            return (
-                <BasketItemCard
-                    name={item.name}
-                    price={item.price}
-                />
-            )
-        })
-        return(
-            <div className='BasketItemList'>{mappedBasketItem}</div>
-        )
-    }
-
-    function AddToCart (input) {
+    const AddToCart = (input) => {
         const purchasingItem = items.filter(item => item.name == input);
+        console.log(purchasingItem)
         basketItem.push(purchasingItem)
         console.log(basketItem)
     }
@@ -87,22 +67,15 @@ export default function Home() {
     }
 
     return (
-        <>
+        <div>
             <Layout searchFunction={searchFunction} />
-            <div className='padding'></div>
-            <div className='BasketContainer'>
-                <h2>Basket</h2>
-                <BasketList items={basketItem} />
-            </div>
-            <hr />
+             <div className="padding"></div>
             <div className='ItemDisplay'>
-                <ItemList items={filteredItems ? filteredItems : items} handelAddToCard={AddToCart} />
+                <ItemList items={fiveStarItems} handelAddToCard={AddToCart} />
             </div>
             <Footer />
-        </>
-
+        </div>
     )
-
-
-
 }
+
+export default BestSeller
