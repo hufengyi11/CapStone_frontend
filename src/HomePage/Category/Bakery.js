@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './Item.css'
+import Carousel, { CarouselItem } from '../../FirstHomePage/Carousel/Carousel';
 
-export default function Bakery() {
+
+const Bakery = () => {
     const [items, setItems] = useState([]);
     // const [addToBasketItem, setAddToBasketItem] = useState();
 
@@ -14,26 +16,54 @@ export default function Bakery() {
             }).catch((err) => console.log(err));
     }, []);
 
-    const handleClick = (item) => {
-        item.preventDefault();
-        console.log(item)
+    
+
+    const ItemCard = ({ id, name, price, rating, imagepath, handelAddToCard }) => {
+        return (
+            <div className='itemcontainerwithcart'>
+                <div className='itemcontainer'>
+                    <img className='itemimage' src={`${imagepath}.jpeg`}/>
+                </div>
+                <h2 className='itemtitle'>{name}</h2>
+                <p className='price'>£{price}</p>
+                <p className='rating'>{rating} star</p>
+                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
+            </div>
+        )
     }
 
+    const ItemList = ({ items, handelAddToCard }) => {
+        let mappedshoppingItem = items.map(item => {
+            return (
+                <ItemCard
+                    name={item.name}
+                    price={item.price}
+                    rating={item.rating}
+                    key={item.id}
+                    id={item.id}
+                    imagepath={item.imagepath}
+                    handelAddToCard={handelAddToCard}
+                />
+            )
+        })
+
+        return (
+            <div className='ItemListContainer'>
+                <div className='ItemCardContainer'>{mappedshoppingItem}</div>
+            </div>
+        )
+    }
 
     return (
+
         <div className='ItemDisplay'>
-            <h3>Bakery</h3>
+            <h3 className='categorytitle'>Bakery</h3>
             <div className='ItemList'>
-                {
-                    items.map(item =>
-                        <div key={item.id} className='ItemGroup'>
-                            <div className='ItemCard'></div>
-                            {item.name}
-                            <button onClick={() => handleClick(item)}>Add to cart</button>
-                        </div>
-                    )
-                }
-            </div>
+            <ItemList items={items}  />
         </div>
+        </div>
+        
     )
 }
+
+export default Bakery;

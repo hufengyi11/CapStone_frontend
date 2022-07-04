@@ -13,10 +13,12 @@
     flex-wrap: wrap;
     gap: 40px;
     padding: 40px;
+    margin-bottom: 60px;
 }
 .ItemDisplay{
     display: flex;
     flex-direction: column;
+    margin-bottom: -20px;
 }
 
 .ItemGroup{

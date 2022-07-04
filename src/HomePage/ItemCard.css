@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     padding-left: 100px;
     padding-right: 100px;
-    margin-bottom: 150px;
+    margin-bottom: -60px;
 }
 
 .itemcontainer{
@@ -13,7 +13,6 @@
     margin: 10px;
     border-radius: 10px;
     padding: 20px;
-    margin: 10;
 }
 
 .ItemCardContainer{
@@ -44,6 +43,13 @@
     width: 130px;
     font-size: medium;
     text-align: center;
+    margin-top: -50px;
+}
+.price{
+    margin-top: -15px;
+}
+.rating{
+    margin-top: -15px;
 }
 
 .BasketContainer{

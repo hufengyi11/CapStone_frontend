@@ -19,21 +19,49 @@ export default function Wellbeing() {
         console.log(item)
     }
 
+    const ItemCard = ({ id, name, price, rating, imagepath, handelAddToCard }) => {
+        return (
+            <div className='itemcontainerwithcart'>
+                <div className='itemcontainer'>
+                    <img className='itemimage' src={`${imagepath}.jpeg`}/>
+                </div>
+                <h2 className='itemtitle'>{name}</h2>
+                <p className='price'>£{price}</p>
+                <p className='rating'>{rating} star</p>
+                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
+            </div>
+        )
+    }
+
+    const ItemList = ({ items, handelAddToCard }) => {
+        let mappedshoppingItem = items.map(item => {
+            return (
+                <ItemCard
+                    name={item.name}
+                    price={item.price}
+                    rating={item.rating}
+                    key={item.id}
+                    id={item.id}
+                    imagepath={item.imagepath}
+                    handelAddToCard={handelAddToCard}
+                />
+            )
+        })
+
+        return (
+            <div className='ItemListContainer'>
+                <div className='ItemCardContainer'>{mappedshoppingItem}</div>
+            </div>
+        )
+    }
     return (
         <div className='ItemDisplay'>
-            <h3>Well Being</h3>
+            <div className='ItemDisplay'>
+            <h3 className='categorytitle'>Wellbeing</h3>
             <div className='ItemList'>
-                {
-                    items.map(item =>
-                        <div key={item.id} className='ItemGroup'>
-                            <div className='ItemCard'></div>
-                            {`${item.name}`}
-                            <button onClick={() => handleClick(item)}>Add to cart</button>
-                            <span></span>
-                        </div>
-                    )
-                }
-            </div>
+            <ItemList items={items}  />
         </div>
+        </div>
+            </div>
     )
 }
