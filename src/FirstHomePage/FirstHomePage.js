@@ -5,6 +5,7 @@ import Description from "./Description";
 import EnterAdress from "./EnterAddress";
 import Layout from '../Layout/Layout';
 import Reviews from "./Reviews";
+import JoinUs from "./JoinUs";
 
 function FirstHomePage() {
     return(
@@ -13,6 +14,7 @@ function FirstHomePage() {
         <EnterAdress />
         <Description />
         <Categories />
+        <JoinUs />
         <Reviews />
         <Footer />
         </>
