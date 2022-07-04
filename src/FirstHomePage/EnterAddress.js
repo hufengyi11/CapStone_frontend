@@ -12,7 +12,8 @@ const EnterAdress = () => {
     const navigate = useNavigate();
     return(
         <>
-        
+        <h1 className="t">GoMart</h1>
+        put a banner with logo. add transition design etc. see gorilla grocery
         <div className="flexbox-container">
             <div className="flexbox-item-1">
             <h1 className="delivery">Daily groceries delivered to you in minutes.</h1>

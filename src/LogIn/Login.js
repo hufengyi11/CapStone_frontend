@@ -75,9 +75,9 @@ const Login = () => {
             ) : (
                 <section className='login-wrapper'>
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-                    <h1>Sign In</h1>
+                    <h1 className='signin'>Sign In</h1>
                     <form onSubmit={handleSubmit} className='loginsection'>
-                        <label htmlFor="username">Username:</label>
+                        <label className='username' htmlFor="username">Username</label>
                         <input
                             type="text"
                             id="username"
@@ -88,7 +88,7 @@ const Login = () => {
                             required
                         />
 
-                        <label htmlFor="email">Email:</label>
+                        <label htmlFor="email">Email</label>
                         <input
                             type="text"
                             id="email"
@@ -99,7 +99,7 @@ const Login = () => {
                             required
                         />
 
-                        <label htmlFor="password">Password:</label>
+                        <label htmlFor="password">Password</label>
                         <input
                             type="password"
                             id="password"
