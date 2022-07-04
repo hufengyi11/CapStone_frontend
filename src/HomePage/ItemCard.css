@@ -61,5 +61,11 @@
 
 .BasketItemList{
     display: flex;
+    flex-direction: column;
+}
+
+.BasketItemCard{
+    display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 }

@@ -18,7 +18,7 @@ export default function Home() {
     const [filteredItems, setFilteredItems] = useState();
     const [basketItem, setBasketItem] = useState([]);
 
-    const ItemCard = ({ name, price, rating, handelAddToCard }) => {
+    const ItemCard = ({ id, name, price, rating, handelAddToCard }) => {
         return (
             <div className='itemcontainerwithcart'>
                 <article className='itemcontainer'>
@@ -27,7 +27,7 @@ export default function Home() {
                 <h2 className='itemtitle'>{name}</h2>
                 <p>£{price}</p>
                 <p>{rating} star</p>
-                <button className='AddtocartButton' onClick={(id) => handelAddToCard(id.target.parentElement.childNodes.item(1).innerText)}>+</button>
+                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
             </div>
         )
     }
@@ -40,6 +40,7 @@ export default function Home() {
                     price={item.price}
                     rating={item.rating}
                     key={item.id}
+                    id={item.id}
                     handelAddToCard={handelAddToCard}
                 />
             )
@@ -54,7 +55,7 @@ export default function Home() {
 
     const BasketItemCard = ({ name, price }) => {
         return (
-            <div>
+            <div className='BasketItemCard'>
                 <h2>{name}</h2>
                 <h4>{price}</h4>
             </div>
@@ -75,10 +76,9 @@ export default function Home() {
         )
     }
 
-    function AddToCart (input) {
-        const purchasingItem = items.filter(item => item.name == input);
-        basketItem.push(purchasingItem)
-        console.log(basketItem)
+    function AddToCart(input) {
+        const purchasingItem = items.find(item => item.id == input);
+        setBasketItem([...basketItem,purchasingItem])
     }
 
     function searchFunction(searchInput) {
@@ -89,7 +89,6 @@ export default function Home() {
     return (
         <>
             <Layout searchFunction={searchFunction} />
-            <div className='padding'></div>
             <div className='BasketContainer'>
                 <h2>Basket</h2>
                 <BasketList items={basketItem} />
