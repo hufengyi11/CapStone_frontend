@@ -55,18 +55,12 @@ const Navigation = ({ searchFunction }) => {
           <Link to='/shopping' className='best-seller'>Shopping</Link>
 
           <Link to="/best-seller" className='best-seller'>Best Sellers</Link>
-          
 
-          <Link to="/login" className='split'>
-            Log In
-          </Link>
-          <Link to="/register" className='split'>
-            Register
-          </Link>
-          <Link to="/basket" className='split'>
-            Basket
-            <FaShoppingBasket />
-          </Link>
+          <Link to="/Stores" className='Stores'>Our Stores</Link>
+
+          <Link to="/login" className='split'>Log In</Link>
+          <Link to="/register" className='split'>Register</Link>
+          <Link to="/basket" className='split'>Basket<FaShoppingBasket /></Link>
           <form onSubmit={handleSubmit} >
             <input
               type="text"
@@ -76,7 +70,6 @@ const Navigation = ({ searchFunction }) => {
             ></input>
           </form>
           <a href="javascript:void(0);" className="icon" onClick={myFunction()}><FaBars /></a>
-
           <button className="darkbutton" onClick={() => setDarkMode(!darkMode)}>
             <FaSun /></button>
         </ul>
