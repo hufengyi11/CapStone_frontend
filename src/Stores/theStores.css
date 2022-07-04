@@ -1,0 +1,21 @@
+.storeViewingLocations{
+    float: left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.ourStores{
+    text-align: center;
+
+}
+
+.StorelocationsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+

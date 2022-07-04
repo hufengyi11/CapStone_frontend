@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import Footer from '../Footer/Footer';
+import theStore from'./theStores.css';
+import Navigation from '../Layout/Layout';
 import axios from 'axios'
 
 export default function Stores(){
-    
 
     useEffect(() => {
         axios.get('http://localhost:8080/stores')
@@ -13,35 +15,33 @@ export default function Stores(){
     }, [])
 
     const [stores, setStores] = useState([]);
-    const [filteredStores, setFilteredStores] = useState();
+    const [filteredStores] = useState();
 
     const StoreViewing = ({ id, name, opening, closing, location, review }) => {
         return (
             <div className='storeViewingLocations'>
-                <article className='StorePics'>
-                    <p>image</p>
+                <article className='itemcontainerr'>
+                    <p>insert photo here :</p>
                 </article>
                 <h2 className='storeName'>{name}</h2>
-                <p>{opening}</p>
-                <p>{closing}</p>
-                <p>{location}</p>
-                <p>{review}</p>
+                <p>Opening: {opening} am</p>
+                <p>Closing: {closing} pm </p>
+                <p>Location: {location}</p>
+                <p>Review: {review}</p>
             </div>
         )
     }
 
-    const StoreList = ({ stores}) => {
+    const StoreList = ({stores}) => {
         let mappedStoreViewing = stores.map(item => {
             return (
                 <StoreViewing
-                    name={store.name}
-                    opening={store.opening}
-                    closing={store.closing}
-                    location = {store.location}
-                    review = {store.review}
+                    name={item.name}
+                    opening={item.opening}
+                    closing={item.closing}
+                    location = {item.location}
+                    review = {item.review}
                     key={item.id}
-                    id={item.id}
-                    handelAddToCard={handelAddToCard}
                 />
             )
         })
@@ -55,13 +55,12 @@ export default function Stores(){
 
     return (
         <>
-        
-        <h1>
-            dsadjsadi
+            <Navigation />
+            <h1 className='ourStores'>
+                Our Stores
             </h1>
-
             <div className='StoreDisplay'>
-                <StoreList store={filteredStore ? filteredStore : store} />
+                <StoreList stores={stores} />
             </div>
             <Footer />
         </>

@@ -55,6 +55,7 @@ const Navigation = ({ searchFunction }) => {
           <Link to='/shopping' className='best-seller'>Shopping</Link>
 
           <Link to="/best-seller" className='best-seller'>Best Sellers</Link>
+          
 
           <Link to="/login" className='split'>
             Log In
