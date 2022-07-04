@@ -13,12 +13,12 @@ const Navigation = ({ searchFunction }) => {
   }
 
   function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
+  //   var x = document.getElementById("myTopnav");
+  //   if (x.className === "topnav") {
+  //     x.className += " responsive";
+  //   } else {
+  //     x.className = "topnav";
+  //   }
   }
   const [darkMode, setDarkMode] = React.useState(false);
 
@@ -55,6 +55,7 @@ const Navigation = ({ searchFunction }) => {
           <Link to='/shopping' className='best-seller'>Shopping</Link>
 
           <Link to="/best-seller" className='best-seller'>Best Sellers</Link>
+          
 
           <Link to="/login" className='split'>
             Log In
