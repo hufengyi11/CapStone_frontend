@@ -56,8 +56,8 @@ export default function Home() {
     const BasketItemCard = ({ name, price }) => {
         return (
             <div className='BasketItemCard'>
-                <h2>{name}</h2>
-                <h4>{price}</h4>
+                <h3>{name}</h3>
+                <h3>£{price}</h3>
             </div>
         )
     }
