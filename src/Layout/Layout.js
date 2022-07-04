@@ -12,14 +12,7 @@ const Navigation = ({ searchFunction }) => {
     searchFunction(searchInput);
   }
 
-  function myFunction() {
-  //   var x = document.getElementById("myTopnav");
-  //   if (x.className === "topnav") {
-  //     x.className += " responsive";
-  //   } else {
-  //     x.className = "topnav";
-  //   }
-  }
+
   const [darkMode, setDarkMode] = React.useState(false);
 
   React.useEffect(() => {
@@ -51,7 +44,6 @@ const Navigation = ({ searchFunction }) => {
           <Link to="/" className="active">
             Home
           </Link>
-
           <Link to='/shopping' className='best-seller'>Shopping</Link>
 
           <Link to="/best-seller" className='best-seller'>Best Sellers</Link>
@@ -69,7 +61,8 @@ const Navigation = ({ searchFunction }) => {
               onChange={e => setSearchInput(e.target.value)}
             ></input>
           </form>
-          <a href="javascript:void(0);" className="icon" onClick={myFunction()}><FaBars /></a>
+          <a href="javascript:void(0);" class="icon" onClick = "myFunction()"> <FaBars /></a>
+          
           <button className="darkbutton" onClick={() => setDarkMode(!darkMode)}>
             <FaSun /></button>
         </ul>
@@ -77,6 +70,15 @@ const Navigation = ({ searchFunction }) => {
       <Outlet />
     </>
   );
+
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += "responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
 }
 
