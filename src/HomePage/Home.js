@@ -18,12 +18,12 @@ export default function Home() {
     const [filteredItems, setFilteredItems] = useState();
     const [basketItem, setBasketItem] = useState([]);
 
-    const ItemCard = ({ id, name, price, rating, handelAddToCard }) => {
+    const ItemCard = ({ id, name, price, rating, imageUrl, handelAddToCard }) => {
         return (
             <div className='itemcontainerwithcart'>
-                <article className='itemcontainer'>
-                    <p>image</p>
-                </article>
+                <div className='itemcontainer'>
+                    <img className='cocacola' src={`${imageUrl}`} />
+                </div>
                 <h2 className='itemtitle'>{name}</h2>
                 <p>£{price}</p>
                 <p>{rating} star</p>

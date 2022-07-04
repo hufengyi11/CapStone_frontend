@@ -139,3 +139,11 @@
     max-width: 100%;
     height: auto;
 }
+.join{
+     background-color: hsl(191, 71%, 60%);
+     flex-direction: column;
+     display: flex;
+     box-sizing: border-box;
+    transition-duration: calc(var(--duration) * 100ms);
+    
+}
