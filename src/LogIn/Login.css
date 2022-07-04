@@ -9,6 +9,23 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 150px;
+    background-color: hsl(191, 71%, 60%);
+    height: 300px;
+    width: 400px;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 0.5px 0.5px;
+    font-weight: bold;    
+}
+
+.username{
+    margin-top: 20px;
+}
+
+.signin{
+    font-size: 100px;
+  font-weight: bold;
+  color: #36bad7;
 }
 
 .padding{
