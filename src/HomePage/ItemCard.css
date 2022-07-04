@@ -53,3 +53,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.padding{
+    width: 100%;
+    height: 150px;
+}
+
+.BasketItemList{
+    display: flex;
+    flex-direction: column;
+}
+
+.BasketItemCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

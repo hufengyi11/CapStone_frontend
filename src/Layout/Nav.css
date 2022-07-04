@@ -63,6 +63,12 @@ margin-right: 2px;
   font-weight: bold;
   font-size: large;
 }
+
+.best-seller {
+  font-weight: bold;
+  font-size: large;
+}
+
 .topnav .icon {
   display: none;
 }

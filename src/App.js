@@ -10,6 +10,7 @@ import ContactUs from './ContactUs/ContactUs';
 import Login from './LogIn/Login';
 import Register from './LogIn/Register';
 import FirstHomePage from './FirstHomePage/FirstHomePage';
+import BestSeller from './BestSeller/BestSeller'
 
 function App (){
 
@@ -42,6 +43,7 @@ function App (){
          
           <Route path="/">
             <Route index element={<FirstHomePage />} />
+            <Route path='best-seller' element={<BestSeller />} />
             <Route path="shopping" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />

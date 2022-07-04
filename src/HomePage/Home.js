@@ -18,7 +18,7 @@ export default function Home() {
     const [filteredItems, setFilteredItems] = useState();
     const [basketItem, setBasketItem] = useState([]);
 
-    const ItemCard = ({ name, price, rating, handelAddToCard }) => {
+    const ItemCard = ({ id, name, price, rating, handelAddToCard }) => {
         return (
             <div className='itemcontainerwithcart'>
                 <article className='itemcontainer'>
@@ -27,19 +27,20 @@ export default function Home() {
                 <h2 className='itemtitle'>{name}</h2>
                 <p>£{price}</p>
                 <p>{rating} star</p>
-                <button className='AddtocartButton' onClick={(id) => handelAddToCard(id.target.parentElement.childNodes.item(1).innerText)}>+</button>
+                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
             </div>
         )
     }
 
     const ItemList = ({ items, handelAddToCard }) => {
-        let mappedItem = items.map(item => {
+        let mappedshoppingItem = items.map(item => {
             return (
                 <ItemCard
                     name={item.name}
                     price={item.price}
                     rating={item.rating}
                     key={item.id}
+                    id={item.id}
                     handelAddToCard={handelAddToCard}
                 />
             )
@@ -47,16 +48,37 @@ export default function Home() {
 
         return (
             <div className='ItemListContainer'>
-                <div className='ItemCardContainer'>{mappedItem}</div>
+                <div className='ItemCardContainer'>{mappedshoppingItem}</div>
             </div>
         )
     }
 
-    const AddToCart = (input) => {
-        const purchasingItem = items.filter(item => item.name == input);
-        console.log(purchasingItem)
-        basketItem.push(purchasingItem)
-        console.log(basketItem)
+    const BasketItemCard = ({ name, price }) => {
+        return (
+            <div className='BasketItemCard'>
+                <h2>{name}</h2>
+                <h4>{price}</h4>
+            </div>
+        )
+    }
+
+    const BasketList = ({ items }) => {
+        let mappedBasketItem = items.map(item => {
+            return (
+                <BasketItemCard
+                    name={item.name}
+                    price={item.price}
+                />
+            )
+        })
+        return(
+            <div className='BasketItemList'>{mappedBasketItem}</div>
+        )
+    }
+
+    function AddToCart(input) {
+        const purchasingItem = items.find(item => item.id == input);
+        setBasketItem([...basketItem,purchasingItem])
     }
 
     function searchFunction(searchInput) {
@@ -69,9 +91,9 @@ export default function Home() {
             <Layout searchFunction={searchFunction} />
             <div className='BasketContainer'>
                 <h2>Basket</h2>
-                <p>can't show stuff, but can print out in console</p>
-                {/* {basketItem.map(item => item.name)} */}
+                <BasketList items={basketItem} />
             </div>
+            <hr />
             <div className='ItemDisplay'>
                 <ItemList items={filteredItems ? filteredItems : items} handelAddToCard={AddToCart} />
             </div>
