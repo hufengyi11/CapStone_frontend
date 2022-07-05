@@ -84,13 +84,6 @@ export default function Home() {
         setBasketItem([...basketItem, purchasingItem])
     }
 
-    function arrayRemove(arr, value) { 
-    
-        return arr.filter(function(ele){ 
-            return ele != value; 
-        });
-    }
-
     function RemoveFromCart(input) {
         const cartItems = basketItem.slice().filter((a) => a.name !== input);
         setBasketItem(cartItems)
