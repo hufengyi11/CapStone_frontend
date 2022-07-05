@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
-import './ItemCard.css'
+import './Home.css'
 import ItemList from './ItemList';
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
             <div className='BasketItemCard'>
                 <h3>{name}</h3>
                 <h3>£{price}</h3>
-                <button onClick={() => RemoveFromBasket(name)}>X</button>
+                <button className='removebutton' onClick={() => RemoveFromBasket(name)}>X</button>
             </div>
         )
     }
@@ -82,8 +82,11 @@ export default function Home() {
     return (
         <>
             <Layout />
-            <BasketList items={basketItem} RemoveFromBasket={RemoveFromCart} />
+            <div className='BasketContainer'>
+            <h1>Basket</h1>
             <p>You have {basketItem.length} items in the basket.</p>
+            <BasketList items={basketItem} RemoveFromBasket={RemoveFromCart} />
+            </div>
             <hr />
             {items.length && <div className='ItemDisplay'>
                 <ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} />
