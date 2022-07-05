@@ -25,7 +25,7 @@ const Category = ({ props }) => {
 
     return (
         <>
-            <h2>{props[1].category}</h2>
+            <h2>{props.category}</h2>
             <ItemList props={props} />
         </>
 
