@@ -8,7 +8,6 @@ const ItemCard = ({ id, name, price, rating, imagepath }) => {
             <h2 className='itemtitle'>{name}</h2>
             <p className='price'>£{price}</p>
             <p className='rating'>{rating} star</p>
-            
         </div>
     )
 }

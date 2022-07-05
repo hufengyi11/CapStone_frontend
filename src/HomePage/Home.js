@@ -49,7 +49,7 @@ export default function Home() {
         <>
             <Layout />
             {items.length && <div className="ItemDisplay">
-                <ItemList items={bakeryItem} propsTitle={bakeryTitle}/> 
+                <ItemList className="categorytitle" items={bakeryItem} propsTitle={bakeryTitle} /> 
                 <ItemList items={dairyItem} propsTitle={dairyTitle}/>
                 <ItemList items={drinksItem} propsTitle={drinksTitle}/>
                 <ItemList items={fruitsItem} propsTitle={fruitsTitle}/>
