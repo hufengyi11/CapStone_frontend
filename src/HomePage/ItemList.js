@@ -1,7 +1,7 @@
 import ItemCard from "./ItemCard";
 const ItemList = ({ items, Title , AddToCart}) => {
 
-const ItemList = ({ items, propsTitle }) => {
+// const ItemList = ({ items, propsTitle }) => {
     return (
         <div className='ItemListContainer'>
             <h1 className="CategoryTitle">{Title}</h1>
@@ -26,4 +26,4 @@ const ItemList = ({ items, propsTitle }) => {
     )
 }
 
-export default ItemList
+export default ItemList;
