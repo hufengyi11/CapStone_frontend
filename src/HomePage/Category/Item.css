@@ -20,14 +20,17 @@
 .ItemDisplay{
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
-    background-color: white;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 20px;
+    margin-bottom: -20px;
 }
 
 .ItemGroup{
     display: flex;
     flex-direction: column;
+}
+
+.itemimage{
+    width:100px;
+    height: 100px;
+    position: relative;
+    left: 25px
 }

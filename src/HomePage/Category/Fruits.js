@@ -2,37 +2,11 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './Item.css'
 
-export default function Fruits() {
+export default function Fruits({fruitsItem}) {
     const [items, setItems] = useState([]);
 
-    useEffect(() => {
-        axios.get('http://localhost:8080/items/fruit')
-            .then(res => {
-                const items = res.data;
-                setItems(items);
-            }).catch((err) => console.log(err));
-    }, []);
-
-    const handleClick = (item) => {
-        console.log(item)
-    }
-
-    const ItemCard = ({ id, name, price, rating, imagepath, handelAddToCard }) => {
-        return (
-            <div className='itemcontainerwithcart'>
-                <div className='itemcontainer'>
-                    <img className='itemimage' src={`${imagepath}.jpeg`}/>
-                </div>
-                <h2 className='itemtitle'>{name}</h2>
-                <p className='price'>£{price}</p>
-                <p className='rating'>{rating} star</p>
-                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
-            </div>
-        )
-    }
-
-    const ItemList = ({ items, handelAddToCard }) => {
-        let mappedshoppingItem = items.map(item => {
+    const ItemList = ({handelAddToCard}) => {
+        let mappedshoppingItem = fruitsItem.map(item => {
             return (
                 <ItemCard
                     name={item.name}
@@ -52,6 +26,22 @@ export default function Fruits() {
             </div>
         )
     }
+
+    const ItemCard = ({ id, name, price, rating, imagepath, handelAddToCard }) => {
+        return (
+            <div className='itemcontainerwithcart'>
+                <div className='itemcontainer'>
+                    <img className='itemimage' src={`${imagepath}.jpeg`}/>
+                </div>
+                <h2 className='itemtitle'>{name}</h2>
+                <p className='price'>£{price}</p>
+                <p className='rating'>{rating} star</p>
+                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
+            </div>
+        )
+    }
+
+    
     return (
         <div className='ItemDisplay'>
             <div className='ItemDisplay'>

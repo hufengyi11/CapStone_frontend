@@ -74,9 +74,14 @@
     justify-content: space-around;
     width: 80%;
 }
+
 .itemimage{
     width:100px;
     height: 100px;
     position: relative;
     left: 25px
+}
+
+.CategoryTitle{
+    padding-top: 100px;
 }

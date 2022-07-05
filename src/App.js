@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Basket from './Basket/Basket';
+import Basket from './Basket/Basket';
 import Home from './HomePage/Home';
 import Layout from './Layout/Layout.js';
 import AboutUs from './AboutUs/AboutUs';
@@ -44,7 +44,7 @@ function App (){
          
           <Route path="/">
             <Route index element={<FirstHomePage />} />
-            <Route path='best-seller' element={<BestSeller />} />
+            {/* <Route path='best-seller' element={<BestSeller />} /> */}
             <Route path="shopping" element={<Home />} />
             <Route path='Stores' element={<Stores />} />
             <Route path="login" element={<Login />} />
@@ -52,7 +52,7 @@ function App (){
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="faqs" element={<Faqs />} />
             <Route path="contact" element={<ContactUs />} />
-            {/* <Route path="basket" element={<Basket />} /> */}
+            <Route path="basket" element={<Basket />} />
           </Route>
         </Routes>
       </BrowserRouter>
