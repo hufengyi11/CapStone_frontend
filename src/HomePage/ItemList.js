@@ -3,7 +3,7 @@ const ItemList = ({ items, Title , AddToCart}) => {
 
     return (
         <div className='ItemListContainer'>
-            <h2 className="CategoryTitle">{Title}</h2>
+            <h1 className="CategoryTitle">{Title}</h1>
             <div className='ItemCardContainer'>
                 {
                     items.map(item => {
