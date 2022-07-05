@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
@@ -16,7 +16,6 @@ export default function Home() {
 
     const [items, setItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState();
-    const [basketItem, setBasketItem] = useState([]);
     const bakeryItem = items.filter(i => i.category === 'Bakery');
     const dairyItem = items.filter(i => i.category === 'Dairy');
     const drinksItem = items.filter(i => i.category === 'Drink');
@@ -35,6 +34,39 @@ export default function Home() {
     const wellbeingTitle = 'Well Being';
 
 
+    //basket
+    const [basketItem, setBasketItem] = useState([]);
+
+    const BasketItemCard = ({ name, price, RemoveFromBasket }) => {
+        return (
+            <div className='BasketItemCard'>
+                <h3>{name}</h3>
+                <h3>£{price}</h3>
+                <button onClick={() => RemoveFromBasket(name)}>X</button>
+            </div>
+        )
+    }
+    const BasketList = ({ items, RemoveFromBasket }) => {
+        let mappedBasketItem = items.map(item => {
+            return (
+                <BasketItemCard
+                    name={item.name}
+                    price={item.price}
+                    RemoveFromBasket={RemoveFromBasket}
+                    key={items.length}
+                />
+            )
+        })
+        return (
+            <div className='BasketItemList'>{mappedBasketItem}</div>
+        )
+    }
+
+    function RemoveFromCart(input) {
+        const cartItems = basketItem.slice().filter((a) => a.name !== input);
+        setBasketItem(cartItems)
+    }
+
     function AddToCart(input) {
         const purchasingItem = items.find(item => item.id === input);
         setBasketItem([...basketItem, purchasingItem])
@@ -48,6 +80,9 @@ export default function Home() {
     return (
         <>
             <Layout />
+            <BasketList items={basketItem} RemoveFromBasket={RemoveFromCart} />
+            <p>You have {basketItem.length} items in the basket.</p>
+            <hr />
             {items.length && <div className='ItemDisplay'>
                 <ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} />
                 <ItemList items={dairyItem} Title={dairyTitle} AddToCart={AddToCart} />
@@ -58,7 +93,6 @@ export default function Home() {
                 <ItemList items={toiletriesItem} Title={toiletriesTitle} AddToCart={AddToCart} />
                 <ItemList items={wellbeingItem} Title={wellbeingTitle} AddToCart={AddToCart} />
             </div>}
-
             <Footer />
         </>
 
