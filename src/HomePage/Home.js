@@ -2,16 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
-import Category from './Category';
-import Bakery from './Category/Bakery';
-import Dairy from './Category/Dairy';
-import Drinks from './Category/Drinks';
-import Fruits from './Category/Fruits';
-import Meat from './Category/Meat';
-import Toiletries from './Category/Toiletries';
-import Vegetable from './Category/Vegetable';
-import Wellbeing from './Category/Wellbeing';
 import './ItemCard.css'
+import ItemList from './ItemList';
 
 export default function Home() {
     useEffect(() => {
@@ -48,14 +40,14 @@ export default function Home() {
         <>
             <Layout />
             <div className='ItemDisplay'>
-                <Category props={bakeryItem}/> 
-                <Category props={dairyItem}/>
-                <Category props={drinksItem}/>
-                <Category props={fruitsItem}/>
-                <Category props={vegeItem}/>
-                <Category props={meatItem}/>
-                <Category props={toiletriesItem}/>
-                <Category props={wellbeingItem}/>
+                <ItemList props={bakeryItem}/> 
+                <ItemList props={dairyItem}/>
+                <ItemList props={drinksItem}/>
+                <ItemList props={fruitsItem}/>
+                <ItemList props={vegeItem}/>
+                <ItemList props={meatItem}/>
+                <ItemList props={toiletriesItem}/>
+                <ItemList props={wellbeingItem}/>
             </div>
             <Footer />
         </>
