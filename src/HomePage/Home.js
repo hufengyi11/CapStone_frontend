@@ -53,32 +53,47 @@ export default function Home() {
         )
     }
 
-    const BasketItemCard = ({ name, price }) => {
+    const BasketItemCard = ({ name, price, RemoveFromBasket}) => {
         return (
             <div className='BasketItemCard'>
                 <h3>{name}</h3>
                 <h3>£{price}</h3>
+                <button onClick={() => RemoveFromBasket(name)}>X</button>
             </div>
         )
     }
 
-    const BasketList = ({ items }) => {
+    const BasketList = ({ items , RemoveFromBasket}) => {
         let mappedBasketItem = items.map(item => {
             return (
                 <BasketItemCard
                     name={item.name}
                     price={item.price}
+                    RemoveFromBasket={RemoveFromBasket}
+                    key={items.length}
                 />
             )
         })
-        return(
+        return (
             <div className='BasketItemList'>{mappedBasketItem}</div>
         )
     }
 
     function AddToCart(input) {
         const purchasingItem = items.find(item => item.id == input);
-        setBasketItem([...basketItem,purchasingItem])
+        setBasketItem([...basketItem, purchasingItem])
+    }
+
+    function arrayRemove(arr, value) { 
+    
+        return arr.filter(function(ele){ 
+            return ele != value; 
+        });
+    }
+
+    function RemoveFromCart(input) {
+        const cartItems = basketItem.slice().filter((a) => a.name !== input);
+        setBasketItem(cartItems)
     }
 
     function searchFunction(searchInput) {
@@ -91,7 +106,8 @@ export default function Home() {
             <Layout searchFunction={searchFunction} />
             <div className='BasketContainer'>
                 <h2>Basket</h2>
-                <BasketList items={basketItem} />
+                <BasketList items={basketItem} RemoveFromBasket={RemoveFromCart}/>
+                <p>You have {basketItem.length} items in the basket.</p>
             </div>
             <hr />
             <div className='ItemDisplay'>
