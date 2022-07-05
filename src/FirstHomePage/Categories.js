@@ -7,6 +7,7 @@ const Categories = () => {
     const navigate = useNavigate();
     return(
         <>
+        <section className="categorysection">
         <div className="categorytitle">
         <h2 className="title">Browse a popular category</h2>
         <p className="shopping">Start Shopping <button className="shoppingbutton" onClick={() => {navigate('shopping', {replace:true})}}><FaArrowRight /></button> </p>
@@ -47,6 +48,7 @@ const Categories = () => {
                 <div className="categoryicon"><GiFruitBowl /></div>
             </div>
             </div>
+            </section>
         </>
     );
 }

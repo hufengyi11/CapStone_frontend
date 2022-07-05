@@ -1,7 +1,7 @@
 import React from "react";
 import './FirstHomePage.css';
 import { Button } from "@material-ui/core";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Carousel, { CarouselItem } from "./Carousel/Carousel";
 import Geolocation from "./Geolocation";
@@ -12,8 +12,10 @@ const EnterAdress = () => {
     const navigate = useNavigate();
     return(
         <>
-        <h1 className="t">GoMart</h1>
-        put a banner with logo. add transition design etc. see gorilla grocery
+        <div className="gomartsection">
+        <h1 className="webtitle">GoMart</h1>
+        <img className="shoppingcart" src={require("../Images/shoppingcart.gif")} />
+        </div>
         <div className="flexbox-container">
             <div className="flexbox-item-1">
             <h1 className="delivery">Daily groceries delivered to you in minutes.</h1>

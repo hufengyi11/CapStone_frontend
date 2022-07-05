@@ -15,7 +15,6 @@ const Bakery = () => {
                 setItems(items);
             }).catch((err) => console.log(err));
     }, []);
-
     
 
     const ItemCard = ({ id, name, price, rating, imagepath, handelAddToCard }) => {
