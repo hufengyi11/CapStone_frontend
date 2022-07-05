@@ -20,9 +20,6 @@ export default function Stores(){
     const StoreViewing = ({ id, name, opening, closing, location, review }) => {
         return (
             <div className='storeViewingLocations'>
-                <article className='itemcontainerr'>
-                    <p>insert photo here :</p>
-                </article>
                 <h2 className='storeName'>{name}</h2>
                 <p>Opening: {opening} am</p>
                 <p>Closing: {closing} pm </p>
