@@ -7,7 +7,6 @@
     padding-bottom: 20px;
     display: grid;
     margin-bottom: 150px;
-    background-color: white;
 }
 #input,
 textarea {
@@ -41,5 +40,4 @@ textarea {
 }
 .contact{
     text-align: center;
-    background-color: white;
 }

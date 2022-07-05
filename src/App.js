@@ -44,7 +44,7 @@ function App (){
          
           <Route path="/">
             <Route index element={<FirstHomePage />} />
-            <Route path='best-seller' element={<BestSeller />} />
+            {/* <Route path='best-seller' element={<BestSeller />} /> */}
             <Route path="shopping" element={<Home />} />
             <Route path='Stores' element={<Stores />} />
             <Route path="login" element={<Login />} />

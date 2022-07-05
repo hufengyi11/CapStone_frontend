@@ -21,7 +21,7 @@ export default function Meat() {
         return (
             <div className='itemcontainerwithcart'>
                 <div className='itemcontainer'>
-                    <img className='itemimage' src={`${imagepath}.jpeg`}/>
+                    <img className='itemimage' src={`${imagepath}.jpeg`} />
                 </div>
                 <h2 className='itemtitle'>{name}</h2>
                 <p className='price'>£{price}</p>
@@ -56,11 +56,11 @@ export default function Meat() {
     return (
         <div className='ItemDisplay'>
             <div className='ItemDisplay'>
-            <h3 className='categorytitle'>Meats</h3>
-            <div className='ItemList'>
-            <ItemList items={items}  />
-        </div>
-        </div>
+                <h3 className='categorytitle'>Meats</h3>
+                <div className='ItemList'>
+                    <ItemList items={items} />
+                </div>
             </div>
+        </div>
     )
 }

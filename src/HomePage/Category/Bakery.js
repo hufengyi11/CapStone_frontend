@@ -4,35 +4,20 @@ import './Item.css'
 import Carousel, { CarouselItem } from '../../FirstHomePage/Carousel/Carousel';
 
 
-const Bakery = () => {
+const Bakery = ({bakeryItem}) => {
     const [items, setItems] = useState([]);
     // const [addToBasketItem, setAddToBasketItem] = useState();
 
-    useEffect(() => {
-        axios.get('http://localhost:8080/items/bakery')
-            .then(res => {
-                const items = res.data;
-                setItems(items);
-            }).catch((err) => console.log(err));
-    }, []);
-    
+    // useEffect(() => {
+    //     axios.get('http://localhost:8080/items/bakery')
+    //         .then(res => {
+    //             const items = res.data;
+    //             setItems(items);
+    //         }).catch((err) => console.log(err));
+    // }, []);
 
-    const ItemCard = ({ id, name, price, rating, imagepath, handelAddToCard }) => {
-        return (
-            <div className='itemcontainerwithcart'>
-                <div className='itemcontainer'>
-                    <img className='itemimage' src={`${imagepath}.jpeg`}/>
-                </div>
-                <h2 className='itemtitle'>{name}</h2>
-                <p className='price'>£{price}</p>
-                <p className='rating'>{rating} star</p>
-                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
-            </div>
-        )
-    }
-
-    const ItemList = ({ items, handelAddToCard }) => {
-        let mappedshoppingItem = items.map(item => {
+    const ItemList = ({handelAddToCard }) => {
+        let mappedshoppingItem = bakeryItem.map(item => {
             return (
                 <ItemCard
                     name={item.name}
@@ -53,15 +38,33 @@ const Bakery = () => {
         )
     }
 
+    const ItemCard = ({ id, name, price, rating, imagepath, handelAddToCard }) => {
+        return (
+            <div className='itemcontainerwithcart'>
+                <div className='itemcontainer'>
+                    <img className='itemimage' src={`${imagepath}.jpeg`} />
+                </div>
+                <h2 className='itemtitle'>{name}</h2>
+                <p className='price'>£{price}</p>
+                <p className='rating'>{rating} star</p>
+                <button className='AddtocartButton' onClick={() => handelAddToCard(id)}>+</button>
+            </div>
+        )
+    }
+
+
+
     return (
 
         <div className='ItemDisplay'>
-            <h3 className='categorytitle'>Bakery</h3>
-            <div className='ItemList'>
-            <ItemList items={items}  />
+            <div className='ItemDisplay'>
+                <h3 className='categorytitle'>Bakery</h3>
+                <div className='ItemList'>
+                    <ItemList items={items} />
+                </div>
+            </div>
         </div>
-        </div>
-        
+
     )
 }
 
