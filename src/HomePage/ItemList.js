@@ -1,12 +1,10 @@
 import ItemCard from "./ItemCard"
 
-const ItemList = ({ props }) => {
-
-    // const CategoryTitle = props[0].category
+const ItemList = ({ props, propsTitle }) => {
 
     return (
         <div className='ItemListContainer'>
-            <h2>CategoryTitle</h2>
+            <h2 className="CategoryTitle">{propsTitle}</h2>
             <div className='ItemCardContainer'>{
                 props.map(item => {
                     return (
@@ -20,8 +18,9 @@ const ItemList = ({ props }) => {
                         />
                     )
                 })
-            }</div>
-        </div>
+            }
+            </div>
+        </div >
     )
 }
 
