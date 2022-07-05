@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react'
+import { BasketContext, CartProvider } from '../Basket/BasketContext';
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
@@ -34,42 +35,43 @@ export default function Home() {
 
 
     //basket
-    const [basketItem, setBasketItem] = useState([]);
+    const Context = createContext('Default Value');
+    const [basketItem, setBasketItem] = useState({});
 
-    const BasketItemCard = ({ name, price, RemoveFromBasket }) => {
-        return (
-            <div className='BasketItemCard'>
-                <h3>{name}</h3>
-                <h3>£{price}</h3>
-                <button className='removebutton' onClick={() => RemoveFromBasket(name)}>X</button>
-            </div>
-        )
-    }
-    const BasketList = ({ items, RemoveFromBasket }) => {
-        let mappedBasketItem = items.map(item => {
-            return (
-                <BasketItemCard
-                    name={item.name}
-                    price={item.price}
-                    RemoveFromBasket={RemoveFromBasket}
-                    key={items.length}
-                />
-            )
-        })
-        return (
-            <div className='BasketItemList'>{mappedBasketItem}</div>
-        )
-    }
+    // const BasketList = ({ items, RemoveFromBasket }) => {
+    //     let mappedBasketItem = items.map(item => {
+    //         return (
+    //             <BasketItemCard
+    //                 name={item.name}
+    //                 price={item.price}
+    //                 RemoveFromBasket={RemoveFromBasket}
+    //                 key={items.length}
+    //             />
+    //         )
+    //     })
+    //     return (
+    //         <div className='BasketItemList'>{mappedBasketItem}</div>
+    //     )
+    // }
 
-    function RemoveFromCart(input) {
-        const cartItems = basketItem.slice().filter((a) => a.name !== input);
-        setBasketItem(cartItems)
-    }
+    // const BasketItemCard = ({ name, price, RemoveFromBasket }) => {
+    //     return (
+    //         <div className='BasketItemCard'>
+    //             <h3>{name}</h3>
+    //             <h3>£{price}</h3>
+    //             <button className='removebutton' onClick={() => RemoveFromBasket(name)}>X</button>
+    //         </div>
+    //     )
+    // }
 
-    function AddToCart(input) {
-        const purchasingItem = items.find(item => item.id === input);
-        setBasketItem([...basketItem, purchasingItem])
-    }
+    // function RemoveFromCart(input) {
+    //     // find how many of the input is there
+    //     const count = basketItem.filter(a => a.id)
+    //     const cartItems = basketItem.slice().filter((a) => a.name !== input);
+    //     setBasketItem(cartItems)
+    // }
+
+
 
     // search function
     const [filteredItems, setFilteredItems] = useState();
@@ -82,22 +84,24 @@ export default function Home() {
     return (
         <>
             <Layout />
-            <div className='BasketContainer'>
+            {/* <div className='BasketContainer'>
             <h1>Basket</h1>
-            <p>You have {basketItem.length} items in the basket.</p>
+            <h2>You have {basketItem.length} items in the basket.</h2>
             <BasketList items={basketItem} RemoveFromBasket={RemoveFromCart} />
             </div>
-            <hr />
-            {items.length && <div className='ItemDisplay'>
-                <ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} />
-                <ItemList items={dairyItem} Title={dairyTitle} AddToCart={AddToCart} />
-                <ItemList items={drinksItem} Title={drinksTitle} AddToCart={AddToCart} />
-                <ItemList items={fruitsItem} Title={fruitsTitle} AddToCart={AddToCart} />
-                <ItemList items={vegeItem} Title={vegeTitle} AddToCart={AddToCart} />
-                <ItemList items={meatItem} Title={meatTitle} AddToCart={AddToCart} />
-                <ItemList items={toiletriesItem} Title={toiletriesTitle} AddToCart={AddToCart} />
-                <ItemList items={wellbeingItem} Title={wellbeingTitle} AddToCart={AddToCart} />
-            </div>}
+            <hr /> */}
+            <CartProvider value={[basketItem, setBasketItem]}>
+                {items.length && <div className='ItemDisplay'>
+                    <ItemList items={bakeryItem} Title={bakeryTitle} />
+                    <ItemList items={dairyItem} Title={dairyTitle} />
+                    <ItemList items={drinksItem} Title={drinksTitle} />
+                    <ItemList items={fruitsItem} Title={fruitsTitle} />
+                    <ItemList items={vegeItem} Title={vegeTitle} />
+                    <ItemList items={meatItem} Title={meatTitle} />
+                    <ItemList items={toiletriesItem} Title={toiletriesTitle} />
+                    <ItemList items={wellbeingItem} Title={wellbeingTitle} />
+                </div>}
+            </CartProvider>
             <Footer />
         </>
 

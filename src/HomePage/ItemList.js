@@ -1,5 +1,5 @@
 import ItemCard from "./ItemCard";
-const ItemList = ({ items, Title , AddToCart}) => {
+const ItemList = ({ items, Title }) => {
 
 // const ItemList = ({ items, propsTitle }) => {
     return (
@@ -16,7 +16,6 @@ const ItemList = ({ items, Title , AddToCart}) => {
                             key={item.id}
                             id={item.id}
                             imagepath={item.imagepath}
-                            AddToCart={AddToCart}
                         />
                     )
                 })
