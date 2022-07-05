@@ -20,6 +20,7 @@ const ItemList = ({ props, propsTitle }) => {
                 })
             }
             </div>
+            <div className="padding"></div>
         </div >
     )
 }
