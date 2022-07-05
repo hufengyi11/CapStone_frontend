@@ -1,15 +1,12 @@
 import ItemCard from "./ItemCard";
-import Carousel from 'react-material-ui-carousel';
-const ItemList = ({ items, propsTitle }) => {
+const ItemList = ({ items, Title , AddToCart}) => {
 
     return (
         <div className='ItemListContainer'>
-            <h2 className="CategoryTitle">{propsTitle}</h2>
+            <h2 className="CategoryTitle">{Title}</h2>
             <div className='ItemCardContainer'>
                 {
-                    
-                items.map(item => {
-                    
+                    items.map(item => {
                     return (
                         <ItemCard
                             name={item.name}
@@ -18,7 +15,8 @@ const ItemList = ({ items, propsTitle }) => {
                             key={item.id}
                             id={item.id}
                             imagepath={item.imagepath}
-                        /> 
+                            AddToCart={AddToCart}
+                        />
                     )
                 })
             }

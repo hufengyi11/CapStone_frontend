@@ -62,6 +62,7 @@ export default function Stores(){
             <div className='StoreDisplay'>
                 <StoreList stores={stores} />
             </div>
+            <div className='padding'></div>
             <Footer />
         </>
     )

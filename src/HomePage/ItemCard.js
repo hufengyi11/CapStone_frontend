@@ -1,4 +1,6 @@
-const ItemCard = ({ id, name, price, rating, imagepath }) => {
+const ItemCard = ({ id, name, price, rating, imagepath, AddToCart }) => {
+
+
     return (
         <div className='itemcontainerwithcart'>
             <div className='itemcontainer'>
@@ -8,9 +10,9 @@ const ItemCard = ({ id, name, price, rating, imagepath }) => {
             <h2 className='itemtitle'>{name}</h2>
             <p className='price'>£{price}</p>
             <p className='rating'>{rating} star</p>
-            
+            <button className='AddtocartButton' onClick={() => AddToCart(id)}>+</button>
         </div>
     )
 }
 
-export default ItemCard
+export default ItemCard;

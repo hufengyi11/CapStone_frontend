@@ -34,10 +34,10 @@ export default function Home() {
     const toiletriesTitle = 'Toiletries';
     const wellbeingTitle = 'Well Being';
 
-    
+
     function AddToCart(input) {
         const purchasingItem = items.find(item => item.id === input);
-        setBasketItem([...basketItem,purchasingItem])
+        setBasketItem([...basketItem, purchasingItem])
     }
 
     function searchFunction(searchInput) {
@@ -48,16 +48,17 @@ export default function Home() {
     return (
         <>
             <Layout />
-            {items.length && <div className="ItemDisplay">
-                <ItemList items={bakeryItem} propsTitle={bakeryTitle}/> 
-                <ItemList items={dairyItem} propsTitle={dairyTitle}/>
-                <ItemList items={drinksItem} propsTitle={drinksTitle}/>
-                <ItemList items={fruitsItem} propsTitle={fruitsTitle}/>
-                <ItemList items={vegeItem} propsTitle={vegeTitle}/>
-                <ItemList items={meatItem} propsTitle={meatTitle}/>
-                <ItemList items={toiletriesItem} propsTitle={toiletriesTitle}/>
-                <ItemList items={wellbeingItem} propsTitle={wellbeingTitle}/>
+            {items.length && <div className='ItemDisplay'>
+                <ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} />
+                <ItemList items={dairyItem} Title={dairyTitle} AddToCart={AddToCart} />
+                <ItemList items={drinksItem} Title={drinksTitle} AddToCart={AddToCart} />
+                <ItemList items={fruitsItem} Title={fruitsTitle} AddToCart={AddToCart} />
+                <ItemList items={vegeItem} Title={vegeTitle} AddToCart={AddToCart} />
+                <ItemList items={meatItem} Title={meatTitle} AddToCart={AddToCart} />
+                <ItemList items={toiletriesItem} Title={toiletriesTitle} AddToCart={AddToCart} />
+                <ItemList items={wellbeingItem} Title={wellbeingTitle} AddToCart={AddToCart} />
             </div>}
+
             <Footer />
         </>
 

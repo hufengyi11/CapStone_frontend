@@ -52,7 +52,7 @@ function App (){
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="faqs" element={<Faqs />} />
             <Route path="contact" element={<ContactUs />} />
-            {/* <Route path="basket" element={<Basket />} /> */}
+            <Route path="basket" element={<Basket />} />
           </Route>
         </Routes>
       </BrowserRouter>

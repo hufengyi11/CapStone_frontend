@@ -46,7 +46,7 @@ const Navigation = ({ searchFunction }) => {
           </Link>
           <Link to='/shopping' className='best-seller'>Shopping</Link>
 
-          <Link to="/best-seller" className='best-seller'>Best Sellers</Link>
+          {/* <Link to="/best-seller" className='best-seller'>Best Sellers</Link> */}
 
           <Link to="/Stores" className='Stores'>Our Stores</Link>
 
@@ -61,7 +61,7 @@ const Navigation = ({ searchFunction }) => {
               onChange={e => setSearchInput(e.target.value)}
             ></input>
           </form>
-          <a href="javascript:void(0);" class="icon" onClick = "myFunction()"> <FaBars /></a>
+          <a href="javascript:void(0);" className="icon" onClick={myFunction}> <FaBars /></a>
           
           <button className="darkbutton" onClick={() => setDarkMode(!darkMode)}>
             <FaSun /></button>
