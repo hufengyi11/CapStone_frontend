@@ -15,7 +15,6 @@ export default function Home() {
     }, [])
 
     const [items, setItems] = useState([]);
-    const [filteredItems, setFilteredItems] = useState();
     const bakeryItem = items.filter(i => i.category === 'Bakery');
     const dairyItem = items.filter(i => i.category === 'Dairy');
     const drinksItem = items.filter(i => i.category === 'Drink');
@@ -71,6 +70,9 @@ export default function Home() {
         const purchasingItem = items.find(item => item.id === input);
         setBasketItem([...basketItem, purchasingItem])
     }
+
+    // search function
+    const [filteredItems, setFilteredItems] = useState();
 
     function searchFunction(searchInput) {
         const filtered = items.filter(item => item.name.toLowerCase().includes(searchInput.toLowerCase()));
