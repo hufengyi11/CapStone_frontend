@@ -71,7 +71,8 @@
 .BasketItemCard{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
+    width: 80%;
 }
 .itemimage{
     width:100px;
