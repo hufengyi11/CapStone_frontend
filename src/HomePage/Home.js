@@ -48,16 +48,16 @@ export default function Home() {
     return (
         <>
             <Layout />
-            <div className='ItemDisplay'>
-                <ItemList props={bakeryItem} propsTitle={bakeryTitle}/> 
-                <ItemList props={dairyItem} propsTitle={dairyTitle}/>
-                <ItemList props={drinksItem} propsTitle={drinksTitle}/>
-                <ItemList props={fruitsItem} propsTitle={fruitsTitle}/>
-                <ItemList props={vegeItem} propsTitle={vegeTitle}/>
-                <ItemList props={meatItem} propsTitle={meatTitle}/>
-                <ItemList props={toiletriesItem} propsTitle={toiletriesTitle}/>
-                <ItemList props={wellbeingItem} propsTitle={wellbeingTitle}/>
-            </div>
+            {items.length && <div className="ItemDisplay">
+                <ItemList items={bakeryItem} propsTitle={bakeryTitle}/> 
+                <ItemList items={dairyItem} propsTitle={dairyTitle}/>
+                <ItemList items={drinksItem} propsTitle={drinksTitle}/>
+                <ItemList items={fruitsItem} propsTitle={fruitsTitle}/>
+                <ItemList items={vegeItem} propsTitle={vegeTitle}/>
+                <ItemList items={meatItem} propsTitle={meatTitle}/>
+                <ItemList items={toiletriesItem} propsTitle={toiletriesTitle}/>
+                <ItemList items={wellbeingItem} propsTitle={wellbeingTitle}/>
+            </div>}
             <Footer />
         </>
 

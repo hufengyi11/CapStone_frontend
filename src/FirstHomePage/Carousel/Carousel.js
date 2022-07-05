@@ -1,13 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./Carousel.css"
 
-export const CarouselItem = ({children, width}) => {
-    return (
-        <div className="carousel_item" style = {{width : width}}>
-            {children}
-        </div>
-    );
-};
 
 const Carousel = ({children}) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -57,3 +50,5 @@ const updateIndex = (newIndex) => {
 };
 
 export default Carousel;
+
+

@@ -3,7 +3,8 @@ import './FirstHomePage.css';
 import { Button } from "@material-ui/core";
 import { FaArrowRight, FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Carousel, { CarouselItem } from "./Carousel/Carousel";
+import  Carousel  from "./Carousel/Carousel";
+import CarouselItem from "./Carousel/Carouseltem";
 import Geolocation from "./Geolocation";
 
 
@@ -13,8 +14,7 @@ const EnterAdress = () => {
     return(
         <>
         <div className="gomartsection">
-        <h1 className="webtitle">GoMart</h1>
-        <img className="shoppingcart" src={require("../Images/shoppingcart.gif")} />
+        <h1 className="webtitle">GoMart<img className="shoppingcart" src={require("../Images/shoppingcart.gif")} /></h1>
         </div>
         <div className="flexbox-container">
             <div className="flexbox-item-1">

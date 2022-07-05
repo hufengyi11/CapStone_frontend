@@ -204,7 +204,7 @@
     font-family:'Times New Roman', Times, serif;
     background-color: #36bad7;
     text-align: center;
-    width:400px;
+    width:800px;
     border-radius: 15px 50px;
     position: relative;
     left: 100px;
@@ -221,11 +221,12 @@
 
 .shoppingcart{
     width: 400px;
-    height: 200px;
+    height: 150px;
     position: relative;
-    left: 900px;
+    
     margin-bottom: -150px;
     mix-blend-mode: multiply;
+    bottom: 110px;
 }
 .deliveryapply{
     position: relative;

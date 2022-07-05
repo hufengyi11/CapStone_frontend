@@ -28,6 +28,8 @@
     font-size: large;
     border-radius: 50%;
     color: white;
+    z-index: 10;
+    position: relative;
 
 }
 
@@ -43,7 +45,7 @@
     width: 130px;
     font-size: medium;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 .price{
     margin-top: -15px;
@@ -79,7 +81,7 @@
     width:100px;
     height: 100px;
     position: relative;
-    left: 25px
+    left: 25px;
 }
 
 .CategoryTitle{
