@@ -1,11 +1,8 @@
 import React, { useContext } from 'react'
 import Footer from '../Footer/Footer'
 import Layout from '../Layout/Layout'
-import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
 import BasketContext from '../BasketContext/BasketContext';
 import './Basket.css'
-import { Remove } from '@material-ui/icons';
 
 function Basket() {
     const { basketItems, setBasketItems } = useContext(BasketContext);
@@ -15,16 +12,16 @@ function Basket() {
         .map(i =>
             <div className='basketListContainer'>
                 <div className='basketListItem'>
-                    <h3>{basketItems.filter(p => p.id == i)[0].name}</h3>
-                    <h4>price: £{basketItems.filter(p => p.id == i)[0].price}</h4>
+                    <h3>{basketItems.filter(p => p.id === i)[0].name}</h3>
+                    <h4>price: £{basketItems.filter(p => p.id === i)[0].price}</h4>
                 </div>
                 <h4 className='basketListItemCount'>
 
                     {/* <button className='button' >-</button> */}
 
-                    amount: {basketItems.filter(p => p.id == i).length}
+                    amount: {basketItems.filter(p => p.id === i).length}
 
-                    {/* <button className='button' onClick={Add(i)}>+</button> */}
+                    <button className='button' >+</button>
                 </h4>
             </div>
         )
@@ -34,6 +31,10 @@ function Basket() {
     const totalValue = orderValue + 2
 
 
+    // const RemoveFromCart = (input) => {
+    //     const cartItems = basketItems.slice().filter((a) => a.name !== input);
+    //     setBasketItems(cartItems)
+    // }
 
     // function RemoveFromCart(input) {
     //     const cartItems = basketItems.slice().filter((a) => a.name !== input);

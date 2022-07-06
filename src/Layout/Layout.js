@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import './Nav.css'
 import { FaShoppingBasket, FaBars, FaSun } from 'react-icons/fa';
 import BasketContext from '../BasketContext/BasketContext';
+import e from 'cors';
 
 const Navigation = ({ searchFunction }) => {
 
@@ -57,10 +58,10 @@ const Navigation = ({ searchFunction }) => {
           <Link to="/login" className='split'>Log In</Link>
           <Link to="/register" className='split'>Register</Link>
           <Link to="/basket" className='split'>Basket <FaShoppingBasket /> {basketItems.length}</Link>
-          <form onSubmit={handleSubmit} >
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Search GoMart"
+              placeholder="Search.."
               className='texts'
               onChange={e => setSearchInput(e.target.value)}
             ></input>

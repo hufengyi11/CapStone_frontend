@@ -47,18 +47,23 @@ export default function Home() {
 
     return (
         <>
-            <Layout />
-                {items.length && <div className='ItemDisplay'>
-                    <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} /></div>
-                    <div id="dairy"><ItemList items={dairyItem} Title={dairyTitle} /></div>
-                    <div id="drinks"><ItemList items={drinksItem} Title={drinksTitle} /></div>
-                    <div id="fruits"><ItemList items={fruitsItem} Title={fruitsTitle} /></div>
-                    <div id="vegetables"><ItemList items={vegeItem} Title={vegeTitle} /></div>
-                    <div id="meats"><ItemList items={meatItem} Title={meatTitle} /></div>
-                    <div id="toiletries"><ItemList items={toiletriesItem} Title={toiletriesTitle} /></div>
-                    <div id="wellbeing"><ItemList items={wellbeingItem} Title={wellbeingTitle} /></div>
-                </div>}
-                <Footer />
+            <Layout searchFunction={searchFunction} />
+
+            <span><ItemList items={filteredItems} /></span>
+            <div className='padding'></div>
+
+
+            {items.length && <div className='ItemDisplay'>
+                <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} /></div>
+                <div id="dairy"><ItemList items={dairyItem} Title={dairyTitle} /></div>
+                <div id="drinks"><ItemList items={drinksItem} Title={drinksTitle} /></div>
+                <div id="fruits"><ItemList items={fruitsItem} Title={fruitsTitle} /></div>
+                <div id="vegetables"><ItemList items={vegeItem} Title={vegeTitle} /></div>
+                <div id="meats"><ItemList items={meatItem} Title={meatTitle} /></div>
+                <div id="toiletries"><ItemList items={toiletriesItem} Title={toiletriesTitle} /></div>
+                <div id="wellbeing"><ItemList items={wellbeingItem} Title={wellbeingTitle} /></div>
+            </div>}
+            <Footer />
 
         </>
 
