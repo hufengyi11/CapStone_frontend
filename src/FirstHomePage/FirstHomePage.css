@@ -211,6 +211,7 @@
     margin-bottom: -150px;
     margin-top: 50px;
     transition: width 1s, height 2s;
+    border: 1px solid black;
     
     
 }
@@ -239,4 +240,44 @@
     width: 600px;
     height: 400px;
     border-radius: 15px;
+}
+.applybutton{
+    background-color: white;
+    color: hsl(191, 71%, 60%);
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: large;
+}
+.applybutton:hover{
+    color:white;
+    background-color: hsl(191, 71%, 60%);
+
+}
+.community{
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: -60px;
+
+}
+.applyform{
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.checkboxtext{
+    width: 200px;
+    position:relative;
+    left: 600px
+}
+.checkbox{
+    position: relative;
+    right:120px;
+    top: 100px;
+    font-size: 100px
 }

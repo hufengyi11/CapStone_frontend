@@ -17,9 +17,10 @@ export default function Stores(){
     const [stores, setStores] = useState([]);
     const [filteredStores] = useState();
 
-    const StoreViewing = ({ id, name, opening, closing, location, review }) => {
+    const StoreViewing = ({ id, name, opening, closing, location, review, imagepath }) => {
         return (
             <div className='storeViewingLocations'>
+                <img className='itemimage' src={`${imagepath}.jpeg`} alt="image" />
                 <h2 className='storeName'>{name}</h2>
                 <p>Opening: {opening} am</p>
                 <p>Closing: {closing} pm </p>
@@ -38,6 +39,7 @@ export default function Stores(){
                     closing={item.closing}
                     location = {item.location}
                     review = {item.review}
+                    imagepath={item.imagepath}
                     key={item.id}
                 />
             )

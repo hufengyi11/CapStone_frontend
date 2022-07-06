@@ -2,6 +2,7 @@
   overflow: hidden;
   background-color: hsl(191, 71%, 60%);
   border-radius: 0px 0px 15px 15px;
+  border: 1px solid black;
   /* position: fixed;
   top: 0;
   width: 100%; */
