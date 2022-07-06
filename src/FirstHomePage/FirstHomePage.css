@@ -201,7 +201,7 @@
     font-size: 100px;
     font-weight: bold;
     color: white;
-    font-family:'Times New Roman', Times, serif;
+    font-family: Monaco;
     background-color: #36bad7;
     text-align: center;
     width:800px;
@@ -217,7 +217,7 @@
 }
 
 .webtitle:hover {
-    width: 800px;
+    width: 1200px;
 }
 
 .shoppingcart{
