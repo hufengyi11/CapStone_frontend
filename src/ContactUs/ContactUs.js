@@ -4,8 +4,6 @@ import './ContactUs.css'
 import Footer from "../Footer/Footer";
 import Navigation from '../Layout/Layout';
 
-
-
 const Contact = () => {
     
     const [name, setName] = useState('');
@@ -67,7 +65,6 @@ const Contact = () => {
             <button id="but" onClick={submit}>
                 Send Message
             </button>
-
             <span
                 className={emailSent ? 'visible' : null}>
             </span>

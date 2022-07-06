@@ -10,7 +10,7 @@ const Navigation = ({ searchFunction }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    searchFunction(searchInput);
+    searchFunction({searchInput});
   }
 
 
@@ -37,6 +37,7 @@ const Navigation = ({ searchFunction }) => {
   }, [darkMode]);
 
   const { basketItems, setBasketItems } = useContext(BasketContext);
+
 
 
   return (

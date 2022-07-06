@@ -26,14 +26,14 @@ const navigate = useNavigate();
                             <Link className="links" to="/faqs" >
                             <li><a href="faqs" onClick={() => {navigate('faqs', {replace:true})}}>FAQs</a></li>
                             </Link>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="JoinUs">Careers</a></li>
                         </ul>
                     </ div>
 
                     <div className="footer-col">
                         <h4>Work with us</h4>
                         <ul>
-                       <li> <a href="#">Become a Delivery Partner</a></li>
+                       <li> <a href="JoinUs">Become a Delivery Partner</a></li>
                         <li><a href="#">Advertise</a></li>
                         <li><a href="#">Partner and Affiliate</a></li>
                         </ul>
@@ -62,6 +62,7 @@ const navigate = useNavigate();
                 </div>
             </div>
             <div className="privacy">
+                
                 <a>© 2022 GoMart, Inc.</a>
                 <div className="privnotice"><a>Privacy Notice</a></div>
                 <div className="terms"><a>Terms and Conditions</a></div>
