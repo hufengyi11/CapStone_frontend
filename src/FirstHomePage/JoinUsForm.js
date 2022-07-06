@@ -69,7 +69,7 @@ const JoinUsForm = () => {
                 <option value="London">London</option>
             </select>
             <div className="checkboxtext">
-            <input type="checkbox" className="checkbox"/>
+            <input type="checkbox" className="checkbox" required/>
                 <p>We collect this data for the purposes of processing your application. 
                     By clicking this box, you acknowledge that you have read and understood the privacy policy and terms of service.<div>*</div></p>
             </div>
