@@ -3,6 +3,7 @@ import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
 import './Home.css'
+import ItemCard from './ItemCard';
 import ItemList from './ItemList';
 
 export default function Home() {
@@ -36,41 +37,6 @@ export default function Home() {
     //basket
     const [basketItem, setBasketItem] = useState([]);
 
-    const BasketItemCard = ({ name, price, RemoveFromBasket }) => {
-        return (
-            <div className='BasketItemCard'>
-                <h3>{name}</h3>
-                <h3>£{price}</h3>
-                <button className='removebutton' onClick={() => RemoveFromBasket(name)}>X</button>
-            </div>
-        )
-    }
-    const BasketList = ({ items, RemoveFromBasket }) => {
-        let mappedBasketItem = items.map(item => {
-            return (
-                <BasketItemCard
-                    name={item.name}
-                    price={item.price}
-                    RemoveFromBasket={RemoveFromBasket}
-                    key={items.length}
-                />
-            )
-        })
-        return (
-            <div className='BasketItemList'>{mappedBasketItem}</div>
-        )
-    }
-
-    function RemoveFromCart(input) {
-        const cartItems = basketItem.slice().filter((a) => a.name !== input);
-        setBasketItem(cartItems)
-    }
-
-    function AddToCart(input) {
-        const purchasingItem = items.find(item => item.id === input);
-        setBasketItem([...basketItem, purchasingItem])
-    }
-
     // search function
     const [filteredItems, setFilteredItems] = useState();
 
@@ -82,17 +48,18 @@ export default function Home() {
     return (
         <>
             <Layout />
-            {items.length && <div className='ItemDisplay'>
-                <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} /></div>
-                <div id="dairy"><ItemList items={dairyItem} Title={dairyTitle} AddToCart={AddToCart} /></div>
-                <div id="drinks"><ItemList items={drinksItem} Title={drinksTitle} AddToCart={AddToCart} /></div>
-                <div id="fruits"><ItemList items={fruitsItem} Title={fruitsTitle} AddToCart={AddToCart} /></div>
-                <div id="vegetables"><ItemList items={vegeItem} Title={vegeTitle} AddToCart={AddToCart} /></div>
-                <div id="meats"><ItemList items={meatItem} Title={meatTitle} AddToCart={AddToCart} /></div>
-                <div id="toiletries"><ItemList items={toiletriesItem} Title={toiletriesTitle} AddToCart={AddToCart} /></div>
-                <div id="wellbeing"><ItemList items={wellbeingItem} Title={wellbeingTitle} AddToCart={AddToCart} /></div>
-            </div>}
-            <Footer />
+                {items.length && <div className='ItemDisplay'>
+                    <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} /></div>
+                    <div id="dairy"><ItemList items={dairyItem} Title={dairyTitle} /></div>
+                    <div id="drinks"><ItemList items={drinksItem} Title={drinksTitle} /></div>
+                    <div id="fruits"><ItemList items={fruitsItem} Title={fruitsTitle} /></div>
+                    <div id="vegetables"><ItemList items={vegeItem} Title={vegeTitle} /></div>
+                    <div id="meats"><ItemList items={meatItem} Title={meatTitle} /></div>
+                    <div id="toiletries"><ItemList items={toiletriesItem} Title={toiletriesTitle} /></div>
+                    <div id="wellbeing"><ItemList items={wellbeingItem} Title={wellbeingTitle} /></div>
+                </div>}
+                <Footer />
+
         </>
 
     )

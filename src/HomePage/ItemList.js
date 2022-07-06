@@ -9,15 +9,7 @@ const ItemList = ({ items, Title , AddToCart}) => {
                 {
                     items.map(item => {
                     return (
-                        <ItemCard
-                            name={item.name}
-                            price={item.price}
-                            rating={item.rating}
-                            key={item.id}
-                            id={item.id}
-                            imagepath={item.imagepath}
-                            AddToCart={AddToCart}
-                        />
+                        <ItemCard item ={item} key={item.id} />
                     )
                 })
             }
