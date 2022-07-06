@@ -45,13 +45,14 @@ export default function Home() {
         setFilteredItems(filtered);
     }
 
+    const empty = ({})
+
     return (
         <>
             <Layout searchFunction={searchFunction} />
-
-            <span><ItemList items={filteredItems} /></span>
-            <div className='padding'></div>
-
+            {/* <div className='ItemDisplay'>
+                <ItemList items={filteredItems ? filteredItems : empty } />
+            </div> */}
 
             {items.length && <div className='ItemDisplay'>
                 <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} /></div>
@@ -64,6 +65,7 @@ export default function Home() {
                 <div id="wellbeing"><ItemList items={wellbeingItem} Title={wellbeingTitle} /></div>
             </div>}
             <Footer />
+
 
         </>
 
