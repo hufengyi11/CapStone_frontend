@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Outlet, Link } from "react-router-dom";
 import './Nav.css'
 import { FaShoppingBasket, FaBars, FaSun } from 'react-icons/fa';
+import BasketContext from '../BasketContext/BasketContext';
 
 const Navigation = ({ searchFunction }) => {
 
@@ -35,6 +36,9 @@ const Navigation = ({ searchFunction }) => {
     localStorage.setItem("site-dark-mode", json);
   }, [darkMode]);
 
+  const { basketItems, setBasketItems } = useContext(BasketContext);
+
+
   return (
     <>
       <nav className="topnav" id="myTopnav">
@@ -52,7 +56,7 @@ const Navigation = ({ searchFunction }) => {
 
           <Link to="/login" className='split'>Log In</Link>
           <Link to="/register" className='split'>Register</Link>
-          <Link to="/basket" className='split'>Basket<FaShoppingBasket /></Link>
+          <Link to="/basket" className='split'>Basket <FaShoppingBasket /> {basketItems.length}</Link>
           <form onSubmit={handleSubmit} >
             <input
               type="text"
@@ -62,7 +66,7 @@ const Navigation = ({ searchFunction }) => {
             ></input>
           </form>
           <a href="javascript:void(0);" className="icon" onClick={myFunction}> <FaBars /></a>
-          
+
           <button className="darkbutton" onClick={() => setDarkMode(!darkMode)}>
             <FaSun /></button>
         </ul>
