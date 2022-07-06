@@ -59,6 +59,7 @@ export default function Home() {
                     <div id="wellbeing"><ItemList items={wellbeingItem} Title={wellbeingTitle} /></div>
                 </div>}
                 <Footer />
+
         </>
 
     )

@@ -38,6 +38,10 @@
     position: relative;
 
 }
+.AddtocartButton:hover{
+    background-color: white;
+    color: rgb(26, 215, 222);
+}
 
 .itemcontainerwithcart{
     display: flex;
