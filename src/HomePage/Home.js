@@ -82,11 +82,7 @@ export default function Home() {
     return (
         <>
             <Layout />
-            <div className='BasketContainer'>
-            <h1>Basket</h1>
-            <p>You have {basketItem.length} items in the basket.</p>
-            <BasketList items={basketItem} RemoveFromBasket={RemoveFromCart} />
-            </div>
+           
             <hr />
             {items.length && <div className='ItemDisplay'>
                 <ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} />

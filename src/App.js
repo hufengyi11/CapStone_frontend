@@ -12,6 +12,8 @@ import Register from './LogIn/Register';
 import FirstHomePage from './FirstHomePage/FirstHomePage';
 import BestSeller from './BestSeller/BestSeller';
 import Stores from './Stores/Stores';
+import JoinUsForm from './FirstHomePage/JoinUsForm';
+import JoinUs from './FirstHomePage/JoinUs';
 
 function App (){
 
@@ -53,6 +55,7 @@ function App (){
             <Route path="faqs" element={<Faqs />} />
             <Route path="contact" element={<ContactUs />} />
             <Route path="basket" element={<Basket />} />
+            <Route path="joinus" element={<JoinUsForm />} />
           </Route>
         </Routes>
       </BrowserRouter>
