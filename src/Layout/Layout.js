@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import './Nav.css'
 import { FaShoppingBasket, FaBars, FaSun } from 'react-icons/fa';
 import BasketContext from '../BasketContext/BasketContext';
+import { IconContext } from 'react-icons';
 
 const Navigation = ({ searchFunction }) => {
 
@@ -56,7 +57,9 @@ const Navigation = ({ searchFunction }) => {
 
           <Link to="/login" className='split'>Log In</Link>
           <Link to="/register" className='split'>Register</Link>
-          <Link to="/basket" className='split'>Basket <FaShoppingBasket /> {basketItems.length}</Link>
+          <Link to="/basket" className='split'> <IconContext.Provider
+          value={{color: 'white', size: '30px'}}>
+          <FaShoppingBasket /> {basketItems.length}</IconContext.Provider></Link>
           <form onSubmit={handleSubmit} >
             <input
               type="text"

@@ -7,6 +7,7 @@
     padding-bottom: 20px;
     display: grid;
     margin-bottom: 150px;
+    
 }
 #input,
 textarea {
@@ -34,10 +35,24 @@ textarea {
 }
 .contacttitle{
     font-size: 100px;
-    
     font-weight: bold;
     color: #36bad7;
 }
-.contact{
+.contactus{
     text-align: center;
+    border:none;
+  
+}
+.contactinfo{
+    font-weight: bold;
+    font-size: large;
+}
+.contactus{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 150px;
 }

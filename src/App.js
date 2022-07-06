@@ -15,6 +15,7 @@ import Stores from './Stores/Stores';
 import JoinUsForm from './FirstHomePage/JoinUsForm';
 import JoinUs from './FirstHomePage/JoinUs';
 import BasketContext from './BasketContext/BasketContext';
+import CheckoutPage from './Basket/CheckoutPage';
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
               <Route path="contact" element={<ContactUs />} />
               <Route path="basket" element={<Basket />} />
               <Route path="joinus" element={<JoinUsForm />} />
+              <Route path="checkout" element={<CheckoutPage />}/>
             </Route>
           </Routes>
         </BrowserRouter>

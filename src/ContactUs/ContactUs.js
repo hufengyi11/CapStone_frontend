@@ -40,10 +40,9 @@ const Contact = () => {
         <div>
             <Navigation />
         </div>
-        <div className='contact'>
+        <div className='contactus'>
             <h1 className='contacttitle'>Contact Us</h1>
-            <p>We want to make sure your GoMart experience is perfect. Contact us using the form below!</p>
-        </div>
+            <p className='contactinfo'>We want to make sure your GoMart experience is perfect. Contact us using the form below!</p>
         <div id="contact-form">
             <label>Your Full Name:</label>
             <input
@@ -68,7 +67,7 @@ const Contact = () => {
             <span
                 className={emailSent ? 'visible' : null}>
             </span>
-
+</div>
         </div>
             <Footer />
         </>

@@ -35,13 +35,15 @@ const JoinUsForm = () => {
     }
 
     return (
-        <>
+        <main>
             <div>
                 <Navigation />
             </div>
+           
             <div className='contact'>
-                <h1 className='contacttitle'>Apply For This Job Now!</h1>
-                <p>
+            <div>
+                <h1 className='joinustitle'>Apply For This Job Now!</h1>
+                <p className='joinusdesc'>
                     No experience required. Part-time and full-time jobs available with flexibility, benefits and tips. Must be eligible to work in the city you're applying to.
                 </p>
             </div>
@@ -92,7 +94,7 @@ const JoinUsForm = () => {
                     <p className='para'>
                         We collect this data for the purposes of processing your application. 
                         By clicking this box, you acknowledge that you have read and understood the privacy policy and terms of service.
-                        <div>*</div>
+                        <div className='star'>*</div>
                     </p>
                 </div>
 
@@ -103,9 +105,10 @@ const JoinUsForm = () => {
                 <span
                     className={emailSent ? 'visible' : null}>
                 </span>
+                </div>
             </div>
             <Footer />
-        </>
+        </main>
     );
 };
 export default JoinUsForm

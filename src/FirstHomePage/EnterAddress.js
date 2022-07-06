@@ -2,7 +2,7 @@ import React from "react";
 import './FirstHomePage.css';
 import { Button } from "@material-ui/core";
 import { FaArrowRight, FaShoppingCart } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import  Carousel  from "./Carousel/Carousel";
 import CarouselItem from "./Carousel/Carouseltem";
 import Geolocation from "./Geolocation";
@@ -20,7 +20,11 @@ const EnterAdress = () => {
             <div className="flexbox-item-1">
             <h1 className="delivery">Daily groceries delivered to you in minutes.</h1>
             
-            <input className="input" type="text" placeholder="Enter delivery address" onClick={()=>{
+            <input className="input" type="text" placeholder="Enter delivery address"
+            onSubmit={
+                <Link to='/shopping'></Link>
+            }
+            onClick={()=>{
                    console.log(location.loaded ? JSON.stringify(location): "location data not available yet.")
                 }}>
                 

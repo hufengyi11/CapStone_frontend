@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Footer from '../Footer/Footer'
 import Layout from '../Layout/Layout'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import BasketContext from '../BasketContext/BasketContext';
 import './Basket.css'
@@ -50,6 +50,7 @@ function Basket() {
                 <h3>Order Value: £{orderValue}</h3>
                 <h3>Delivery Cost: £2</h3>
                 <h2>Total: £{totalValue}</h2>
+                <Link to="/checkout"><button id="but" > Checkout</button></Link>
             </div>
 
             <div className='padding'></div>

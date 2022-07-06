@@ -8,12 +8,16 @@
   text-align:center;
   overflow: hidden;
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
+    
     display: block;
     padding: 15px;
     margin-bottom: 150px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
 }
 .names{
     text-align: center;

@@ -19,6 +19,7 @@ export default function Stores(){
 
     const StoreViewing = ({ id, name, opening, closing, location, review, imagepath }) => {
         return (
+            
             <div className='storeViewingLocations'>
                 <img className='itemimage' src={`${imagepath}.jpeg`} alt="image" />
                 <h2 className='storeName'>{name}</h2>
@@ -55,11 +56,14 @@ export default function Stores(){
     return (
         <>
             <Navigation />
+            <div className='storewrapper'>
             <h1 className='ourStores'>
                 Our Stores
             </h1>
+            <p className='stores'>Here are the list of stores that have partnered with us to delivery your groceries!</p>
             <div className='StoreDisplay'>
                 <StoreList stores={stores} />
+            </div>
             </div>
             <div className='padding'></div>
             <Footer />
