@@ -102,11 +102,38 @@ body{
 .dark .footer{
   background-color: rgb(56, 54, 54);
 }
+.dark .ItemListContainer{ 
+  background-color: rgb(56, 54, 54);
+}
 
+.dark  .ItemCardContainer{
+  background-color: rgb(56, 54, 54);
+}
+
+.dark .descriptioncontainer{
+  background-color: rgb(56, 54, 54);
+
+}
+.dark .categorysection{
+  background-color: rgb(56, 54, 54);
+}
+
+
+.dark .join{
+  background-color: rgb(56, 54, 54);
+
+}
 .dark .footer-col ul li a{
   color: white;
 }
+.dark #email{
+background-color: white;
+}
 
+.dark #mes{
+  background-color: white;
+  color: black;
+}
 .dark .footer-col h4{
   color: white;
 }

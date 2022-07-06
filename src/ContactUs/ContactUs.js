@@ -59,7 +59,7 @@ const Contact = () => {
                 placeholder="Your email address"
                 value={email} onChange={e => setEmail(e.target.value)} />
             <label id='subject'>Subject</label>
-            <textarea
+            <textarea id='mes'
                 placeholder="Your message"
                 value={message} onChange={e => setMessage(e.target.value)}>
             </textarea>
