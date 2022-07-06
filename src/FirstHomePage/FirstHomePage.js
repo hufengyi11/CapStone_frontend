@@ -10,7 +10,7 @@ import JoinUs from "./JoinUs";
 function FirstHomePage() {
     return(
         <>
-        <Layout />
+        <Layout  />
         <EnterAdress />
         <Description />
         <Categories />
