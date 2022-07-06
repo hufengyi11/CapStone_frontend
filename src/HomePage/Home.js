@@ -85,14 +85,14 @@ export default function Home() {
            
             <hr />
             {items.length && <div className='ItemDisplay'>
-                <ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} />
-                <ItemList items={dairyItem} Title={dairyTitle} AddToCart={AddToCart} />
-                <ItemList items={drinksItem} Title={drinksTitle} AddToCart={AddToCart} />
-                <ItemList items={fruitsItem} Title={fruitsTitle} AddToCart={AddToCart} />
-                <ItemList items={vegeItem} Title={vegeTitle} AddToCart={AddToCart} />
-                <ItemList items={meatItem} Title={meatTitle} AddToCart={AddToCart} />
-                <ItemList items={toiletriesItem} Title={toiletriesTitle} AddToCart={AddToCart} />
-                <ItemList items={wellbeingItem} Title={wellbeingTitle} AddToCart={AddToCart} />
+                <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} /></div>
+                <div id="dairy"><ItemList items={dairyItem} Title={dairyTitle} AddToCart={AddToCart} /></div>
+                <div id="drinks"><ItemList items={drinksItem} Title={drinksTitle} AddToCart={AddToCart} /></div>
+                <div id="fruits"><ItemList items={fruitsItem} Title={fruitsTitle} AddToCart={AddToCart} /></div>
+                <div id="vegetables"><ItemList items={vegeItem} Title={vegeTitle} AddToCart={AddToCart} /></div>
+                <div id="meats"><ItemList items={meatItem} Title={meatTitle} AddToCart={AddToCart} /></div>
+                <div id="toiletries"><ItemList items={toiletriesItem} Title={toiletriesTitle} AddToCart={AddToCart} /></div>
+                <div id="wellbeing"><ItemList items={wellbeingItem} Title={wellbeingTitle} AddToCart={AddToCart} /></div>
             </div>}
             <Footer />
         </>
