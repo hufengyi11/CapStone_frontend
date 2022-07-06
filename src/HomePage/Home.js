@@ -82,8 +82,6 @@ export default function Home() {
     return (
         <>
             <Layout />
-           
-            <hr />
             {items.length && <div className='ItemDisplay'>
                 <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} AddToCart={AddToCart} /></div>
                 <div id="dairy"><ItemList items={dairyItem} Title={dairyTitle} AddToCart={AddToCart} /></div>
