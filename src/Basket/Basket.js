@@ -5,26 +5,39 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import BasketContext from '../BasketContext/BasketContext';
 import './Basket.css'
-import { Remove } from '@material-ui/icons';
+import e from 'cors';
 
 function Basket() {
     const { basketItems, setBasketItems } = useContext(BasketContext);
 
+    function Add(id) {
+        const purchasingItem = basketItems.find(item => item.id == id);
+        setBasketItems([...basketItems, purchasingItem])
+    }
+
+    function Remove(id) {
+        const listWithid = basketItems.filter(item => item.id === id)
+        const listWithoutid = basketItems.filter(item => item.id != id)
+        listWithid.shift();
+        const newList = listWithoutid.concat(listWithid)
+        setBasketItems(newList)
+
+    }
+
     const uniqueNames = basketItems.map(item => item.id)
         .filter((value, index, self) => self.indexOf(value) === index)
-        .map(i =>
+        .map(id =>
             <div className='basketListContainer'>
                 <div className='basketListItem'>
-                    <h3>{basketItems.filter(p => p.id == i)[0].name}</h3>
-                    <h4>price: £{basketItems.filter(p => p.id == i)[0].price}</h4>
+                    <h3>{basketItems.filter(p => p.id === id)[0].name}</h3>
+                    <h4>price: £{basketItems.filter(p => p.id === id)[0].price}</h4>
                 </div>
                 <h4 className='basketListItemCount'>
+                    <button className='button' onClick={() => Remove(id)}>-</button>
 
-                    {/* <button className='button' >-</button> */}
+                    amount: {basketItems.filter(p => p.id === id).length}
 
-                    amount: {basketItems.filter(p => p.id == i).length}
-
-                    {/* <button className='button' onClick={Add(i)}>+</button> */}
+                    <button className='button' onClick={() => Add(id)}>+</button>
                 </h4>
             </div>
         )
@@ -35,10 +48,6 @@ function Basket() {
 
 
 
-    // function RemoveFromCart(input) {
-    //     const cartItems = basketItems.slice().filter((a) => a.name !== input);
-    //     setBasketItems(cartItems)
-    // }
 
     return (
         <div>

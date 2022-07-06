@@ -4,6 +4,7 @@ import './Nav.css'
 import { FaShoppingBasket, FaBars, FaSun } from 'react-icons/fa';
 import BasketContext from '../BasketContext/BasketContext';
 import { IconContext } from 'react-icons';
+import e from 'cors';
 
 const Navigation = ({ searchFunction }) => {
 
@@ -63,7 +64,7 @@ const Navigation = ({ searchFunction }) => {
           <form onSubmit={handleSubmit} >
             <input
               type="text"
-              placeholder="Search GoMart"
+              placeholder="Search.."
               className='texts'
               onChange={e => setSearchInput(e.target.value)}
             ></input>
