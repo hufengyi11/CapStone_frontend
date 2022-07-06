@@ -44,7 +44,7 @@ function App (){
       <BrowserRouter>
         <Routes>
          
-          <Route path="/">
+          <Route path="/" >
             <Route index element={<FirstHomePage />} />
             {/* <Route path='best-seller' element={<BestSeller />} /> */}
             <Route path="shopping" element={<Home />} />

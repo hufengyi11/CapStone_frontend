@@ -1,8 +1,23 @@
+<<<<<<< HEAD
 import React from 'react'
 import Footer from '../Footer/Footer'
 import Layout from '../Layout/Layout'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+=======
+import React, { useState } from 'react'
+import './Basket.css'
+import Footer from "../Footer/Footer";
+import Bakery from '../HomePage/Bakery';
+
+const Basket = (item) => {
+    const [basketItems, setBasketItems] = useState([]);
+
+    const addToBasket = (item) => {
+        console.log(item)
+        setBasketItems([...basketItems, item])
+    }
+>>>>>>> parent of 096e3f3 (added search function and restyled the shopping page)
 
 function Basket() {
     const navigate = useNavigate;

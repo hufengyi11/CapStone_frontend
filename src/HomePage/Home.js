@@ -2,8 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
 import axios from '../LogIn/api/axios';
-import './Home.css'
-import ItemList from './ItemList';
+import ItemCard from './ItemCard';
 
 export default function Home() {
     useEffect(() => {
@@ -38,11 +37,17 @@ export default function Home() {
 
     const BasketItemCard = ({ name, price, RemoveFromBasket }) => {
         return (
+<<<<<<< HEAD
             <div className='BasketItemCard'>
                 <h3>{name}</h3>
                 <h3>£{price}</h3>
                 <button className='removebutton' onClick={() => RemoveFromBasket(name)}>X</button>
             </div>
+=======
+            <>
+                {mappedItem}
+            </>
+>>>>>>> parent of 096e3f3 (added search function and restyled the shopping page)
         )
     }
     const BasketList = ({ items, RemoveFromBasket }) => {

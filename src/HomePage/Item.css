@@ -1,0 +1,25 @@
+.ItemCard {
+    height: 250px;
+    width: 240px;
+    background-color: gray;
+    border-radius: 20px;
+    border-color: black;
+    padding: 20px;
+}
+
+.ItemList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+}
+.ItemDisplay{
+    display: flex;
+    flex-direction: column;
+}
+
+.ItemGroup{
+    display: flex;
+    flex-direction: column;
+}
