@@ -2,18 +2,18 @@ import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Basket from './Basket/Basket';
-import Home from './HomePage/Home';
-import AboutUs from './AboutUs/AboutUs';
-import Faqs from './FAQs/Faqs';
+import Home from './ShoppingPage/ShoppingPage';
+import AboutUs from './Footer/AboutUs/AboutUs';
+import Faqs from './Footer/FAQs/Faqs';
 import ContactUs from './ContactUs/ContactUs';
 import Login from './LogIn/Login';
 import Register from './LogIn/Register';
-import FirstHomePage from './FirstHomePage/FirstHomePage';
+import FirstHomePage from './LandingPage/LandingPage';
 import Stores from './Stores/Stores';
-import JoinUsForm from './FirstHomePage/JoinUsForm';
+import JoinUsForm from './LandingPage/JoinUsForm';
 import BasketContext from './BasketContext/BasketContext';
 import CheckoutPage from './Basket/CheckoutPage';
-import ItemPage from './HomePage/POST/ItemPage';
+import ItemPage from './ShoppingPage/ManageItem/ItemPage';
 import StoreManagement from './Stores/StoreManagement';
 
 function App() {
