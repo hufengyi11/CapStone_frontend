@@ -1,0 +1,69 @@
+.carousel {
+    overflow: hidden
+  }
+  
+  .inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }
+  
+  .carousel_item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24262b;;
+    color: white;
+  }
+
+  .indicators {
+      display:flex;
+      justify-content: center;
+  }
+
+  .indicators > button {
+      margin: 5px;
+  }
+
+  .indicators > button.active {
+      background-color: darkred;
+      color: white;
+  }
+
+
+  button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  
+  button:hover {
+    background-color: #24262b;
+    color: black;
+  }
+  
+  .previous {
+    background-color: white;
+    color: black;
+  }
+  
+  .next {
+    background-color: white;
+    color: black;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+
+  .imgContainer {
+    position: relative;
+  }
+ 
+  .leftButton {
+     position: absolute;
+     left: 10%; bottom: 50%;
+  }
+   .rightButton {
+     position: absolute;
+     right: 10%; bottom: 50%;
+  }

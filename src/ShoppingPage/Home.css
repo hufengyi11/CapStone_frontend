@@ -1,0 +1,120 @@
+.ItemListContainer{
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    border: 1px solid black;
+    
+}
+
+.itemcontainer{
+    width: 150px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.ItemCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.AddtocartButton{
+    background-color: rgb(26, 215, 222);
+    width: 40px;
+    height: 40px;
+    font-size: large;
+    border-radius: 50%;
+    color: white;
+    z-index: 10;
+    position: relative;
+    left:50px;
+    bottom: 35px;
+
+}
+.AddtocartButton:hover{
+    background-color: white;
+    color: rgb(26, 215, 222);
+}
+
+.itemcontainerwithcart{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px;
+}
+
+.itemtitle{
+    width: 130px;
+    font-size: medium;
+    text-align: center;
+    margin-top: -30px;
+
+}
+.price{
+    margin-top: -15px;
+}
+.rating{
+    margin-top: -15px;
+    color: rgb(255,215,0);
+    font-weight: bold;
+}
+
+.BasketContainer{
+    padding-left: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.padding{
+    width: 100%;
+    height: 150px;
+}
+
+.BasketItemList{
+    display: flex;
+    flex-direction: column;
+}
+
+.BasketItemCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.itemimage{
+    width:100px;
+    height: 100px;
+    position: relative;
+    left: 25px;
+}
+
+.itemimage:hover{
+    width: 110px;
+    height: 110px;
+}
+
+.CategoryTitle{
+    padding-top: 100px;
+}
+.ItemDisplay{
+    text-align: center;
+    
+}
+.CategoryTitle{
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(26, 215, 222);
+    text-decoration: underline;
+    margin-top: -50px;
+}

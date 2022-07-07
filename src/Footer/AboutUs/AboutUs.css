@@ -1,0 +1,25 @@
+.about{
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: block;
+    padding: 15px;
+    margin-bottom: 150px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.aboutus{
+    text-align:center;
+    
+}
+
+.aboutustitle{
+    font-size: 100px;
+    font-weight: bold;
+    color: #36bad7;
+}
+
