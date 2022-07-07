@@ -10,6 +10,10 @@ const JoinUsForm = () => {
     const [mobile, setMobile] = useState(Number);
     const [emailSent, setEmailSent] = useState(false);
 
+    const handleNameChange = event => setName(event.target.value);
+    const handleEmailChange = event => setEmail(event.target.value);
+    const handleMobileChange = event => setMobile(event.target.value);
+
     const submit = () => {
         if (name && email && mobile) {
             const serviceId = 'service_y7l234l';
@@ -27,11 +31,12 @@ const JoinUsForm = () => {
 
             setName('');
             setEmail('');
-            setMobile(Number);
+            setMobile(0);
             setEmailSent(true);
         } else {
             alert('Please fill in all fields.');
         }
+        window.location.reload(false);
     }
 
     return (
@@ -52,21 +57,21 @@ const JoinUsForm = () => {
                 <input
                     type="text"
                     placeholder="Your Full Name"
-                    value={name} onChange={e => setName(e.target.value)} 
+                    value={name} onChange={handleNameChange} 
                 />
 
                 <label>Your Email Address:</label>
                 <input
                     type="email"
                     placeholder="Your Email Address"
-                    value={email} onChange={e => setEmail(e.target.value)}
+                    value={email} onChange={handleEmailChange}
                 />
                 
                 <label>Mobile Number:</label>
                 <input
                     type="mobile"
                     placeholder="Enter Your Mobile Number"
-                    value={mobile} onChange={e => setMobile(e.target.value)}
+                    value={mobile} onChange={handleMobileChange}
                 />
 
                 <label>Country</label>

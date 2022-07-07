@@ -50,14 +50,17 @@ export default function Home() {
             return (
                 <ItemList items={filteredItems} />
             )
+        } else {
+
         }
     }
 
     return (
         <>
             <Layout searchFunction={searchFunction} />
-            <SearchComponent />
-
+            <div className='ItemDisplay'>
+                <SearchComponent />
+            </div>
             {items.length && <div className='ItemDisplay'>
                 <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} /></div>
                 <div id="dairy"><ItemList items={dairyItem} Title={dairyTitle} /></div>
