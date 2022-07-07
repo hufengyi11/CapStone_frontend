@@ -1,7 +1,6 @@
 import React from "react";
 import DeleteStore from "../API/DeleteStore";
 import PostStore from "../API/PostStore";
-import axios from "axios";
 import { useState } from "react";
 
 const StorePage = () => {
@@ -111,7 +110,7 @@ const StorePage = () => {
     const handleStoreIdChange = (event) => setStoreId(event.target.value);
 
     const toDeleteStores = async (stores) => {
-      const result = await PostStore(JSON.stringify(stores));
+      const result = await DeleteStore(JSON.stringify(stores));
       console.log(result);
     };
 
