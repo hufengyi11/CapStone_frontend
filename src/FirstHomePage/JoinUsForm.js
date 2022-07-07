@@ -13,7 +13,7 @@ const JoinUsForm = () => {
     const submit = () => {
         if (name && email && mobile) {
             const serviceId = 'service_y7l234l';
-            const templateId = 'template_s5rvmqg';
+            const templateId = 'template_kb082tr';
             const userId = 'SZcn2mHqjBK2Ky7Aq';
             const templateParams = {
                 name,
