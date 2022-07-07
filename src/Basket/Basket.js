@@ -1,23 +1,21 @@
 import React, { useContext } from 'react'
 import Footer from '../Footer/Footer'
 import Layout from '../Layout/Layout'
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { Link } from "react-router-dom";
 import BasketContext from '../BasketContext/BasketContext';
 import './Basket.css'
-import e from 'cors';
 
 function Basket() {
     const { basketItems, setBasketItems } = useContext(BasketContext);
 
     function Add(id) {
-        const purchasingItem = basketItems.find(item => item.id == id);
+        const purchasingItem = basketItems.find(item => item.id === id);
         setBasketItems([...basketItems, purchasingItem])
     }
 
     function Remove(id) {
         const listWithid = basketItems.filter(item => item.id === id)
-        const listWithoutid = basketItems.filter(item => item.id != id)
+        const listWithoutid = basketItems.filter(item => item.id !== id)
         listWithid.shift();
         const newList = listWithoutid.concat(listWithid)
         setBasketItems(newList)

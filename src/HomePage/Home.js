@@ -1,4 +1,3 @@
-import e from 'cors';
 import React, { createContext, useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';

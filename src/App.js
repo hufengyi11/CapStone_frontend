@@ -3,21 +3,18 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Basket from './Basket/Basket';
 import Home from './HomePage/Home';
-import Layout from './Layout/Layout.js';
 import AboutUs from './AboutUs/AboutUs';
 import Faqs from './FAQs/Faqs';
 import ContactUs from './ContactUs/ContactUs';
 import Login from './LogIn/Login';
 import Register from './LogIn/Register';
 import FirstHomePage from './FirstHomePage/FirstHomePage';
-import BestSeller from './BestSeller/BestSeller';
 import Stores from './Stores/Stores';
 import JoinUsForm from './FirstHomePage/JoinUsForm';
-import JoinUs from './FirstHomePage/JoinUs';
 import BasketContext from './BasketContext/BasketContext';
 import CheckoutPage from './Basket/CheckoutPage';
 import AddNewItems from './HomePage/POST/addNewItems';
-import AddNewStore from './Stores/POST/addNewStore';
+import StorePage from './Stores/POST/StorePage';
 
 function App() {
 
@@ -61,7 +58,7 @@ function App() {
               <Route path="faqs" element={<Faqs />} />
               <Route path="contact" element={<ContactUs />} />
               <Route path="AddNewItemScreen" element={<AddNewItems />} />
-              <Route path="add-new-store" element={<AddNewStore />} />
+              <Route path="add-new-store" element={<StorePage />} />
               <Route path="basket" element={<Basket />} />
               <Route path="joinus" element={<JoinUsForm />} />
               <Route path="checkout" element={<CheckoutPage />}/>

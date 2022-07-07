@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
-import theStore from'./theStores.css';
+import './theStores.css';
 import Navigation from '../Layout/Layout';
 import axios from 'axios'
 
@@ -15,13 +15,12 @@ export default function Stores(){
     }, [])
 
     const [stores, setStores] = useState([]);
-    const [filteredStores] = useState();
 
-    const StoreViewing = ({ id, name, opening, closing, location, review, imagepath }) => {
+    const StoreViewing = ({ name, opening, closing, location, review, imagepath }) => {
         return (
             
             <div className='storeViewingLocations'>
-                <img className='itemimage' src={`${imagepath}.jpeg`} alt="image" />
+                <img className='itemimage' src={`${imagepath}.jpeg`} alt="stores‹" />
                 <h2 className='storeName'>{name}</h2>
                 <p>Opening: {opening} am</p>
                 <p>Closing: {closing} pm </p>
