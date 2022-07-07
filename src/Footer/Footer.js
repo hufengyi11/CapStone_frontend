@@ -56,7 +56,9 @@ const navigate = useNavigate();
                     <div className="footer-col">
                         <h4>Vendor</h4>
                         <ul>
-                            <li><a href="login">Login</a></li>
+                            {/* add store page  */}
+                            <Link className="linkes" to="/add-new-store">Register</Link>
+                            {/* <li><a href="login" onClick={() => {navigate('add-new-store', {replace:true})}}>Register</a></li> */}
                         </ul>
                     </div>
                 </div>

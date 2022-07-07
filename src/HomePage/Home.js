@@ -1,3 +1,4 @@
+import e from 'cors';
 import React, { createContext, useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import Layout from '../Layout/Layout.js';
@@ -38,7 +39,7 @@ export default function Home() {
     const [basketItem, setBasketItem] = useState([]);
 
     // search function
-    const [filteredItems, setFilteredItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState(null);
 
     function searchFunction(searchInput) {
         const filtered = items.filter(item => item.name.toLowerCase().includes(searchInput.toLowerCase()));
@@ -46,13 +47,17 @@ export default function Home() {
     }
 
     const SearchComponent = () => {
+       if(filteredItems){
         if (filteredItems.length > 0) {
             return (
                 <ItemList items={filteredItems} />
             )
-        } else {
-
+        } else  {
+            return(
+                <span>The item doesn't exist</span>
+            )
         }
+       }
     }
 
     return (

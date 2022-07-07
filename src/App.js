@@ -61,7 +61,7 @@ function App() {
               <Route path="faqs" element={<Faqs />} />
               <Route path="contact" element={<ContactUs />} />
               <Route path="AddNewItemScreen" element={<AddNewItems />} />
-              <Route path="AddNewStoreScreen" element={<AddNewStore />} />
+              <Route path="add-new-store" element={<AddNewStore />} />
               <Route path="basket" element={<Basket />} />
               <Route path="joinus" element={<JoinUsForm />} />
               <Route path="checkout" element={<CheckoutPage />}/>
