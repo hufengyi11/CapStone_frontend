@@ -7,24 +7,24 @@ import { GB } from 'country-flag-icons/react/3x2'
 
 
 const Footer = () => {
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
-        
+
         <footer className="footer">
-             <div className="gomartfooter">
-            <h1>GoMart</h1>
+            <div className="gomartfooter">
+                <h1>GoMart</h1>
             </div>
             <div className="container">
                 <div className="row">
                     <div className="footer-col" >
                         <h4>Company</h4>
                         <ul>
-                        <Link className="links" to="/aboutus" >
-                            <li><a href="aboutus" onClick={() => {navigate('aboutus', {replace:true})}}>About us</a></li>
+                            <Link className="links" to="/aboutus" >
+                                <li><a href="aboutus" onClick={() => { navigate('aboutus', { replace: true }) }}>About us</a></li>
                             </Link>
                             <Link className="links" to="/faqs" >
-                            <li><a href="faqs" onClick={() => {navigate('faqs', {replace:true})}}>FAQs</a></li>
+                                <li><a href="faqs" onClick={() => { navigate('faqs', { replace: true }) }}>FAQs</a></li>
                             </Link>
                             <li><a href="JoinUs">Careers</a></li>
                         </ul>
@@ -33,23 +33,23 @@ const navigate = useNavigate();
                     <div className="footer-col">
                         <h4>Work with us</h4>
                         <ul>
-                       <li> <a href="JoinUs">Become a Delivery Partner</a></li>
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Partner and Affiliate</a></li>
+                            <li> <a href="JoinUs">Become a Delivery Partner</a></li>
+                            <li><a href="#">Advertise</a></li>
+                            <li><a href="#">Partner and Affiliate</a></li>
                         </ul>
                     </ div>
 
                     <div className="footer-col">
                         <h4>Support</h4>
                         <ul>
-                        <Link className="links" to="/contact" >
-                       <li><a href="contact" onClick={() => {navigate('contact', {replace:true})}}> Contact Us</a></li>
-                       </Link>
+                            <Link className="links" to="/contact" >
+                                <li><a href="contact" onClick={() => { navigate('contact', { replace: true }) }}> Contact Us</a></li>
+                            </Link>
                         </ul>
-                        
+
                         <h4>Language</h4>
-                       <div className="flag">
-                           <a className="flag"><GB/></a>
+                        <div className="flag">
+                            <a className="flag"><GB /></a>
                         </div>
                     </div>
 
@@ -57,23 +57,24 @@ const navigate = useNavigate();
                         <h4>Vendor</h4>
                         <ul>
                             {/* add store page  */}
-                            <Link className="linkes" to="/add-new-store">Register</Link>
-                            {/* <li><a href="login" onClick={() => {navigate('add-new-store', {replace:true})}}>Register</a></li> */}
+                            <Link className="links" to="/add-new-store">
+                                <li><a href="add-new-store" onClick={() => {navigate('add-new-store', {replace:true})}}>Register</a></li>
+                            </Link>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="privacy">
-                
+
                 <a>© 2022 GoMart, Inc.</a>
                 <div className="privnotice"><a>Privacy Notice</a></div>
                 <div className="terms"><a>Terms and Conditions</a></div>
 
             </div>
             <div className="socialmedia">
-                        <div className="facebook"><a className="social" href="https://www.facebook.com/"><FaFacebook /></a></div>
-                        <div className="twitter"><a className="social" href="https://www.twitter.com/"><FaTwitter /></a></div>
-                        <div className="insta"><a className="social" href="https://www.instagram.com/"><FaInstagram /></a></div>
+                <div className="facebook"><a className="social" href="https://www.facebook.com/"><FaFacebook /></a></div>
+                <div className="twitter"><a className="social" href="https://www.twitter.com/"><FaTwitter /></a></div>
+                <div className="insta"><a className="social" href="https://www.instagram.com/"><FaInstagram /></a></div>
             </div>
         </footer>
     );
