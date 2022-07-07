@@ -113,6 +113,7 @@ const ItemPage = () => {
     const toDeleteItems = async (items) => {
       const result = await DeleteItem(JSON.stringify(items));
       console.log(result);
+      alert(`${result.id} is removed`)
     };
 
     const handleFormSubmit = (event) => {
@@ -124,16 +125,15 @@ const ItemPage = () => {
       };
 
       toDeleteItems(items);
-
       setItemId();
     };
 
     return (
       <>
-        <div>delete Items: </div>
-        <form onSubmit={handleFormSubmit}>
+        <h2>Delete An Item </h2>
+        <form>
           <label className="label">
-            Item id:
+            Item id:<br />
             <input
               type="number"
               placeholder="Item id"
@@ -142,7 +142,7 @@ const ItemPage = () => {
               value={itemId}
             />
           </label>
-          <button>Submit</button>
+          <button onClick={(event) => handleFormSubmit(event)}>Submit</button>
         </form>
       </>
     );
