@@ -38,21 +38,25 @@ export default function Home() {
     const [basketItem, setBasketItem] = useState([]);
 
     // search function
-    const [filteredItems, setFilteredItems] = useState();
+    const [filteredItems, setFilteredItems] = useState([]);
 
     function searchFunction(searchInput) {
         const filtered = items.filter(item => item.name.toLowerCase().includes(searchInput.toLowerCase()));
         setFilteredItems(filtered);
     }
 
-    const empty = ({})
+    const SearchComponent = () => {
+        if (filteredItems.length > 0) {
+            return (
+                <ItemList items={filteredItems} />
+            )
+        }
+    }
 
     return (
         <>
             <Layout searchFunction={searchFunction} />
-            {/* <span className='ItemDisplay'>
-                <ItemList items={filteredItems ? filteredItems : empty } />
-            </span> */}
+            <SearchComponent />
 
             {items.length && <div className='ItemDisplay'>
                 <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} /></div>
