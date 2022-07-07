@@ -9,9 +9,9 @@ const RemoveStore = () => {
     const handleStoreIdChange = (event) => setStoreId(event.target.value);
 
     const toDeleteStores = async (stores) => {
-      const result = await DeleteStore(JSON.stringify(stores));
+      const result = await DeleteStore(stores);
       console.log(result);
-      alert(`${result.id} is deleted`)
+      alert("Store is deleted")
     };
 
     const handleFormSubmit = (event) => {

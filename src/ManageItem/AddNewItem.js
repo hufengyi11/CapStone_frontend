@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PostItem from "./API/PostItem";
+import '../Stores/Stores.css';
 
 
 const AddNewItem = () => {
@@ -43,11 +44,11 @@ const AddNewItem = () => {
     }
 
     return (
-      <>
-        <div>Add New Items: </div>
-        <form onSubmit={handleFormSubmit}>
+      <div className="Container">
+        <h2>Add New Items: </h2>
+        <form className="form">
           <label className="label">
-            Name:
+            Name: <br />
             <input
               type="text"
               placeholder='Item Name'
@@ -57,7 +58,7 @@ const AddNewItem = () => {
             />
           </label>
           <label className="label">
-            Price:
+            Price: <br />
             <input
               type="number"
               placeholder='Cost (£)'
@@ -67,7 +68,7 @@ const AddNewItem = () => {
             />
           </label>
           <label className="label">
-            Rating:
+            Rating:<br />
             <input
               type="number"
               placeholder='Review out of 5'
@@ -77,7 +78,7 @@ const AddNewItem = () => {
             />
           </label>
           <label className="label">
-            category:
+            category:<br />
             <input
               type="text"
               onChange={handleCategoryChange}
@@ -86,7 +87,7 @@ const AddNewItem = () => {
             />
           </label>
           <label className="label">
-            description:
+            description:<br />
             <input
               type="text"
               onChange={handleDescriptionChange}
@@ -94,9 +95,9 @@ const AddNewItem = () => {
               value={itemDescription}
             />
           </label>
-          <button className="button">Submit</button>
+          <button className="button" onClick={(event) => handleFormSubmit(event)}>Submit</button>
         </form>
-      </>
+        </div>
     );
   };
 

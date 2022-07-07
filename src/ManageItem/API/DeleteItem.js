@@ -1,12 +1,6 @@
-const DeleteItem = (deleteItems) => fetch("http://localhost:8080/items", {
-    method: 'DELETE',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: deleteItems
+const DeleteItem = (deleteItems) => fetch(`http://localhost:8080/items/${deleteItems.id}`, {
+    method: 'DELETE'
 })
-    .then((items) => items.json())
     .catch((error) => { console.log(error) })
 
 export default DeleteItem
