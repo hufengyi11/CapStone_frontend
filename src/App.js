@@ -16,6 +16,8 @@ import JoinUsForm from './FirstHomePage/JoinUsForm';
 import JoinUs from './FirstHomePage/JoinUs';
 import BasketContext from './BasketContext/BasketContext';
 import CheckoutPage from './Basket/CheckoutPage';
+import AddNewItems from './HomePage/POST/addNewItems';
+import AddNewStore from './Stores/POST/addNewStore';
 
 function App() {
 
@@ -58,6 +60,8 @@ function App() {
               <Route path="aboutus" element={<AboutUs />} />
               <Route path="faqs" element={<Faqs />} />
               <Route path="contact" element={<ContactUs />} />
+              <Route path="AddNewItemScreen" element={<AddNewItems />} />
+              <Route path="AddNewStoreScreen" element={<AddNewStore />} />
               <Route path="basket" element={<Basket />} />
               <Route path="joinus" element={<JoinUsForm />} />
               <Route path="checkout" element={<CheckoutPage />}/>
