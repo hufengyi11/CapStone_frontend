@@ -50,7 +50,7 @@ const ItemPage = () => {
     return (
       <>
         <div>Add New Items: </div>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <label className="label">
             Name:
             <input
@@ -98,10 +98,8 @@ const ItemPage = () => {
               className="label"
               value={itemDescription}
             />
-
-            <label className="label">Submit</label>
-            <button className="yesButton-invisible" onClick={(event) => handleFormSubmit(event)}></button>
           </label>
+          <button className="button">Submit</button>
         </form>
       </>
     );
@@ -133,7 +131,7 @@ const ItemPage = () => {
     return (
       <>
         <div>delete Items: </div>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <label className="label">
             Item id:
             <input
@@ -143,9 +141,8 @@ const ItemPage = () => {
               className="label"
               value={itemId}
             />
-            <label className="label">Submit</label>
-            <button onClick={(event) => handleFormSubmit(event)}></button>
           </label>
+          <button>Submit</button>
         </form>
       </>
     );
