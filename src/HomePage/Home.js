@@ -50,9 +50,9 @@ export default function Home() {
     return (
         <>
             <Layout searchFunction={searchFunction} />
-            {/* <div className='ItemDisplay'>
+            {/* <span className='ItemDisplay'>
                 <ItemList items={filteredItems ? filteredItems : empty } />
-            </div> */}
+            </span> */}
 
             {items.length && <div className='ItemDisplay'>
                 <div id="bakery"><ItemList items={bakeryItem} Title={bakeryTitle} /></div>

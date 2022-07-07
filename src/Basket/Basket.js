@@ -46,7 +46,13 @@ function Basket() {
     let orderValue = priceList.reduce((a, b) => a + b, 0)
     const totalValue = orderValue + 2
 
-
+    const Checkout = () => {
+        if (basketItems.length > 0) {
+            return (
+                <Link to="/checkout"><button id="but" > Checkout</button></Link>
+            )
+        }
+    }
 
 
     return (
@@ -57,10 +63,11 @@ function Basket() {
             <div className='BasketContainer'>
                 {uniqueNames}
                 <div className='orders'>
-                <h3>Order Value: £{orderValue}</h3>
-                <h3>Delivery Cost: £2</h3>
-                <h2>Total: £{totalValue}</h2>
-                <Link to="/checkout"><button id="but" > Checkout</button></Link>
+                    <h3>Order Value: £{orderValue}</h3>
+                    <h3>Delivery Cost: £2</h3>
+                    <h2>Total: £{totalValue}</h2>
+                    {/* checkout only when basketItems.length > 0 */}
+                    <Checkout />
                 </div>
             </div>
 
