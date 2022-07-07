@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import PostStore from "./API/PostStore";
-import Layout from "../Navigation/Navigation"
+import Layout from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
-import './theStores.css'
-import DeleteStore from './API/DeleteStore'
+import '../Stores/Stores.css';
+import DeleteStore from './API/DeleteStore';
 
 const StoreManagement = () => {
 

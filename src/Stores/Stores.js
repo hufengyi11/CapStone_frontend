@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
-import './theStores.css';
+import './Stores.css';
 import Navigation from '../Navigation/Navigation';
 import axios from 'axios'
 

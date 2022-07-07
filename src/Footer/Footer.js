@@ -60,6 +60,9 @@ const Footer = () => {
                             <Link className="links" to="/manage-store">
                                 <li><a href="manage-store" onClick={() => {navigate('manage-store', {replace:true})}}>Register</a></li>
                             </Link>
+                            <Link className="links" to="/manage-items">
+                                <li><a href="manage-items" onClick={() => {navigate('manage-items', {replace:true})}}>Manage Items</a></li>
+                            </Link>
                         </ul>
                     </div>
                 </div>

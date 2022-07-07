@@ -1,6 +1,6 @@
 import React from 'react';
-import PostItem from "../API/PostItem"
-import DeleteItem  from "../API/DeleteItem"
+import PostItem from "./API/PostItem"
+import DeleteItem  from "./API/DeleteItem"
 import { useState } from "react";
 
 

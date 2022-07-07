@@ -5,7 +5,7 @@ import Basket from './Basket/Basket';
 import Home from './ShoppingPage/ShoppingPage';
 import AboutUs from './Footer/AboutUs/AboutUs';
 import Faqs from './Footer/FAQs/Faqs';
-import ContactUs from './ContactUs/ContactUs';
+import Contact from './Footer/ContactUs/ContactUs';
 import Login from './LogIn/Login';
 import Register from './LogIn/Register';
 import FirstHomePage from './LandingPage/LandingPage';
@@ -13,8 +13,8 @@ import Stores from './Stores/Stores';
 import JoinUsForm from './LandingPage/JoinUsForm';
 import BasketContext from './BasketContext/BasketContext';
 import CheckoutPage from './Basket/CheckoutPage';
-import ItemPage from './ShoppingPage/ManageItem/ItemPage';
-import StoreManagement from './Stores/StoreManagement';
+import ItemPage from './ManageItem/ItemPage';
+import StoreManagement from './ManageStore/StoreManagement';
 
 function App() {
 
@@ -56,8 +56,8 @@ function App() {
               <Route path="register" element={<Register />} />
               <Route path="aboutus" element={<AboutUs />} />
               <Route path="faqs" element={<Faqs />} />
-              <Route path="contact" element={<ContactUs />} />
-              <Route path="ItemPage" element={<ItemPage />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="manage-items" element={<ItemPage />} />
               <Route path="manage-store" element={<StoreManagement />} />
               <Route path="basket" element={<Basket />} />
               <Route path="joinus" element={<JoinUsForm />} />
