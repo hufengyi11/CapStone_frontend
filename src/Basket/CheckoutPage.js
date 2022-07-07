@@ -37,7 +37,7 @@ const CheckoutPage = () => {
         </div>
         <div className="estimatedelivery">
         <h2 className="checkouttitle">Estimated arrival</h2>
-        <h3 className="timetitle"><App /></h3>
+        <h3 className="timetitle"><CurrentTime /></h3>
         <p>Your order is being prepared</p>
         <img className="deliveryimg" src={require("../Images/delivery.gif")} />
         </div>
