@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
-import Layout from '../Layout/Layout.js';
+import Layout from '../Navigation/Navigation.js';
 import axios from '../LogIn/api/axios';
 import './Home.css'
 import ItemCard from './ItemCard';

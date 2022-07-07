@@ -57,8 +57,8 @@ const Footer = () => {
                         <h4>Vendor</h4>
                         <ul>
                             {/* add store page  */}
-                            <Link className="links" to="/add-new-store">
-                                <li><a href="add-new-store" onClick={() => {navigate('add-new-store', {replace:true})}}>Register</a></li>
+                            <Link className="links" to="/manage-store">
+                                <li><a href="manage-store" onClick={() => {navigate('manage-store', {replace:true})}}>Register</a></li>
                             </Link>
                         </ul>
                     </div>

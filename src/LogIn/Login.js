@@ -4,7 +4,7 @@ import AuthContext from "./context/AuthProvider";
 import Footer from "../Footer/Footer";
 import axios from './api/axios';
 import { Link } from 'react-router-dom';
-import Layout from '../Layout/Layout'
+import Layout from '../Navigation/Navigation'
 const LOGIN_URL = '/auth';
 
 

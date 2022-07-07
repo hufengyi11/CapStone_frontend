@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import './Register.css'
 import RegisterAPI from './RegisterAPI.js'
-import Layout from '../Layout/Layout'
+import Layout from '../Navigation/Navigation'
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;

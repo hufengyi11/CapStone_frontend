@@ -1,14 +1,12 @@
 import React from "react";
-import DeleteStore from "../API/DeleteStore";
-import PostStore from "../API/PostStore";
 import { useState } from "react";
 import PostStore from "./API/PostStore";
-import Layout from "../Layout/Layout"
+import Layout from "../Navigation/Navigation"
 import Footer from "../Footer/Footer";
 import './theStores.css'
-import {  useState } from 'react'
+import DeleteStore from './API/DeleteStore'
 
-const StorePage = () => {
+const StoreManagement = () => {
 
   const AddNewStore = () => {
     const [storeName, setStoreName] = useState("");
@@ -168,4 +166,4 @@ const StorePage = () => {
   );
 };
 
-export default StorePage;
+export default StoreManagement;

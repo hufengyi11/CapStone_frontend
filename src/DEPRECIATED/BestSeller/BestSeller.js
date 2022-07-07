@@ -1,7 +1,7 @@
-import Layout from "../Layout/Layout"
-import Footer from "../Footer/Footer"
+import Layout from "../../Layout/Layout"
+import Footer from "../../Footer/Footer"
 import React, { useEffect, useState } from 'react'
-import axios from "../LogIn/api/axios";
+import axios from "../../LogIn/api/axios";
 import "./BestSeller.css"
 
 function BestSeller() {

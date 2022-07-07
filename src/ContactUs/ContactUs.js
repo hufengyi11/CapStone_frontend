@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import './ContactUs.css'
 import Footer from "../Footer/Footer";
-import Navigation from '../Layout/Layout';
+import Navigation from '../Navigation/Navigation';
 
 const Contact = () => {
     

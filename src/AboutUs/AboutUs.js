@@ -7,7 +7,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Navigation from "../Layout/Layout";
+import Navigation from "../Navigation/Navigation";
 const AboutUs = () => {
     const navigate = useNavigate;
     return(

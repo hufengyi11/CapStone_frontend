@@ -14,9 +14,7 @@ import JoinUsForm from './FirstHomePage/JoinUsForm';
 import BasketContext from './BasketContext/BasketContext';
 import CheckoutPage from './Basket/CheckoutPage';
 import ItemPage from './HomePage/POST/ItemPage';
-import StorePage from './Stores/POST/StorePage';
-import AddNewItems from './HomePage/POST/addNewItems';
-import StorePage from './Stores/EditStorePage';
+import StoreManagement from './Stores/StoreManagement';
 
 function App() {
 
@@ -60,7 +58,7 @@ function App() {
               <Route path="faqs" element={<Faqs />} />
               <Route path="contact" element={<ContactUs />} />
               <Route path="ItemPage" element={<ItemPage />} />
-              <Route path="add-new-store" element={<StorePage />} />
+              <Route path="manage-store" element={<StoreManagement />} />
               <Route path="basket" element={<Basket />} />
               <Route path="joinus" element={<JoinUsForm />} />
               <Route path="checkout" element={<CheckoutPage />}/>

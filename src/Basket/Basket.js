@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Footer from '../Footer/Footer'
-import Layout from '../Layout/Layout'
+import Layout from '../Navigation/Navigation'
 import { Link } from "react-router-dom";
 import BasketContext from '../BasketContext/BasketContext';
 import './Basket.css'

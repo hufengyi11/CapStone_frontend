@@ -1,7 +1,7 @@
 import React from "react";
 import App from "./CurrentTime";
 import CurrentTime from "./CurrentTime";
-import Layout from '../Layout/Layout'
+import Layout from '../Navigation/Navigation'
 import { useContext } from "react";
 import BasketContext from '../BasketContext/BasketContext';
 import Footer from "../Footer/Footer";

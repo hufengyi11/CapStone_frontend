@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../Footer/Footer';
 import './theStores.css';
-import Navigation from '../Layout/Layout';
+import Navigation from '../Navigation/Navigation';
 import axios from 'axios'
 
 export default function Stores(){
