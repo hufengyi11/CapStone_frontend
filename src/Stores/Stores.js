@@ -5,6 +5,8 @@ import Navigation from '../Layout/Layout';
 import axios from 'axios'
 
 export default function Stores(){
+    const [stores, setStores] = useState([]);
+
 
     useEffect(() => {
         axios.get('http://localhost:8080/stores')
@@ -14,7 +16,6 @@ export default function Stores(){
             }).catch((err) => console.log(err));
     }, [])
 
-    const [stores, setStores] = useState([]);
 
     const StoreViewing = ({ name, opening, closing, location, review, imagepath }) => {
         return (

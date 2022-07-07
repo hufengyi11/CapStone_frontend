@@ -15,6 +15,8 @@ import BasketContext from './BasketContext/BasketContext';
 import CheckoutPage from './Basket/CheckoutPage';
 import ItemPage from './HomePage/POST/ItemPage';
 import StorePage from './Stores/POST/StorePage';
+import AddNewItems from './HomePage/POST/addNewItems';
+import StorePage from './Stores/EditStorePage';
 
 function App() {
 

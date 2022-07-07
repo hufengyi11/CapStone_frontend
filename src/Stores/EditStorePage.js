@@ -2,8 +2,14 @@ import React from "react";
 import DeleteStore from "../API/DeleteStore";
 import PostStore from "../API/PostStore";
 import { useState } from "react";
+import PostStore from "./API/PostStore";
+import Layout from "../Layout/Layout"
+import Footer from "../Footer/Footer";
+import './theStores.css'
+import {  useState } from 'react'
 
 const StorePage = () => {
+
   const AddNewStore = () => {
     const [storeName, setStoreName] = useState("");
     const [storeOpening, setStoreOpening] = useState(0);
@@ -21,6 +27,7 @@ const StorePage = () => {
     const toPostStores = async (stores) => {
       const result = await PostStore(JSON.stringify(stores));
       console.log(result);
+      alert(`Your store id is ${result.id}`)
     };
 
     const handleFormSubmit = (event) => {
@@ -42,13 +49,14 @@ const StorePage = () => {
       setStoreClosing();
       setStoreLocation("");
       setStoreReview("");
+
     };
     return (
-      <>
-        <div>Add New Stores: </div>
-        <form>
+      <div className="Container">
+        <h2>Add New Store </h2>
+        <form className="form">
           <label className="label">
-            Name:
+            Name: <br />
             <input
               type="text"
               placeholder="Store Name"
@@ -58,7 +66,7 @@ const StorePage = () => {
             />
           </label>
           <label className="label">
-            Opening:
+            Opening: <br />
             <input
               type="number"
               placeholder="Opening time AM "
@@ -68,7 +76,7 @@ const StorePage = () => {
             />
           </label>
           <label className="label">
-            Closing:
+            Closing: <br />
             <input
               type="number"
               placeholder="Closing time PM"
@@ -78,7 +86,7 @@ const StorePage = () => {
             />
           </label>
           <label className="label">
-            Location:
+            Location: <br />
             <input
               type="text"
               placeholder="Location"
@@ -88,7 +96,7 @@ const StorePage = () => {
             />
           </label>
           <label className="label">
-            Review:
+            Review: <br />
             <input
               type="text"
               placeholder="Review out of 5"
@@ -96,11 +104,10 @@ const StorePage = () => {
               className="label"
               value={storeReview}
             />
-            <label className="label">Submit</label>
-            <button onClick={(event) => handleFormSubmit(event)}></button>
           </label>
+          <button className="button" onClick={(event) => handleFormSubmit(event)}>Submit</button>
         </form>
-      </>
+      </div>
     );
   };
 
@@ -112,6 +119,7 @@ const StorePage = () => {
     const toDeleteStores = async (stores) => {
       const result = await DeleteStore(JSON.stringify(stores));
       console.log(result);
+      alert(`${result.id} is deleted`)
     };
 
     const handleFormSubmit = (event) => {
@@ -128,11 +136,11 @@ const StorePage = () => {
     };
 
     return (
-      <>
-        <div>delete Stores: </div>
-        <form>
+      <div className="Container">
+        <h2>Delete A Stores </h2>
+        <form className="form">
           <label className="label">
-            store id:
+            store id: <br />
             <input
               type="number"
               placeholder="store id"
@@ -140,18 +148,22 @@ const StorePage = () => {
               className="label"
               value={storeId}
             />
-            <label className="label">Submit</label>
-            <button onClick={(event) => handleFormSubmit(event)}></button>
           </label>
+          <button className="button" onClick={(event) => handleFormSubmit(event)}>Submit</button>
         </form>
-      </>
+      </div>
     );
   };
 
   return (
     <>
-      <AddNewStore />
-      <RemoveStore />
+      <Layout />
+      <div className="storeContainer">
+        <AddNewStore />
+        <RemoveStore />
+      </div>
+      <div className="padding"></div>
+      <Footer />
     </>
   );
 };
