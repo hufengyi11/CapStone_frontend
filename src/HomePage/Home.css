@@ -65,6 +65,8 @@
 }
 .rating{
     margin-top: -15px;
+    color: rgb(255,215,0);
+    font-weight: bold;
 }
 
 .BasketContainer{

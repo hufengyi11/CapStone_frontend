@@ -14,7 +14,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <p>{this.state.curTime}</p>
+        <p>
+          {this.state.curTime}
+          </p>
       </div>
     );
   }

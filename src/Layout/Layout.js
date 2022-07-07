@@ -47,7 +47,7 @@ const Navigation = ({ searchFunction }) => {
         <ul>
           <Link to="/" className="active2">
             <img className="logo" src={require('../Images/gomartlogo.png')} alt="image" /></Link>
-          <Link to="/" className="active">
+          <Link to="/" className='Stores'>
             Home
           </Link>
           <Link to='/shopping' className='best-seller'>Shopping</Link>

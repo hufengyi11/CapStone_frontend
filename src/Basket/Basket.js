@@ -56,10 +56,12 @@ function Basket() {
 
             <div className='BasketContainer'>
                 {uniqueNames}
+                <div className='orders'>
                 <h3>Order Value: £{orderValue}</h3>
                 <h3>Delivery Cost: £2</h3>
                 <h2>Total: £{totalValue}</h2>
                 <Link to="/checkout"><button id="but" > Checkout</button></Link>
+                </div>
             </div>
 
             <div className='padding'></div>

@@ -5,6 +5,7 @@ import Layout from '../Layout/Layout'
 import { useContext } from "react";
 import BasketContext from '../BasketContext/BasketContext';
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 const CheckoutPage = () => {
     const { basketItems, setBasketItems } = useContext(BasketContext);
@@ -42,7 +43,12 @@ const CheckoutPage = () => {
         </div>
         <div>
             <h1 className="orderdetails">Order Details</h1>
-        <p className="orderitems">{uniqueNames}</p>
+        <p className="orderitems">
+            {uniqueNames}
+            </p>
+            <Link to="/">
+            <button className="checkoutbutton">
+                Back</button></Link>
         </div>
         </div>
         <Footer />

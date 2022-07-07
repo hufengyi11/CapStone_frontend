@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import BasketContext from "../BasketContext/BasketContext";
+import { AiFillStar } from "react-icons/ai";
 
 const ItemCard = ({ item }) => {
 
@@ -19,7 +20,7 @@ const ItemCard = ({ item }) => {
             </div>
             <h2 className='itemtitle'>{item.name}</h2>
             <p className='price'>£{item.price}</p>
-            <p className='rating'>{item.rating} star</p>
+            <p className='rating'>{item.rating} <AiFillStar /></p>
         </div>
     )
 }
