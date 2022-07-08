@@ -56,9 +56,10 @@ function Basket() {
     return (
         <div>
             <Layout />
-            <h1 className='title'>Shopping Bag</h1>
+            
 
             <div className='BasketContainer'>
+            <h1 className='title'>Shopping Basket</h1>
                 {uniqueNames}
                 <div className='orders'>
                     <h3>Order Value: £{orderValue}</h3>

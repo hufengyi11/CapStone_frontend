@@ -5,6 +5,9 @@
 
 .title {
     text-align: center;
+    margin-top: -50px;
+    position: relative;
+    right: 40px;
 }
 
 .BasketContainer {
@@ -15,6 +18,7 @@
     width: 50%;
     margin: auto;
     border: 1px solid black;
+    margin-top: 50px;
    
     
 }
